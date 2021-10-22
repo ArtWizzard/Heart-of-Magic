@@ -24,11 +24,10 @@ public class Player_movement : MonoBehaviour
         body.velocity = new Vector2(HorizontalInput * speed, body.velocity.y);
 
         // Otáčení
-        float wsize = 0.3f;
         if(HorizontalInput > 0.01f)
-            transform.localScale = Vector3.one * wsize;
+            transform.localScale = Vector3.one;
         else if (HorizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1 * wsize, 1 * wsize, 1 * wsize);
+            transform.localScale = new Vector3(-1, 1, 1);
 
         // Skok
         if(Input.GetKey(KeyCode.Space) && isGrounded())
