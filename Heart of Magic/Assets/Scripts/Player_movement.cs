@@ -9,12 +9,15 @@ public class Player_movement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private Rigidbody2D body;
     private BoxCollider2D boxCollider;
+    private Animator anim;
     
 
     private void Awake()
     {
+        //Grap references to rigidbody, boxcollider, animator from object
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -34,6 +37,9 @@ public class Player_movement : MonoBehaviour
         {
             body.velocity = new Vector2(body.velocity.x, jump_power);
         }
+
+        // Set animator parameters
+        anim.SetBool("Run", HorizontalInput != 0);
     }
 
     private bool isGrounded()
