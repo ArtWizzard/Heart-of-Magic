@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 40811fcee4f1b9c4084620c4fec8d670
+guid: 214ccc75a0e68ee42a9b66185f23056d
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -7977256250719906567
-    second: Wizzard_idle_multiple_0
-  - first:
-      213: -1283135827230331596
-    second: Wizzard_idle_multiple_1
-  - first:
-      213: -1143137082428435041
-    second: Wizzard_idle_multiple_2
-  - first:
-      213: -6876426577365081
-    second: Wizzard_idle_multiple_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,18 +35,18 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 14
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,91 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Wizzard_idle_multiple_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f4539d84b71b4190800000000000000
-      internalID: -7977256250719906567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizzard_idle_multiple_1
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43deb5373c2613ee0800000000000000
-      internalID: -1283135827230331596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizzard_idle_multiple_2
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f95d64051e2c220f0800000000000000
-      internalID: -1143137082428435041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizzard_idle_multiple_3
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a7388c2de197eff0800000000000000
-      internalID: -6876426577365081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
