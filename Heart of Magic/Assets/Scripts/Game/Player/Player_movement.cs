@@ -33,16 +33,16 @@ public class Player_movement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
 
         // Skok
-        if(Input.GetKey(KeyCode.Space) && isGrounded())
+        if(Input.GetKey(KeyCode.UpArrow) && isGrounded())
         {
             body.velocity = new Vector2(body.velocity.x, jump_power);
             //anim.SetBool("Jump", true);
         }
 
         // Set animator parameters
-        anim.SetBool("Run", HorizontalInput != 0);  // Začne 
-        anim.SetBool("Jump", !isGrounded());    // Dopadne
-        anim.SetFloat("yVelocity", body.velocity.y);
+        anim.SetBool("Run", HorizontalInput != 0);      // Začne 
+        anim.SetBool("Jump", !isGrounded());            // Dopadne
+        anim.SetFloat("yVelocity", body.velocity.y);    // Fáze skoku/pádu
 
     }
 
