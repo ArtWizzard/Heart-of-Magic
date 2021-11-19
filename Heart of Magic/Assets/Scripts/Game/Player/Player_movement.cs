@@ -36,7 +36,7 @@ public class Player_movement : MonoBehaviour
         if(Input.GetKey(KeyCode.UpArrow) && isGrounded())
         {
             body.velocity = new Vector2(body.velocity.x, jump_power);
-            //anim.SetBool("Jump", true);
+            anim.SetBool("Jump", true);
         }
 
         // Set animator parameters
