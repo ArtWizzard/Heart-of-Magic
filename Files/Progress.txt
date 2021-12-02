@@ -1,0 +1,2 @@
+2. 12. 2021
+- tag - musím nastavit na objektu, využívá se při kolizi OnTriggerEnter

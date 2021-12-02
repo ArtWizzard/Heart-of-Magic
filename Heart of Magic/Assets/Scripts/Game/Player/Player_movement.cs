@@ -9,6 +9,7 @@ public class Player_movement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private Rigidbody2D body;
     private BoxCollider2D boxCollider;
+    private CircleCollider2D circleCollider;
     private Animator anim;
     
 
@@ -17,6 +18,7 @@ public class Player_movement : MonoBehaviour
         //Grap references to rigidbody, boxcollider, animator from object
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
     }
 
@@ -48,7 +50,7 @@ public class Player_movement : MonoBehaviour
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(circleCollider.bounds.center, circleCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
 }

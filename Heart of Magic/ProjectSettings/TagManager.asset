@@ -14,9 +14,9 @@ TagManager:
   - 
   - Background
   - Ground
-  - Players
-  - 
-  - 
+  - Foreground
+  - Player
+  - Projectile
   - 
   - 
   - 
