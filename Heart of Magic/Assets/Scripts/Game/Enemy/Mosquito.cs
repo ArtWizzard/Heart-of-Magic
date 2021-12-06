@@ -39,11 +39,11 @@ public class Mosquito : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
+        // Debug.Log(collision.tag);
         if(collision.tag == "Player")
         {
             collision.GetComponent<Player_health>().TakeDamage(damage);
-            Debug.Log("hit");
+            // Debug.Log("hit");
         }
     }
 }
