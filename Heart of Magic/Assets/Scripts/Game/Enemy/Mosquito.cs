@@ -45,5 +45,9 @@ public class Mosquito : MonoBehaviour
             collision.GetComponent<Player_health>().TakeDamage(damage);
             // Debug.Log("hit");
         }
+        else if (collision.tag == "Projectile")
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
