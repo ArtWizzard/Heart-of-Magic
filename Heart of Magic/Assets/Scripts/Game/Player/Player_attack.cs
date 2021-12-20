@@ -17,11 +17,22 @@ public class Player_attack : MonoBehaviour
 
     private void Update()
     { 
-        if(Input.GetKey( KeyCode.Space) && cooldownTimer >= attackCooldown)
+        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs())
         {
-            Attack();
+            switch (Input.inputString)
+            {
+                case "5":
+                    Attack();
+                    break;
+            }
+            /*
+            if(Input.GetKey(KeyCode.Keypad5))
+            {
+                Attack();
+            }*/
         }
         cooldownTimer += Time.deltaTime;
+
     }
 
     private void Attack()
@@ -34,6 +45,7 @@ public class Player_attack : MonoBehaviour
         energyballs[FindEnergyballs()].GetComponent<Energy_fireball>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
+    //  Najde nejlepší energyball
     private int FindEnergyballs()
     {
         for(int i = 0; i < energyballs.Length; i++)
@@ -41,7 +53,6 @@ public class Player_attack : MonoBehaviour
             if(!energyballs[i].activeInHierarchy)
                 return i;
         }
-
-        return 0;
+        return -1;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
     }
 }

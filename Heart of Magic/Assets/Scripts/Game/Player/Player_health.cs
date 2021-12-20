@@ -8,7 +8,7 @@ public class Player_health : MonoBehaviour
     [SerializeField] private int maxtHealth = 100;
     [SerializeField] private int startHealth = 100;
     public int currentHealth;
-    private bool dead;
+    //private bool dead;
 
     [Header ("iFrame")]
     [SerializeField] private float iFrameDuration;
@@ -19,18 +19,24 @@ public class Player_health : MonoBehaviour
 
     void Start()
     {
-        currentHealth = startHealth;
-        health_bar.SetMaxHealth(maxtHealth);
+        ResetHealth();
         spriteRend = GetComponent<SpriteRenderer>();
     }
     
+    public void ResetHealth()
+    {
+        currentHealth = startHealth;
+        health_bar.SetMaxHealth(maxtHealth); 
+    }
     public void TakeDamage(int _damage)
     {
         currentHealth -= _damage;
         if(currentHealth <= 0)
             {
                 currentHealth = 0;
-                dead = true;
+                //dead = true;
+                Debug.Log("Current health: " + currentHealth.ToString());
+                FindObjectOfType<LevelManager>().Respawn();
             }
         StartCoroutine(Invunerability());
 
