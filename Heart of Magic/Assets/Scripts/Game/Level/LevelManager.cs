@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        player.transform.position = respawnPoint.position;      //  přemístí ho na respawn
     }
     public void Respawn()
     {
