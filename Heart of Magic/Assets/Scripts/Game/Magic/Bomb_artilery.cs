@@ -1,25 +1,31 @@
+//  using System.Collections;
+//  using System.Collections.Generic;
 using UnityEngine;
 
-public class Energy_fireball : MonoBehaviour
+public class Bomb_artilery : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private float direction;
+    [SerializeField] private float power;
+    [SerializeField] private float up;
+    //[SerializeField] private float power;
+    private float direction; // right or left
     private bool hit;
     private float lifeTime;
 
-    private BoxCollider2D BoxCollider;
+    private CircleCollider2D cCollider;
     private Animator anim;
+    private Rigidbody2D body;
 
     private void Awake()
     {
-        BoxCollider = GetComponent<BoxCollider2D>();
-        anim = GetComponent<Animator>();
+        cCollider = GetComponent<CircleCollider2D>();
+        body = GetComponent<Rigidbody2D>();
+        //anim = GetComponent<Animator>();
     }
     
     private void Update()
     {
         if (hit) return;
-        float movementSpeed = speed * Time.deltaTime * direction;
+        float movementSpeed = power * Time.deltaTime * direction;
         transform.Translate(movementSpeed, 0, 0);
 
         lifeTime += Time.deltaTime;
@@ -31,8 +37,9 @@ public class Energy_fireball : MonoBehaviour
         if(collision.tag != "Player")
         {
             hit = true;
-            BoxCollider.enabled = false;
-            anim.SetTrigger("explode");
+            cCollider.enabled = false;
+            gameObject.SetActive(false);
+            //  anim.SetTrigger("explode");
         }
     }
 
@@ -42,13 +49,10 @@ public class Energy_fireball : MonoBehaviour
         direction = _direction;
         gameObject.SetActive(true);
         hit = false;
-        BoxCollider.enabled = true;
+        cCollider.enabled = true;
 
         float localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != _direction)
-            localScaleX = -localScaleX;
-
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+        body.velocity = new Vector2(0,up);
     }
 
     private void Deactivate()

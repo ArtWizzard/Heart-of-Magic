@@ -11,7 +11,7 @@ public class Player_movement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private CircleCollider2D circleCollider;
     private Animator anim;
-    
+    private float HorizontalInput;
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class Player_movement : MonoBehaviour
     private void Update()
     {
         // Pohyb do stran
-        float HorizontalInput = Input.GetAxis("Horizontal");
+        HorizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(HorizontalInput * speed, body.velocity.y);
 
         // Otáčení
@@ -52,5 +52,10 @@ public class Player_movement : MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(circleCollider.bounds.center, circleCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
+    }
+
+    public bool isMoving()
+    {
+        return HorizontalInput != 0;
     }
 }

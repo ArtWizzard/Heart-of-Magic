@@ -5,6 +5,7 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] energyballs;
+    [SerializeField] private GameObject[] bombsartilery;
     private Animator anim;
     private Player_movement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
@@ -17,12 +18,16 @@ public class Player_attack : MonoBehaviour
 
     private void Update()
     { 
-        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs())
+        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs() && 0<= FindBombs() && !FindObjectOfType<Player_movement>().isMoving())
         {
             switch (Input.inputString)
             {
                 case "5":
                     Attack();
+                    break;
+
+                case "8":
+                    Artilery();
                     break;
             }
             /*
@@ -34,10 +39,10 @@ public class Player_attack : MonoBehaviour
         cooldownTimer += Time.deltaTime;
 
     }
-
+//------------------------------Energy ball
     private void Attack()
     {
-        // anim.SetTrigger("Attack");
+        anim.SetTrigger("attack");
         cooldownTimer = 0;
 
         //Pool fireballs
@@ -51,6 +56,27 @@ public class Player_attack : MonoBehaviour
         for(int i = 0; i < energyballs.Length; i++)
         {
             if(!energyballs[i].activeInHierarchy)
+                return i;
+        }
+        return -1;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
+    }
+//------------------------------Bomb artilery
+    private void Artilery()
+    {
+        anim.SetTrigger("attack");
+        cooldownTimer = 0;
+
+        //Pool bombs
+        bombsartilery[FindBombs()].transform.position = firePoint.position;
+        bombsartilery[FindBombs()].GetComponent<Bomb_artilery>().SetDirection(Mathf.Sign(transform.localScale.x));
+    }
+
+    //  same
+    private int FindBombs()
+    {
+        for(int i = 0; i < bombsartilery.Length; i++)
+        {
+            if(!bombsartilery[i].activeInHierarchy)
                 return i;
         }
         return -1;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
