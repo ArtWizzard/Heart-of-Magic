@@ -1,50 +1,79 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Player_attack : MonoBehaviour
 {
+    [Header ("Attack")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private float magicDelay;
+    [Header ("Magic objects")]
     [SerializeField] private GameObject[] energyballs;
     [SerializeField] private GameObject[] bombsartilery;
     private Animator anim;
     private Player_movement playerMovement;
+    //  Counters
     private float cooldownTimer = Mathf.Infinity;
+    private float DelayTimer = Mathf.Infinity;
+    //  Data package
+    private bool energy;
+    private bool bomb;
+    //private Dictionary<string, int> magic;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<Player_movement>();
+
+        energy = false;
+        bomb = false;
     }
 
     private void Update()
     { 
-        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs() && 0<= FindBombs() && !FindObjectOfType<Player_movement>().isMoving())
+        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs() && BombsExploded() && !FindObjectOfType<Player_movement>().isMoving() && !(energy || bomb))
         {
             switch (Input.inputString)
             {
                 case "5":
-                    Attack();
+                    SetAttack();
+                    energy = true;
                     break;
 
                 case "8":
-                    Artilery();
+                    //Artilery();
+                    SetAttack();
+                    bomb = true;
                     break;
             }
-            /*
-            if(Input.GetKey(KeyCode.Keypad5))
-            {
-                Attack();
-            }*/
         }
         cooldownTimer += Time.deltaTime;
+        
+        if(DelayTimer > magicDelay)
+        {
+            if(energy)
+                Attack();
+            if(bomb)
+                Artilery();
+        }
+        else
+        {
+            DelayTimer += Time.deltaTime;
+        }
 
     }
+
+    private void SetAttack()
+    {
+        DelayTimer = 0;
+        anim.SetTrigger("attack");
+    }
+
 //------------------------------Energy ball
     private void Attack()
     {
-        anim.SetTrigger("attack");
         cooldownTimer = 0;
-
+        energy = false;
         //Pool fireballs
         energyballs[FindEnergyballs()].transform.position = firePoint.position;
         energyballs[FindEnergyballs()].GetComponent<Energy_fireball>().SetDirection(Mathf.Sign(transform.localScale.x));
@@ -60,25 +89,32 @@ public class Player_attack : MonoBehaviour
         }
         return -1;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
     }
+
 //------------------------------Bomb artilery
     private void Artilery()
     {
-        anim.SetTrigger("attack");
         cooldownTimer = 0;
+        bomb = false;
 
-        //Pool bombs
-        bombsartilery[FindBombs()].transform.position = firePoint.position;
-        bombsartilery[FindBombs()].GetComponent<Bomb_artilery>().SetDirection(Mathf.Sign(transform.localScale.x));
+        //Bombs inactive
+        if(BombsExploded())
+        {
+            for(int i = 0; i < bombsartilery.Length; i++)
+            {
+                bombsartilery[i].transform.position = firePoint.position;
+                bombsartilery[i].GetComponent<Bomb_artilery>().SetDirection(Mathf.Sign(transform.localScale.x));
+            }
+        }
     }
 
     //  same
-    private int FindBombs()
+    private bool BombsExploded()
     {
         for(int i = 0; i < bombsartilery.Length; i++)
         {
-            if(!bombsartilery[i].activeInHierarchy)
-                return i;
+            if(bombsartilery[i].activeInHierarchy)
+                return false;
         }
-        return -1;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
+        return true;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
     }
 }

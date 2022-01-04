@@ -10,6 +10,9 @@ public class Bomb_artilery : MonoBehaviour
     private float direction; // right or left
     private bool hit;
     private float lifeTime;
+    private float rndUp;
+    private float rndPower;
+    private float rndSpeed;
 
     private CircleCollider2D cCollider;
     private Animator anim;
@@ -25,7 +28,7 @@ public class Bomb_artilery : MonoBehaviour
     private void Update()
     {
         if (hit) return;
-        float movementSpeed = power * Time.deltaTime * direction;
+        float movementSpeed = power * Time.deltaTime * direction * ((10+rndSpeed)/10);
         transform.Translate(movementSpeed, 0, 0);
 
         lifeTime += Time.deltaTime;
@@ -34,7 +37,7 @@ public class Bomb_artilery : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag != "Player")
+        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Projectile"))
         {
             hit = true;
             cCollider.enabled = false;
@@ -52,7 +55,11 @@ public class Bomb_artilery : MonoBehaviour
         cCollider.enabled = true;
 
         float localScaleX = transform.localScale.x;
-        body.velocity = new Vector2(0,up);
+        rndUp = Random.Range(-2f,2f);
+        rndPower = Random.Range(-2f,2f);
+        rndSpeed = Random.Range(-2f,2f);
+        
+        body.velocity = new Vector2(direction*(power + rndPower),up + rndUp);
     }
 
     private void Deactivate()

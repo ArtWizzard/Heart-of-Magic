@@ -1,27 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    /*
-    [Header("Detection Parameters")]
-    //  Detection point
-    public Transform detectionPoint;
-    //  Detection radius
-    private const float detectionRadius = 0.2f;
-    //  Detection layer
-    public LayerMask detectionLayer;
-    //  Cached Trigger Object
-    public GameObject detectObject;
-    [Header("Others")]
-    //  List of picked items
-    public List<GameObject> pickedItems = new List<GameObject>();
-    */
+    [Header("Visualization")]
+    public Text runeText;
     public int runes = 0;
 
-    public void PickRune()
+    private void Awake()
     {
-        runes = runes + 1;
+        runeText.text = runes.ToString() + "X";
+    }
+
+    public void PickRune(int _ammount)
+    {
+        runes += _ammount;
+        runeText.text = runes.ToString() + "X";
+        //Debug.Log(runes);
     }
 }
