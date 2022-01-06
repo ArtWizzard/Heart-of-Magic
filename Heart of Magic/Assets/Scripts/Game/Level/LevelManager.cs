@@ -22,4 +22,10 @@ public class LevelManager : MonoBehaviour
         player.SetActive(true);                                 //  vytvoří hráče
         FindObjectOfType<Player_health>().ResetHealth();        //  má plné životy
     }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene("LevelSelect");  //  Vyjde z levlu do výběru kol
+    }
+
 }
