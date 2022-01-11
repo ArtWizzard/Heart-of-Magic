@@ -8,16 +8,31 @@ public class InventoryManager : MonoBehaviour
     [Header("Visualization")]
     public Text runeText;
     public int runes = 0;
+    public Text keyText;
+    public int keys = 0;
 
     private void Awake()
     {
         runeText.text = runes.ToString() + "X";
+        keyText.text = keys.ToString() + "X";
     }
 
-    public void PickRune(int _ammount)
+    public void Pick(string type, int _ammount)
     {
-        runes += _ammount;
-        runeText.text = runes.ToString() + "X";
-        //Debug.Log(runes);
+        switch(type)
+        {
+            case "Key":
+                keys += _ammount;
+                keyText.text = keys.ToString() + "X";
+                break;
+            case "Rune":
+                runes += _ammount;
+                runeText.text = runes.ToString() + "X";
+                //Debug.Log(runes);
+                break;
+            default:
+                Debug.Log("Wrong item name");
+                break;
+        }
     }
 }
