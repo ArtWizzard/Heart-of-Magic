@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
     [SerializeField] public InventoryManager IM;
     [Header("Properities")]
     [SerializeField] private int value;
-    private BoxCollider2D BoxCollider;
+    private CircleCollider2D CircleCollider;
     private bool taken = false;
 
 
@@ -26,4 +26,6 @@ public class Item : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+
 }
