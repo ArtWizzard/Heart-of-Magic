@@ -28,7 +28,7 @@ public class Energy_fireball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((collision.tag != "Player") && (collision.tag != "Item"))
+        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Doors_interface"))
         {
             hit = true;
             BoxCollider.enabled = false;

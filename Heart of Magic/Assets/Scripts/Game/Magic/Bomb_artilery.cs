@@ -37,7 +37,7 @@ public class Bomb_artilery : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Projectile"))
+        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Projectile") && (collision.tag != "Doors_interface"))
         {
             hit = true;
             cCollider.enabled = false;
