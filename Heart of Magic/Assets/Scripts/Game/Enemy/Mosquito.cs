@@ -47,7 +47,7 @@ public class Mosquito : MonoBehaviour
         }
         else if (collision.tag == "Projectile")
         {
-            FindObjectOfType<Enemy_health_behaviour>().TakeHit(1);
+            FindObjectOfType<Enemy_health>().TakeHit(1);
             //Debug.Log("Hit projectile");
         }
     }

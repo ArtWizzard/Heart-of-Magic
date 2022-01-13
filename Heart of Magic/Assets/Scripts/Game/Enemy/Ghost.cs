@@ -6,7 +6,7 @@ public class Ghost : MonoBehaviour
 {
     [Header ("Properities")]
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private Enemy_health_behaviour health;
+    [SerializeField] private Enemy_health health;
 
     [Header ("Power")]
     [SerializeField] private int damage; 
@@ -35,9 +35,16 @@ public class Ghost : MonoBehaviour
         }
         else if (collision.tag == "Projectile")
         {
-            //FindObjectOfType<Enemy_health_behaviour>().TakeHit(1);
+            //FindObjectOfType<Enemy_health>().TakeHit(1);
             health.TakeHit(1);
             //Debug.Log("Hit projectile");
         }
+    }
+
+    public void ReSpawn()
+    {
+        transform.position = spawnPoint.position;
+        health.ReLoad();
+        gameObject.SetActive(true);
     }
 }

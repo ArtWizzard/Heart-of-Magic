@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy_healthBar_behaviour : MonoBehaviour
+public class Enemy_healthBar : MonoBehaviour
 {
     [SerializeField] private Slider Slider;
     [SerializeField] private Color Low;       // Barva žádných životů
