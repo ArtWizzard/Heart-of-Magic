@@ -10,6 +10,8 @@ public class Player_attack : MonoBehaviour
     [Header ("Magic objects")]
     [SerializeField] private GameObject[] energyballs;
     [SerializeField] private GameObject[] bombsartilery;
+    [SerializeField] private GameObject[] barriers;
+
     private Animator anim;
     private Player_movement playerMovement;
     //  Counters
@@ -18,6 +20,7 @@ public class Player_attack : MonoBehaviour
     //  Data package
     private bool energy;
     private bool bomb;
+    private bool barrier;
     //private Dictionary<string, int> magic;
 
     private void Awake()
@@ -27,6 +30,7 @@ public class Player_attack : MonoBehaviour
 
         energy = false;
         bomb = false;
+        barrier = false;
     }
 
     private void Update()
@@ -45,6 +49,10 @@ public class Player_attack : MonoBehaviour
                     SetAttack();
                     bomb = true;
                     break;
+                case "2":
+                    SetAttack();
+                    barrier = true;
+                    break;
             }
         }
         cooldownTimer += Time.deltaTime;
@@ -55,6 +63,8 @@ public class Player_attack : MonoBehaviour
                 Attack();
             if(bomb)
                 Artilery();
+            if(barrier)
+                SetBarrier();
         }
         else
         {
@@ -117,4 +127,13 @@ public class Player_attack : MonoBehaviour
         }
         return true;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
     }
-}
+
+//------------------------------Barrier
+    private void SetBarrier()
+    {
+        cooldownTimer = 0;
+        barrier = false;
+        //Set barrier
+        barriers[0].GetComponent<Barrier>().SetBarrier();
+    }
+} // -------------------------- closing class
