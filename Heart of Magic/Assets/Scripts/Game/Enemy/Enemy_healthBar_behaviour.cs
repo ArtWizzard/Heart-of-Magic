@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Enemy_healthBar_behaviour : MonoBehaviour
 {
-    public Slider Slider;
-    public Color Low;       // Barva žádných životů
-    public Color High;      // Barva plných životů
-    public Vector3 Offset;  // Pozice healthBaru
+    [SerializeField] private Slider Slider;
+    [SerializeField] private Color Low;       // Barva žádných životů
+    [SerializeField] private Color High;      // Barva plných životů
+    [SerializeField] private Vector3 Offset;  // Pozice healthBaru
 
     void Update()
     {
