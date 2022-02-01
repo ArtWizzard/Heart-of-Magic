@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: 5347066023129718718
     second: Background_forest_multiple_4
+  - first:
+      213: -4344643782986010653
+    second: Background_forest_multiple_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -218,6 +221,27 @@ TextureImporter:
       bones: []
       spriteID: ebf1533d738943a40800000000000000
       internalID: 5347066023129718718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_forest_multiple_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef628f8f79b4b3c0800000000000000
+      internalID: -4344643782986010653
       vertices: []
       indices: 
       edges: []
