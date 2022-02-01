@@ -45,7 +45,7 @@ public class Player_health : MonoBehaviour
 
     private IEnumerator Invunerability()
     {
-        Physics2D.IgnoreLayerCollision(10, 11, true);
+        Physics2D.IgnoreLayerCollision(10, 13, true);
         //Invunerability duration
         for (int i = 0; i < numberOfFlashes; i++)
         {
@@ -54,7 +54,7 @@ public class Player_health : MonoBehaviour
             spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes * 2));
         }
-        Physics2D.IgnoreLayerCollision(10, 11, false);
+        Physics2D.IgnoreLayerCollision(10, 13, false);
 
     }
 }

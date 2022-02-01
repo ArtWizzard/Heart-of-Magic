@@ -94,6 +94,7 @@ MonoBehaviour:
   runes: 0
   keyText: {fileID: 0}
   keys: 0
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!1 &1859085659834059300
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97e65193167a8c43a0b7e3909350a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!1 &1859085660650208000
 GameObject:
   m_ObjectHideFlags: 0

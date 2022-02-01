@@ -11,8 +11,12 @@ public class InventoryManager : MonoBehaviour
     public Text keyText;
     public int keys = 0;
 
+    [Header("Storages")]
+    [SerializeField] private DataStorage dataStorage;
+
     private void Awake()
     {
+        runes = dataStorage.runesAmmount;
         runeText.text = runes.ToString() + "X";
         keyText.text = keys.ToString() + "X";
     }
@@ -28,7 +32,9 @@ public class InventoryManager : MonoBehaviour
             case "Rune":
                 runes += _ammount;
                 runeText.text = runes.ToString() + "X";
-                //Debug.Log(runes);
+                
+                dataStorage.runesAmmount += _ammount;
+
                 break;
             default:
                 Debug.Log("Wrong item name");

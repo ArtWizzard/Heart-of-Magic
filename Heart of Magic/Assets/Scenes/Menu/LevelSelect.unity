@@ -7953,6 +7953,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: 766240315709075925, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: 36608145869256151, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!1 &727371754
 GameObject:
   m_ObjectHideFlags: 0
@@ -8005,6 +8006,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -760281743129920705, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: 3956161818572297367, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &727371757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8231,6 +8233,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -7369535847772130675, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: 2062333843913260536, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &771257500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8360,6 +8363,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -1060425921312703126, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: 6991388205114752388, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &787223602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8520,6 +8524,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -3155686268120249167, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: 875576651439620348, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &921019570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8649,6 +8654,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -4579835561018565008, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: -2114603764237288695, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &1042341304
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8778,6 +8784,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -2259617215905793841, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: 4953995527266523093, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &1119190580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9040,6 +9047,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -6039679634664352177, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: -5574664540720871692, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &1272352401
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10434,6 +10442,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: 4072175799264311422, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: 664367831154467434, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &1464931408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10752,6 +10761,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: -5456465237590833269, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: -3632977876487991104, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &1664744541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10871,6 +10881,7 @@ MonoBehaviour:
   - {fileID: 1664744538}
   - {fileID: 1272352398}
   levelName: Menu
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!4 &1831145602
 Transform:
   m_ObjectHideFlags: 0
@@ -11019,6 +11030,7 @@ MonoBehaviour:
   locked_selected: {fileID: -7952083620994614149, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked: {fileID: 6327231587018487895, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
   unlocked_selected: {fileID: -3427861369553141521, guid: 90000cda8ecc8da4dafd3f878ac3a822, type: 3}
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &2052495141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11112,7 +11124,7 @@ GameObject:
   - component: {fileID: 2110498953}
   - component: {fileID: 2110498952}
   m_Layer: 10
-  m_Name: Player_selector
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

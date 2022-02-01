@@ -18,37 +18,46 @@ public enum nameState{
 
 public class Level_controller : MonoBehaviour
 {
-    Dictionary<nameState, string> translation = new Dictionary<nameState, string>(){
-        {nameState.Level_0, "Level_0"},
-        {nameState.Level_1, "Level_1"},
-        {nameState.Level_2, "Level_2"},
-        {nameState.Level_3, "Level_3"},
-        {nameState.Level_4, "Level_4"},
-        {nameState.Level_5, "Level_5"},
-        {nameState.Level_6, "Level_6"},
-        {nameState.Level_7, "Level_7"},
-        {nameState.Level_8, "Level_8"},
-        {nameState.Level_9, "Level_9"},
-        {nameState.Level_10, "Level_10"},
+    Dictionary<nameState, int> translation = new Dictionary<nameState, int>(){
+        {nameState.Level_0, 0},
+        {nameState.Level_1, 1},
+        {nameState.Level_2, 2},
+        {nameState.Level_3, 3},
+        {nameState.Level_4, 4},
+        {nameState.Level_5, 5},
+        {nameState.Level_6, 6},
+        {nameState.Level_7, 7},
+        {nameState.Level_8, 8},
+        {nameState.Level_9, 9},
+        {nameState.Level_10, 10},
     };
-
 
     [Header ("Select")]
     [SerializeField] private GameObject manager;
     public nameState name;
     public bool Locked = true;
+    private string level;
+
     [Header ("Appearance")]
     [SerializeField] private Sprite locked;
     [SerializeField] private Sprite locked_selected;
     [SerializeField] private Sprite unlocked;
     [SerializeField] private Sprite unlocked_selected;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage dataStorage;
+
     private SpriteRenderer pic;
 
     private void Awake()
     {
-        pic = GetComponent<SpriteRenderer>();
+        //  locked/unlocked
+        Locked = true;
+        if (translation[name] <= dataStorage.levelsUnlocked)
+            Locked = false;
 
+        //  visualization
+        pic = GetComponent<SpriteRenderer>();
         if (Locked == true)
         {
             pic.sprite = locked;
@@ -61,14 +70,17 @@ public class Level_controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        manager.GetComponent<LevelSelector>().Select(translation[name]);
+        level = "Level_" + translation[name].ToString();
+        manager.GetComponent<LevelSelector>().Select(level, Locked);
     }
 
     public void Change(string _name)
     {
+        level = "Level_" + translation[name].ToString();
+
         if (Locked == true)
         {
-            if(_name == translation[name])
+            if(_name == level)
             {
                 pic.sprite = locked_selected;
             } else
@@ -78,7 +90,7 @@ public class Level_controller : MonoBehaviour
 
         } else if (Locked == false)
         {
-            if(_name == translation[name])
+            if(_name == level)
             {
                 pic.sprite = unlocked_selected;
             } else
