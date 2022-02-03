@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Energy_fireball : MonoBehaviour
 {
+    [Header ("Properities")]
     [SerializeField] private float speed;
+    [SerializeField] public int damage;
     private float direction;
     private bool hit;
     private float lifeTime;
@@ -28,7 +30,7 @@ public class Energy_fireball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Doors_interface"))
+        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Doors_interface") && (collision.tag != "Barrier"))
         {
             hit = true;
             BoxCollider.enabled = false;

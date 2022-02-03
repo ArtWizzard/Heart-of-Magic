@@ -9,16 +9,36 @@ public class Barrier : MonoBehaviour
 
     [Header ("Properities")]
     [SerializeField] private float duration;
+    [SerializeField] public int damage;
+    [SerializeField] private float damageFrequency;
+    private float actualFTime = Mathf.Infinity;
     private float actualTime = Mathf.Infinity;
+
+    private CircleCollider2D circleCollider;
+
+    private void Awake()
+    {
+         circleCollider = GetComponent<CircleCollider2D>();
+    }
 
     private void Update()
     {
-        transform.position = target.position;
-        if (duration < actualTime && gameObject.activeInHierarchy)
+        if (gameObject.activeInHierarchy)
         {
-            DestroyBarrier();
+            transform.position = target.position;
+            if (duration < actualTime)
+            {
+                DestroyBarrier();
+            }
+            actualTime += Time.deltaTime;
+
+            if (actualFTime > damageFrequency)
+            {
+                actualFTime = 0;
+                circleCollider.enabled = !circleCollider.enabled;
+            }
+            actualFTime += Time.deltaTime;
         }
-        actualTime += Time.deltaTime;
     }
 
     public void SetBarrier()

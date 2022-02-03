@@ -35,7 +35,7 @@ public class Player_health : MonoBehaviour
             {
                 currentHealth = 0;
                 //dead = true;
-                Debug.Log("Current health: " + currentHealth.ToString());
+                //Debug.Log("Current health: " + currentHealth.ToString());
                 FindObjectOfType<LevelManager>().Respawn();
             }
         StartCoroutine(Invunerability());

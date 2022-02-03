@@ -27,19 +27,32 @@ public class Ghost : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Debug.Log(collision.tag);
+        //GameObject other = collision.gameObject;
+
         if(collision.tag == "Player")
         {
             collision.GetComponent<Player_health>().TakeDamage(damage);
-            // Debug.Log("hit");
         }
-        else if (collision.tag == "Projectile")
+        else if (collision.tag == "Energy_ball")
         {
-            //FindObjectOfType<Enemy_health>().TakeHit(1);
-            health.TakeHit(1);
-            //Debug.Log("Hit projectile");
+            health.TakeHit(collision.GetComponent<Energy_fireball>().damage);
         }
+        else if (collision.tag == "Artilery_ball")
+        {
+            health.TakeHit(collision.GetComponent<Bomb_artilery>().damage);
+        }
+        else if (collision.tag == "Barrier")
+        {
+            health.TakeHit(collision.GetComponent<Barrier>().damage);
+        }
+
     }
+/*
+    private void OnTriggerStay2D(Collider2D collision) 
+     {
+         if (collision.tag == "Barrier")    
+            health.TakeHit(collision.GetComponent<Barrier>().damage);     
+     }*/
 
     public void ReSpawn()
     {

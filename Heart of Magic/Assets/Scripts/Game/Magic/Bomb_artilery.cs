@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bomb_artilery : MonoBehaviour
 {
+    [Header ("Properities")]
     [SerializeField] private float power;
     [SerializeField] private float up;
-    //[SerializeField] private float power;
+    [SerializeField] public int damage;
+
     private float direction; // right or left
     private bool hit;
     private float lifeTime;
@@ -37,7 +39,7 @@ public class Bomb_artilery : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Projectile") && (collision.tag != "Doors_interface"))
+        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Artilery_ball") && (collision.tag != "Doors_interface") && (collision.tag != "Barrier"))
         {
             hit = true;
             cCollider.enabled = false;
