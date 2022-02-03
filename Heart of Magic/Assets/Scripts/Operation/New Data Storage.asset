@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98cf39799ed642c4386ca3d762822292, type: 3}
   m_Name: New Data Storage
   m_EditorClassIdentifier: 
-  runesAmmount: 3
+  runesAmmount: 6
   levelsUnlocked: 1
+  maxHealth: 0
+  maxSpeed: 0
+  energyBallDamage: 0

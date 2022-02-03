@@ -9,15 +9,15 @@ public class Grave : MonoBehaviour
     [SerializeField] private float SpawnInterval;
     [Header ("Properities")]
     [SerializeField] private Enemy_health health;
-    
+
+
+    public bool playerInRagne = false;
     private float delayTime;
-
-
 
 
     private void Update()
     {
-        if (SpawnInterval < delayTime)
+        if ((SpawnInterval < delayTime) && playerInRagne)
         {
             delayTime = 0;
             // Ghosts pooling
@@ -28,12 +28,28 @@ public class Grave : MonoBehaviour
         delayTime += Time.deltaTime;
     }
 
+/*
+    private void OnTriggerStay2D(Collider2D collision) 
+     {
+         if (collision.tag == "Barrier")    
+            health.TakeHit(collision.GetComponent<Barrier>().damage);     
+     }*/
+/*
+    private void OnTriggerExit2D(Collider2D collision) 
+     {
+        if (collision.tag == "Player")
+            playerInRagne = false;
+     }*/
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Projectile")
         {
             health.TakeHit(1);
         }
+/*
+        if (collision.tag == "Player")
+            playerInRagne = true;*/
     }
 
     private int FindActiveGhost()

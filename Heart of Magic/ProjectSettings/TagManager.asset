@@ -11,6 +11,7 @@ TagManager:
   - Energy_ball
   - Artilery_ball
   - Barrier
+  - Area
   layers:
   - Default
   - TransparentFX

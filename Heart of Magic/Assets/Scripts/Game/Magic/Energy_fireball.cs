@@ -8,6 +8,7 @@ public class Energy_fireball : MonoBehaviour
     private float direction;
     private bool hit;
     private float lifeTime;
+    private bool hitLogic;
 
     private BoxCollider2D BoxCollider;
     private Animator anim;
@@ -30,7 +31,14 @@ public class Energy_fireball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Doors_interface") && (collision.tag != "Barrier"))
+        hitLogic =  (collision.tag != "Player") && 
+                    (collision.tag != "Item") && 
+                    (collision.tag != "Doors_interface") && 
+                    (collision.tag != "Barrier") &&
+                    (collision.tag != "Decoration") &&
+                    (collision.tag != "Area");
+
+        if(hitLogic)
         {
             hit = true;
             BoxCollider.enabled = false;

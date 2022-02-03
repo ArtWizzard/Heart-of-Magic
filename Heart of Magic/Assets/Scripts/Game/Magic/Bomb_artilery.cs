@@ -15,6 +15,7 @@ public class Bomb_artilery : MonoBehaviour
     private float rndUp;
     private float rndPower;
     private float rndSpeed;
+    private bool hitLogic;
 
     private CircleCollider2D cCollider;
     private Animator anim;
@@ -39,7 +40,15 @@ public class Bomb_artilery : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((collision.tag != "Player") && (collision.tag != "Item") && (collision.tag != "Artilery_ball") && (collision.tag != "Doors_interface") && (collision.tag != "Barrier"))
+        hitLogic =  (collision.tag != "Player") && 
+                    (collision.tag != "Item") && 
+                    (collision.tag != "Artilery_ball") && 
+                    (collision.tag != "Doors_interface") && 
+                    (collision.tag != "Barrier") &&
+                    (collision.tag != "Decoration") &&
+                    (collision.tag != "Area");
+
+        if(hitLogic)
         {
             hit = true;
             cCollider.enabled = false;

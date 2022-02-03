@@ -47,12 +47,6 @@ public class Ghost : MonoBehaviour
         }
 
     }
-/*
-    private void OnTriggerStay2D(Collider2D collision) 
-     {
-         if (collision.tag == "Barrier")    
-            health.TakeHit(collision.GetComponent<Barrier>().damage);     
-     }*/
 
     public void ReSpawn()
     {
