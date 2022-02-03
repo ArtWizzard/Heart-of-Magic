@@ -8,6 +8,9 @@ TagManager:
   - Item
   - Doors
   - Doors_interface
+  - Energy_ball
+  - Artilery_ball
+  - Barrier
   layers:
   - Default
   - TransparentFX
