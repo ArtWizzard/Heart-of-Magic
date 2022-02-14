@@ -40,16 +40,36 @@ public class Grave : MonoBehaviour
         if (collision.tag == "Player")
             playerInRagne = false;
      }*/
-
+/*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Projectile")
         {
             health.TakeHit(1);
         }
-/*
+
         if (collision.tag == "Player")
-            playerInRagne = true;*/
+            playerInRagne = true;
+    }*/
+
+
+        private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //GameObject other = collision.gameObject;
+
+        if (collision.tag == "Energy_ball")
+        {
+            health.TakeHit(collision.GetComponent<Energy_fireball>().damage);
+        }
+        else if (collision.tag == "Artilery_ball")
+        {
+            health.TakeHit(collision.GetComponent<Bomb_artilery>().damage);
+        }
+        else if (collision.tag == "Barrier")
+        {
+            health.TakeHit(collision.GetComponent<Barrier>().damage);
+        }
+
     }
 
     private int FindActiveGhost()

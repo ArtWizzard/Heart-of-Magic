@@ -39,24 +39,27 @@ public class Player_attack : MonoBehaviour
         {
             switch (Input.inputString)
             {
-                case "5":
+                case "q":
                     SetAttack();
-                    energy = true;
+                    //energy = true;
+                    Attack();
                     break;
 
-                case "8":
+                case "w":
                     //Artilery();
                     SetAttack();
-                    bomb = true;
+                    Artilery();
+                    //bomb = true;
                     break;
-                case "2":
+                case "e":
                     SetAttack();
-                    barrier = true;
+                    SetBarrier();
+                    //barrier = true;
                     break;
             }
         }
         cooldownTimer += Time.deltaTime;
-        
+        /*
         if(DelayTimer > magicDelay)
         {
             if(energy)
@@ -69,13 +72,13 @@ public class Player_attack : MonoBehaviour
         else
         {
             DelayTimer += Time.deltaTime;
-        }
+        }*/
 
     }
 
     private void SetAttack()
     {
-        DelayTimer = 0;
+        //DelayTimer = 0;
         anim.SetTrigger("attack");
     }
 
