@@ -42,7 +42,7 @@ public class Bomb_artilery : MonoBehaviour
     {
         hitLogic =  (collision.tag != "Player") && 
                     (collision.tag != "Item") && 
-                    (collision.tag != "Artilery_ball") && 
+                    (collision.tag != "Artilery_ball") && // !!!! tohle
                     (collision.tag != "Doors_interface") && 
                     (collision.tag != "Barrier") &&
                     (collision.tag != "Decoration") &&
