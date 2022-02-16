@@ -517,6 +517,8 @@ MonoBehaviour:
   IM: {fileID: 519685538}
   type: 1
   value: 1
+  dRate: 70
+  dataStorage: {fileID: 0}
 --- !u!58 &404248672
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16588,6 +16590,10 @@ PrefabInstance:
       propertyPath: IM
       value: 
       objectReference: {fileID: 519685538}
+    - target: {fileID: 7227820772538516403, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
+      propertyPath: dRate
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7227820772538516406, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -16834,6 +16840,10 @@ PrefabInstance:
       propertyPath: IM
       value: 
       objectReference: {fileID: 519685538}
+    - target: {fileID: 8041193737449226627, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
+      propertyPath: dRate
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
 --- !u!1001 &8347613797368149661

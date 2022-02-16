@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndOfLevel : MonoBehaviour
 {
     [Header ("Informations")]
-    [SerializeField] private int currentLevel;
+    public int currentLevel;
 
     [Header ("Storage to update")]
     [SerializeField] private DataStorage dataStorage;

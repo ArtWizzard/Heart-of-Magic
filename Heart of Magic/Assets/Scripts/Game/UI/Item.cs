@@ -13,10 +13,28 @@ public class Item : MonoBehaviour
     private CircleCollider2D CircleCollider;
     private bool taken = false;
     private string item_type;
-
+    [Header("Droprate [%]")]
+    [SerializeField] private int dRate = 0;
+    private int reduced = 1;    //  1 - normální drop-rate, 2 - poloviční drop-rate
+    [Header("Storages")]
+    [SerializeField] private DataStorage dataStorage;
+    private bool lvlCleared;
+    
     public enum ItemType{
         Key,
         Rune
+    }
+ 
+    private void Awake()
+    {
+        lvlCleared = GameObject.Find("End").GetComponent<EndOfLevel>().currentLevel < dataStorage.levelsUnlocked;
+        //  Random.Range(0,10);     //  int from 0 to 9
+
+        if(lvlCleared)
+            reduced = 2;
+
+        if(Random.Range(0,100)*reduced >= dRate)
+            gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

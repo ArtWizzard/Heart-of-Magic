@@ -170,6 +170,7 @@ MonoBehaviour:
   IM: {fileID: 0}
   type: 1
   value: 1
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &8041193737449226636
 MonoBehaviour:
   m_ObjectHideFlags: 0
