@@ -13,9 +13,14 @@ public class LevelSelector : MonoBehaviour
     private int activeLevels;
     private bool lockedLevel;
 
+    [Header ("Player settings")]
+    [SerializeField] private Transform spawn;
+    [SerializeField] private GameObject player;
+
     private void Awake()
     {
         activeLevels = dataStorage.levelsUnlocked;
+        player.transform.position = spawn.position;
     }
 
     private void Update()

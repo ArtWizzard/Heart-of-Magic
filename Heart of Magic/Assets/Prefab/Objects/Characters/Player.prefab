@@ -246,6 +246,7 @@ MonoBehaviour:
   currentHealth: 100
   iFrameDuration: 1.5
   numberOfFlashes: 3
+  dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
   health_bar: {fileID: 0}
 --- !u!95 &6304797600368014121
 Animator:

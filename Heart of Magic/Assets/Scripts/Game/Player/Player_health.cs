@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player_health : MonoBehaviour
 {
     [Header ("Health")]
-    [SerializeField] private int maxtHealth = 100;
-    [SerializeField] private int startHealth = 100;
+    private int maxtHealth;
     public int currentHealth;
     //private bool dead;
 
@@ -15,6 +14,10 @@ public class Player_health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
 
+    [Header("Storages")]
+    [SerializeField] private DataStorage dataStorage;
+    
+    [Header("References")]
     public Health_bar health_bar;
 
     void Start()
@@ -25,8 +28,8 @@ public class Player_health : MonoBehaviour
     
     public void ResetHealth()
     {
-        currentHealth = startHealth;
-        health_bar.SetMaxHealth(maxtHealth); 
+        currentHealth = dataStorage.maxHealth;
+        health_bar.SetMaxHealth(dataStorage.maxHealth); 
     }
     public void TakeDamage(int _damage)
     {
