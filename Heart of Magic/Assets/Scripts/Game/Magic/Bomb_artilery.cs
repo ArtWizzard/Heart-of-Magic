@@ -46,7 +46,8 @@ public class Bomb_artilery : MonoBehaviour
                     (collision.tag != "Doors_interface") && 
                     (collision.tag != "Barrier") &&
                     (collision.tag != "Decoration") &&
-                    (collision.tag != "Area");
+                    (collision.tag != "Area") &&
+                    (collision.tag != "Dialogue");
 
         if(hitLogic)
         {

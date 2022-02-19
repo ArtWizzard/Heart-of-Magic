@@ -12,6 +12,7 @@ TagManager:
   - Artilery_ball
   - Barrier
   - Area
+  - Dialogue
   layers:
   - Default
   - TransparentFX

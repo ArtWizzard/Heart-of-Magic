@@ -12769,12 +12769,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5123074
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5123074
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.5123074
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.8652
+      value: 24.33
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.348
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12786,15 +12798,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010600, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12811,6 +12823,14 @@ PrefabInstance:
     - target: {fileID: 3802473163867010601, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: m_Name
       value: Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802473163867010602, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802473163867010602, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
+      propertyPath: m_Size.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3802473163867010603, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
       propertyPath: target

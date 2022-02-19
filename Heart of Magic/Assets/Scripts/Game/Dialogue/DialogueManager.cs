@@ -13,14 +13,25 @@ public class DialogueManager : MonoBehaviour
     
     public Animator animator;
 
+    public bool isRunning;
+
 
     void Start()
     {
         sentences = new Queue<string>();
     }
 
+    private void Update()
+    {
+        
+        if(isRunning)
+            if(Input.GetKeyDown(KeyCode.Space))
+                DisplayNextSentence();
+    }
+
     public void StartDialogue (Dialogue dialogue)
     {
+        isRunning = true;
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name; 
         //Debug.Log("starting conversation with: " + dialogue.name);
@@ -61,6 +72,7 @@ public class DialogueManager : MonoBehaviour
     {
         //Debug.Log("End of dialogue");
         animator.SetBool("IsOpen", false);
+        isRunning = false;
     }
 
 }

@@ -11,6 +11,9 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private GameObject[] energyballs;
     [SerializeField] private GameObject[] bombsartilery;
     [SerializeField] private GameObject[] barriers;
+    [SerializeField] private GameObject[] beams;
+    [SerializeField] private float deltaYBeam;
+    [SerializeField] private float deltaXBeam;
 
     private Animator anim;
     private Player_movement playerMovement;
@@ -56,6 +59,11 @@ public class Player_attack : MonoBehaviour
                     SetBarrier();
                     //barrier = true;
                     break;
+                case "r":
+                    SetAttack();
+                    SetBeam();
+                    //beam = true;
+                    break;
             }
         }
         cooldownTimer += Time.deltaTime;
@@ -78,7 +86,6 @@ public class Player_attack : MonoBehaviour
 
     private void SetAttack()
     {
-        //DelayTimer = 0;
         anim.SetTrigger("attack");
     }
 
@@ -86,7 +93,7 @@ public class Player_attack : MonoBehaviour
     private void Attack()
     {
         cooldownTimer = 0;
-        energy = false;
+        //energy = false;
         //Pool fireballs
         energyballs[FindEnergyballs()].transform.position = firePoint.position;
         energyballs[FindEnergyballs()].GetComponent<Energy_fireball>().SetDirection(Mathf.Sign(transform.localScale.x));
@@ -107,7 +114,7 @@ public class Player_attack : MonoBehaviour
     private void Artilery()
     {
         cooldownTimer = 0;
-        bomb = false;
+        //bomb = false;
 
         //Bombs inactive
         if(BombsExploded())
@@ -135,8 +142,23 @@ public class Player_attack : MonoBehaviour
     private void SetBarrier()
     {
         cooldownTimer = 0;
-        barrier = false;
+        //barrier = false;
         //Set barrier
         barriers[0].GetComponent<Barrier>().SetBarrier();
+    }
+//------------------------------Beam
+    private void SetBeam()
+    {
+        cooldownTimer = 0;
+        beams[0].transform.localScale = transform.localScale; //new Vector3(-1, 1, 1);
+        
+        Vector3 beamDir;
+        if(transform.localScale.x < 0)
+            beamDir = new Vector3(firePoint.position.x - deltaXBeam, firePoint.position.y + deltaYBeam, firePoint.position.z);
+        else
+            beamDir = new Vector3(firePoint.position.x + deltaXBeam, firePoint.position.y + deltaYBeam, firePoint.position.z);
+
+        beams[0].transform.position = beamDir;
+        beams[0].GetComponent<Beam>().Shoot();
     }
 } // -------------------------- closing class
