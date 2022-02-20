@@ -40,7 +40,6 @@ public class Ghost : MonoBehaviour
         else if (collision.tag == "Artilery_ball")
         {
             health.TakeHit(collision.GetComponent<Bomb_artilery>().damage);
-            Debug.Log("hit");
         }
         else if (collision.tag == "Barrier")
         {

@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Projectile
   - Item
   - Doors
   - Doors_interface
@@ -13,6 +12,9 @@ TagManager:
   - Barrier
   - Area
   - Dialogue
+  - Enemy_project_fire
+  - Enemy_project_poison
+  - Enemy
   layers:
   - Default
   - TransparentFX

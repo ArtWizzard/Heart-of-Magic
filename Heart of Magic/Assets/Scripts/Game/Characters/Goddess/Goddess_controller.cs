@@ -10,6 +10,7 @@ public class Goddess_controller : MonoBehaviour
     [SerializeField] private DialogueManager DM;
     private Transform child;
     private int childCount;
+    private int direction;
 
     private bool dialogueRuns = false;
     private int i = 0;
@@ -27,26 +28,27 @@ public class Goddess_controller : MonoBehaviour
             {
                 if (i < childCount)         //  je potřeba něco říct
                 {
-                    //  dialogueHolders.Length
-                    //  dialogueHolders[i].GetComponent<DialogueTrigger>().TriggerDialogue();
                     child = transform.GetChild(i);
                     child.GetComponent<DialogueTrigger>().TriggerDialogue();
                     i ++;
                 } else {
                     dialogueRuns = false;   //  není - skonči
                     i = 0;
-                    goddess.SetActive(false);
+                    goddess.GetComponent<Goddess_teleportation>().HideGoddess();
                 }
             }
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
-            goddess.SetActive(true);
-            goddess.transform.position = gameObject.transform.position;
+            if (collision.transform.position.x < transform.position.x)
+                direction = -1;
+            else
+                direction = 1;
+
+            goddess.GetComponent<Goddess_teleportation>().ShowGoddess(transform, direction);
             dialogueRuns = true;
 
         //  gameObject.GetComponent<ScriptName>().variable

@@ -40,7 +40,7 @@ public class Pillar_controller : MonoBehaviour
     {
         pic = GetComponent<SpriteRenderer>();
         pic.sprite = def;
-        child.SetInteger("atribut", translation[atribut]);
+        //child.SetInteger("atribut", translation[atribut]);
     }
 
     private void Update()

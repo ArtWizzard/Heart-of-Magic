@@ -39,6 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6304797600368014120}
+  - component: {fileID: 8133429598093889086}
   - component: {fileID: 6304797600368014119}
   - component: {fileID: 6304797600368014123}
   - component: {fileID: 6304797600368014117}
@@ -69,6 +70,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &8133429598093889086
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6304797600368014115}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: bec558f3d13d65e40a0db54f46161270, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0011175275, y: 0.32}
+  m_Size: {x: 0.6620054, y: 0.6999999}
+  m_Direction: 0
 --- !u!61 &6304797600368014119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0008432269, y: 0.16369805}
+  m_Offset: {x: 0, y: -0.0026071668}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -93,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6819676, y: 0.9827693}
+  m_Size: {x: 0.6516757, y: 0.6501589}
   m_EdgeRadius: 0
 --- !u!58 &6304797600368014123
 CircleCollider2D:
@@ -108,9 +125,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.33}
+  m_Offset: {x: 0, y: -0.34759218}
   serializedVersion: 2
-  m_Radius: 0.34304252
+  m_Radius: 0.32984525
 --- !u!212 &6304797600368014117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -229,6 +246,9 @@ MonoBehaviour:
   - {fileID: 0}
   barriers:
   - {fileID: 0}
+  beams: []
+  deltaYBeam: 0
+  deltaXBeam: 0
 --- !u!114 &6304797600368014124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,8 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42007ec0ac634fe44aeb55dc268d0073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxtHealth: 100
-  startHealth: 100
   currentHealth: 100
   iFrameDuration: 1.5
   numberOfFlashes: 3
