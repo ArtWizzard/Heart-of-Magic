@@ -31,13 +31,8 @@ public class Energy_fireball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hitLogic =  (collision.tag != "Player") && 
-                    (collision.tag != "Item") && 
-                    (collision.tag != "Doors_interface") && 
-                    (collision.tag != "Barrier") &&
-                    (collision.tag != "Decoration") &&
-                    (collision.tag != "Area") &&
-                    (collision.tag != "Dialogue");
+        hitLogic =  (collision.tag == "Ground") ||
+                    (collision.tag == "Enemy");
 
         if(hitLogic)
         {

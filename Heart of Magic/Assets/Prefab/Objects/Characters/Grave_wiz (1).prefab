@@ -243,7 +243,6 @@ MonoBehaviour:
   aim: {fileID: 0}
   shootingPeriod: 0
   firePoint: {fileID: 4615678614946578141}
-  speed: 0
 --- !u!1 &7816561915974733065
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +258,7 @@ GameObject:
   - component: {fileID: 7816561915974733060}
   m_Layer: 0
   m_Name: Grave_wiz (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

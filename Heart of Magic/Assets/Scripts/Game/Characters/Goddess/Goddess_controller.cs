@@ -43,6 +43,7 @@ public class Goddess_controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
+        {
             if (collision.transform.position.x < transform.position.x)
                 direction = -1;
             else
@@ -50,7 +51,7 @@ public class Goddess_controller : MonoBehaviour
 
             goddess.GetComponent<Goddess_teleportation>().ShowGoddess(transform, direction);
             dialogueRuns = true;
-
+        }
         //  gameObject.GetComponent<ScriptName>().variable
         //  player.transform.position = respawnPoint.position;
         //  player.SetActive(false);  

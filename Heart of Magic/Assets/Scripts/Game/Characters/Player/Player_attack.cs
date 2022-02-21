@@ -7,6 +7,11 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float magicDelay;
+    [SerializeField] private Mana_bar mana_controller;
+    [SerializeField] private int energyCost;
+    [SerializeField] private int earthCost;
+    [SerializeField] private int barrierCost;
+    [SerializeField] private int beamCost;
     [Header ("Magic objects")]
     [SerializeField] private GameObject[] energyballs;
     [SerializeField] private GameObject[] bombsartilery;
@@ -43,26 +48,20 @@ public class Player_attack : MonoBehaviour
             switch (Input.inputString)
             {
                 case "q":
-                    SetAttack();
-                    //energy = true;
-                    Attack();
+                    if (SetAttack(energyCost))
+                        Attack();
                     break;
-
                 case "w":
-                    //Artilery();
-                    SetAttack();
-                    Artilery();
-                    //bomb = true;
+                    if (SetAttack(earthCost))
+                        Artilery();
                     break;
                 case "e":
-                    SetAttack();
-                    SetBarrier();
-                    //barrier = true;
+                    if (SetAttack(barrierCost))
+                        SetBarrier();
                     break;
                 case "r":
-                    SetAttack();
-                    SetBeam();
-                    //beam = true;
+                    if (SetAttack(beamCost))
+                        SetBeam();
                     break;
             }
         }
@@ -84,9 +83,10 @@ public class Player_attack : MonoBehaviour
 
     }
 
-    private void SetAttack()
+    private bool SetAttack(int _cost)
     {
         anim.SetTrigger("attack");
+        return mana_controller.SpendMana(_cost);
     }
 
 //------------------------------Energy ball
