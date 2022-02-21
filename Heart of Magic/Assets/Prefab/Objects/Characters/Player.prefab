@@ -165,9 +165,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: -452446263
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e98fc51d394086f4c953661edca4d181, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -232,6 +232,11 @@ MonoBehaviour:
   attackCooldown: 0.3
   firePoint: {fileID: 6304797599235626244}
   magicDelay: 0.2
+  mana_controller: {fileID: 0}
+  energyCost: 5
+  earthCost: 10
+  barrierCost: 20
+  beamCost: 50
   energyballs:
   - {fileID: 0}
   - {fileID: 0}
@@ -248,7 +253,8 @@ MonoBehaviour:
   - {fileID: 0}
   beams: []
   deltaYBeam: 0
-  deltaXBeam: 0
+  deltaXBeam: 3
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &6304797600368014124
 MonoBehaviour:
   m_ObjectHideFlags: 0

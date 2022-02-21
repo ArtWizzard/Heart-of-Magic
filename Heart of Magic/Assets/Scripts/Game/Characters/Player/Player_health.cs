@@ -41,8 +41,9 @@ public class Player_health : MonoBehaviour
                 //Debug.Log("Current health: " + currentHealth.ToString());
                 FindObjectOfType<LevelManager>().Respawn();
             }
-        StartCoroutine(Invunerability());
 
+        StartCoroutine(Invunerability());
+        SoundManager.PlaySound("wizzard_hit");
         health_bar.SetHealth(currentHealth);
     }
 

@@ -17,7 +17,7 @@ public class Goddess_controller : MonoBehaviour
 
     private void Awake()
     {
-        childCount = transform.childCount;
+        childCount = transform.childCount - 2;
     }
 
     private void Update()
@@ -30,6 +30,7 @@ public class Goddess_controller : MonoBehaviour
                 {
                     child = transform.GetChild(i);
                     child.GetComponent<DialogueTrigger>().TriggerDialogue();
+                    child.GetComponent<SoundTrigger>().StartDialogue();
                     i ++;
                 } else {
                     dialogueRuns = false;   //  není - skonči

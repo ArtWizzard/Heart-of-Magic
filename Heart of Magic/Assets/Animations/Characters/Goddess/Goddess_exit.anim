@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Goddess_entry
+  m_Name: Goddess_exit
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,23 +21,23 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 3911763735520675852, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 0.13333334
+    - time: 0.16666667
       value: {fileID: -1436500064320731867, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 0.26666668
+    - time: 0.33333334
       value: {fileID: 1754026059101257400, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 0.4
+    - time: 0.5
       value: {fileID: -2875379149071749778, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 0.53333336
+    - time: 0.6666667
       value: {fileID: 3388361628876228320, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 0.65
+    - time: 0.8333333
       value: {fileID: -1338994110116042559, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 0.76666665
+    - time: 1
       value: {fileID: 6005678030554219421, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 0.9
-      value: {fileID: -830936044089428580, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - time: 1.0333333
-      value: {fileID: 1774520005232737023, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - time: 1.1666666
+      value: {fileID: -830936044089428580, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
+    - time: 1.3333334
+      value: {fileID: 1774520005232737023, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
+    - time: 1.5
       value: {fileID: 4813670754897799884, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     attribute: m_Sprite
     path: 
@@ -73,12 +73,12 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1833333
+    m_StopTime: 1.5166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -93,8 +93,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.1666666
-    functionName: SetFloating
+  - time: 0
+    functionName: UnsetFloating
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.5
+    functionName: Deactivate
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

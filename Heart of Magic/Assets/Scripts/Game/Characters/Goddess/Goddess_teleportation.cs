@@ -5,41 +5,31 @@ using UnityEngine;
 public class Goddess_teleportation : MonoBehaviour
 {
     private Animator anim;
-    private bool deactivateProcess;
-    private float stayTime = 1.5f;
-    private float actualTime = 0;
+    public bool active;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (deactivateProcess)
-        {
-            if (actualTime > stayTime)
-            {
-                gameObject.SetActive(false);
-                deactivateProcess = false;
-            }
-            actualTime += Time.deltaTime;
-        }
-    }
-
     public void ShowGoddess(Transform _place, int _direction)
     {
+        gameObject.SetActive(true);
         transform.position = _place.position;
         transform.localScale = new Vector3(_direction, 1, 1);
-        gameObject.SetActive(true);
         anim.SetBool("Visible", true);
+        active = true;
     }
 
     public void HideGoddess()
     {
         anim.SetBool("Visible", false);
-        //gameObject.SetActive(false);
-        deactivateProcess = true;
-        actualTime = 0;
+        
+        active = false;
+    }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }

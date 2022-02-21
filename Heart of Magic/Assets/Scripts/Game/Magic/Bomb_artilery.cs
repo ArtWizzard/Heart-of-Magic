@@ -25,7 +25,7 @@ public class Bomb_artilery : MonoBehaviour
     {
         cCollider = GetComponent<CircleCollider2D>();
         body = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
     
     private void Update()
@@ -47,8 +47,8 @@ public class Bomb_artilery : MonoBehaviour
         {
             hit = true;
             cCollider.enabled = false;
-            gameObject.SetActive(false);
-            //  anim.SetTrigger("explode");
+            //gameObject.SetActive(false);
+            anim.SetTrigger("explode");
         }
     }
 

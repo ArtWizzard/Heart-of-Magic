@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5612110375556996700}
   - component: {fileID: 5612110375556996699}
   - component: {fileID: 2209430638221263266}
+  - component: {fileID: 1362945127829594641}
   m_Layer: 0
   m_Name: Goddess
   m_TagString: Untagged
@@ -70,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -452446263
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 6637213405030967536, guid: 6706a286b3b425047b3708197f78d15f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,3 +116,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc428b93428ac55429b0a0d67134ca29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+--- !u!114 &1362945127829594641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5612110375556996697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6522ed578435f5042b5c2d1b4f8dcb2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.3
+  frequency: 0.5
+  movTime: -0.5

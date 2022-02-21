@@ -31,11 +31,7 @@ public class Mana_bar : MonoBehaviour
 
         Rect uvRect = barRawImage.uvRect;
         uvRect.x += animSpeed * Time.deltaTime;
-        barRawImage.uvRect = uvRect;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            if (SpendMana(30))
-                Debug.Log("works");
+        barRawImage.uvRect = uvRect;;
     }
 
     public void SetMaxMana(int _mana)
