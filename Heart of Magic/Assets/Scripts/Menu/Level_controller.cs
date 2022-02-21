@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum nameState{
     Level_0,
@@ -33,10 +34,11 @@ public class Level_controller : MonoBehaviour
     };
 
     [Header ("Select")]
-    [SerializeField] private GameObject manager;
+    [SerializeField] private LevelSelector manager;
     public nameState name;
     public bool Locked = true;
     private string level;
+    private bool chosen = false;
 
     [Header ("Appearance")]
     [SerializeField] private Sprite locked;
@@ -51,6 +53,9 @@ public class Level_controller : MonoBehaviour
 
     private void Awake()
     {
+        Locked = (dataStorage.levelsUnlocked >= translation[name]);
+        level = "Level_" + translation[name].ToString();
+
         //  locked/unlocked
         Locked = true;
         if (translation[name] <= dataStorage.levelsUnlocked)
@@ -67,20 +72,35 @@ public class Level_controller : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && chosen)       // Výběr kola
+        {
+            //Debug.Log(Locked);
+
+            if (!Locked)               // odemčen
+                SceneManager.LoadScene(level);
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        level = "Level_" + translation[name].ToString();
-        manager.GetComponent<LevelSelector>().Select(level, Locked);
+        chosen = true;
+        Change();
     }
 
-    public void Change(string _name)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        level = "Level_" + translation[name].ToString();
+        chosen = false;
+        Change();
+    }
 
+    public void Change()
+    {
         if (Locked == true)
         {
-            if(_name == level)
+            if(chosen)
             {
                 pic.sprite = locked_selected;
             } else
@@ -90,7 +110,7 @@ public class Level_controller : MonoBehaviour
 
         } else if (Locked == false)
         {
-            if(_name == level)
+            if(chosen)
             {
                 pic.sprite = unlocked_selected;
             } else

@@ -17615,6 +17615,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6304797600368014122, guid: 44744fd566cfac24c8b3c714ab7684df, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 6304797600368014122, guid: 44744fd566cfac24c8b3c714ab7684df, type: 3}
       propertyPath: beamCost
       value: 50
       objectReference: {fileID: 0}

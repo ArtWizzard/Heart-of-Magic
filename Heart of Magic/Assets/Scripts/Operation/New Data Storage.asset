@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98cf39799ed642c4386ca3d762822292, type: 3}
   m_Name: New Data Storage
   m_EditorClassIdentifier: 
-  runesAmmount: 12
-  keysAmmount: 2
-  levelsUnlocked: 2
-  maxHealth: 200
-  maxMana: 200
-  manaRegen: 30
-  energyBallDamage: 0
-  earthBallDamage: 0
-  barrierDuration: 0
-  beamDamage: 0
+  runesAmmount: 1
+  keysAmmount: 0
+  levelsUnlocked: 0
+  energyUnlocked: 0
+  earthUnlocked: 1
+  barrierUnlocked: 0
+  beamUnlocked: 0
+  maxHealth: 100
+  maxMana: 50
+  manaRegen: 5
+  energyBallDamage: 9
+  earthBallDamage: 4
+  barrierDuration: 1
+  beamDamage: 10
+  started: 1

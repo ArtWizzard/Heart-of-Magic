@@ -17,13 +17,20 @@ public class Monk_controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isIn = true;
-        hint.SetActive(true);
+        if (collision.tag == "Player")
+        {
+            isIn = true;
+            hint.SetActive(true);
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isIn = false;
-        hint.SetActive(false);
+        if (collision.tag == "Player")
+        {
+            isIn = false;
+            hint.SetActive(false);
+        }
     }
 }

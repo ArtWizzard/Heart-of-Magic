@@ -9,6 +9,6 @@ public class ExitSelector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        manager.GetComponent<LevelSelector>().LoadLevel("Menu");
+        SceneManager.LoadScene("Menu");
     }
 }

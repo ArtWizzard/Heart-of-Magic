@@ -7,6 +7,7 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float magicDelay;
+    [Header ("Mana management")]
     [SerializeField] private Mana_bar mana_controller;
     [SerializeField] private int energyCost;
     [SerializeField] private int earthCost;
@@ -19,6 +20,8 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private GameObject[] beams;
     [SerializeField] private float deltaYBeam;
     [SerializeField] private float deltaXBeam;
+    [Header ("Data storage")]
+    [SerializeField] private DataStorage storage;
 
     private Animator anim;
     private Player_movement playerMovement;
@@ -48,19 +51,19 @@ public class Player_attack : MonoBehaviour
             switch (Input.inputString)
             {
                 case "q":
-                    if (SetAttack(energyCost))
+                    if (SetAttack(energyCost, storage.energyUnlocked))
                         Attack();
                     break;
                 case "w":
-                    if (SetAttack(earthCost))
+                    if (SetAttack(earthCost, storage.earthUnlocked))
                         Artilery();
                     break;
                 case "e":
-                    if (SetAttack(barrierCost))
+                    if (SetAttack(barrierCost, storage.barrierUnlocked))
                         SetBarrier();
                     break;
                 case "r":
-                    if (SetAttack(beamCost))
+                    if (SetAttack(beamCost, storage.beamUnlocked))
                         SetBeam();
                     break;
             }
@@ -83,10 +86,19 @@ public class Player_attack : MonoBehaviour
 
     }
 
-    private bool SetAttack(int _cost)
+    private bool SetAttack(int _cost, bool _active)
     {
-        anim.SetTrigger("attack");
-        return mana_controller.SpendMana(_cost);
+        if (_active)
+        {
+            bool enoughMana = mana_controller.SpendMana(_cost);
+            if (enoughMana)
+            {
+                anim.SetTrigger("attack");
+                return true;
+            } else
+                return false;
+        } else
+            return false;
     }
 
 //------------------------------Energy ball
