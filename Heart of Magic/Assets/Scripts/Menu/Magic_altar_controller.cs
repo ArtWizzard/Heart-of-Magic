@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goddess_controller : MonoBehaviour
+public class Magic_altar_controller : MonoBehaviour
 {
     [Header("Objects")]
     [SerializeField] private GameObject goddess;
-    //[SerializeField] private GameObject[] dialogueHolders;
+    [SerializeField] private GameObject[] dialoguesHolder;
     [SerializeField] private DialogueManager DM;
-    private Transform child;
-    private int childCount;
+    [SerializeField] private GameObject activation;
+    private int diaCount;
     private int direction;
+    private bool once;
 
     private bool dialogueRuns = false;
     private int i = 0;
 
     private void Awake()
     {
-        childCount = transform.childCount - 2;
+        diaCount = dialoguesHolder.Length;
     }
 
     private void Update()
@@ -26,18 +27,23 @@ public class Goddess_controller : MonoBehaviour
         {
             if (DM.GetComponent<DialogueManager>().isRunning == false)      //  domluvila osoba
             {
-                if (i < childCount)         //  je potřeba něco říct
+                if (i < diaCount)         //  je potřeba něco říct
                 {
-                    child = transform.GetChild(i);
-                    child.GetComponent<DialogueTrigger>().TriggerDialogue();
-                    child.GetComponent<SoundTrigger>().StartDialogue();
+                    dialoguesHolder[i].GetComponent<DialogueTrigger>().TriggerDialogue();
+                    dialoguesHolder[i].GetComponent<SoundTrigger>().StartDialogue();
                     i ++;
                 } else {
                     dialogueRuns = false;   //  není - skonči
                     i = 0;
                     goddess.GetComponent<Goddess_teleportation>().HideGoddess();
+                    //activation.SetActive(false);
                 }
             }
+        }
+        if (!goddess.activeInHierarchy && once)
+        {
+            activation.SetActive(false);
+            once = false;
         }
     }
 
@@ -50,11 +56,11 @@ public class Goddess_controller : MonoBehaviour
             else
                 direction = 1;
 
+            activation.SetActive(true);
             goddess.GetComponent<Goddess_teleportation>().ShowGoddess(transform, direction);
             dialogueRuns = true;
+            once = true;
+            //Debug.Log(transform);
         }
-        //  gameObject.GetComponent<ScriptName>().variable
-        //  player.transform.position = respawnPoint.position;
-        //  player.SetActive(false);  
     }
 }

@@ -14,14 +14,9 @@ public class Goddess_levitating : MonoBehaviour
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
  
-    private void Start () {
+    private void Transfer () {
         posOffset = transform.position;
     }
-/*
-    private void OnEnable()
-    {
-        
-    }*/
 
     private void Update () {
         if (fly)
@@ -36,6 +31,7 @@ public class Goddess_levitating : MonoBehaviour
     private void SetFloating()
     {
         fly = true;
+        Transfer();
         deltaTime = Time.fixedTime;
     }
 

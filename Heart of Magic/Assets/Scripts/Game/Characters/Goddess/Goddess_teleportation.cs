@@ -16,6 +16,8 @@ public class Goddess_teleportation : MonoBehaviour
     {
         gameObject.SetActive(true);
         transform.position = _place.position;
+        //Debug.Log(_place.position.x);
+        //Debug.Log(_place.position.y);
         transform.localScale = new Vector3(_direction, 1, 1);
         anim.SetBool("Visible", true);
         active = true;
