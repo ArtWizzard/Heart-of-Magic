@@ -14,6 +14,15 @@ public class Ghost : MonoBehaviour
     [Header ("Movement")]
     [SerializeField] private float speed;
     [SerializeField] Transform target;
+    [SerializeField] private float stopDistance;
+    [SerializeField] private float backDistance;
+
+    private bool stopLogic;
+    private bool backLogic;
+    private float xPosS;
+    private float yPosS;
+    private float xPosT;
+    private float yPosT;
 
     void Awake()
     {
@@ -22,7 +31,21 @@ public class Ghost : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        xPosS = transform.position.x;
+        yPosS = transform.position.y;
+        xPosT = target.position.x;
+        yPosT = target.position.y;
+
+        stopLogic = Mathf.Abs(xPosS - xPosT) < stopDistance && Mathf.Abs(yPosS - yPosT) < stopDistance;
+        backLogic = Mathf.Abs(xPosS - xPosT) < backDistance && Mathf.Abs(yPosS - yPosT) < backDistance;
+
+        if (backLogic)
+            transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
+        else if (stopLogic)
+            transform.position = transform.position;
+        else
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

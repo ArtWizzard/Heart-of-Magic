@@ -208,6 +208,8 @@ MonoBehaviour:
   damage: 5
   speed: 2
   target: {fileID: 0}
+  stopDistance: 7
+  backDistance: 5
 --- !u!95 &7816561915904142841
 Animator:
   serializedVersion: 3
@@ -239,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286b7cced3f8aaf43b865b2fef479069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireDelay: 0
   projectiles: []
-  aim: {fileID: 0}
-  shootingPeriod: 0
+  target: {fileID: 0}
   firePoint: {fileID: 4615678614946578141}
 --- !u!1 &7816561915974733065
 GameObject:

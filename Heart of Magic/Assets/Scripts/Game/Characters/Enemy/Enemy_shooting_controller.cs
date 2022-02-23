@@ -4,42 +4,51 @@ using UnityEngine;
 
 public class Enemy_shooting_controller : MonoBehaviour
 {
-    [Header ("Holders")]
-    [SerializeField] private GameObject[] projectiles;
-    [SerializeField] private Transform aim;
-
     [Header ("Attack")]
-    [SerializeField] private float shootingPeriod;
+    [SerializeField] private float fireDelay;
+    [SerializeField] private GameObject[] projectiles;
+    [SerializeField] private Transform target;
     [SerializeField] private Transform firePoint;
 
-    private float actualTime = Mathf.Infinity;
+    private float actualTime = 0;
+
+    private void Awake()
+    {
+        actualTime = 0;
+    }
 
     private void Update()
     {
-        if (actualTime >= shootingPeriod && FindProjectiles() != -1)
+        if (actualTime > fireDelay)
         {
-            //projectiles[0].GetComponent<Enemy_projectile>().SetDirection(firePoint, aim);
-            Attack();
+            Fire();
+            //Debug.Log("fire");
             actualTime = 0;
         }
         actualTime += Time.deltaTime;
     }
 
-    private void Attack()
+    private void Fire()
     {
-        if (FindProjectiles() == -1)
-            return;
-        projectiles[FindProjectiles()].GetComponent<Enemy_projectile>().SetDirection(firePoint, aim);
+        if (FindProjectile() != -1)
+        {
+            float xDir = target.position.x - transform.position.x;
+            float yDir = target.position.y - transform.position.y;
+
+            GameObject projectile = projectiles[FindProjectile()];
+
+            projectile.transform.position = firePoint.position;
+            projectile.GetComponent<Enemy_projectile>().SetDirection(new Vector3(xDir, yDir, 0).normalized);
+        }
     }
 
-    //  Najde nejlepší energyball
-    private int FindProjectiles()
+    private int FindProjectile()
     {
         for(int i = 0; i < projectiles.Length; i++)
         {
             if(!projectiles[i].activeInHierarchy)
                 return i;
         }
-        return -1;  //  vrať hodnotu zápornou, jestliže nemá žádný volný energyball
+        return -1;
     }
 }

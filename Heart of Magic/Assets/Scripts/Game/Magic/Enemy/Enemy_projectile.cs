@@ -15,77 +15,76 @@ public class Enemy_projectile : MonoBehaviour
     [Header ("Power")]
     [SerializeField] private int damage;
     [SerializeField] float speed;
+
+    [Header ("Movement")]
+    [SerializeField] private float lifeTime;
+    private float actualTime;
     private Vector3 direction;
 
-    private CircleCollider2D cC;
-    private Rigidbody2D rB;
-    private float lifeTime;
+    private CircleCollider2D cc;
+    private Animator anim;
     private bool hitLogic;
-    private bool hit = true;
-
-    private float xDir;
-    private float yDir;
-    
 
     private void Awake()
     {
-        cC = GetComponent<CircleCollider2D>();
-        rB = GetComponent<Rigidbody2D>();
+        cc = GetComponent<CircleCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (hit) return;
-       // float movSpeed = speed * Time.deltaTime;
-        //transform.Translate(movSpeed * new Vector3(xDir, yDir, 0), Space.World);
-        rB.velocity = transform.TransformDirection(new Vector3(xDir * speed, yDir * speed, speed * Time.deltaTime));
-
-        lifeTime += Time.deltaTime;
-        if (lifeTime > 5)
+        transform.position += direction * speed * Time.deltaTime;
+        
+        if (actualTime > lifeTime)
+        {
             gameObject.SetActive(false);
+        }
+        actualTime += Time.deltaTime;
+    }
+
+    public void SetDirection(Vector3 _direction)
+    {
+        direction = _direction;     // nastaví aktuální směr
+        gameObject.SetActive(true); // rožne objekt
+        cc.enabled = true;          // zapne collider
+        actualTime = 0;             // spustí čas života
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hitLogic =  (collision.tag != "Item") && 
-                    (collision.tag != "Artilery_ball") && // !!!! tohle
-                    (collision.tag != "Doors_interface") && 
-                    (collision.tag != "Barrier") &&
-                    (collision.tag != "Decoration") &&
-                    (collision.tag != "Area") &&
-                    (collision.tag != "Dialogue") &&
-                    (collision.tag != "Enemy");
-
-        if (collision.tag == "Player")
+        switch(collision.tag)
         {
-            collision.GetComponent<Player_health>().TakeDamage(damage);
-        } else if (hitLogic) 
-        {
-            cC.enabled = false;
-            gameObject.SetActive(false);
+            case "Player":
+                Stop();
+                collision.GetComponent<Player_health>().TakeDamage(damage);
+                break;
+            case "Barrier":
+                Stop();
+                break;
+            case "Energy_ball":
+                Stop();
+                break;
+            case "Artilery_ball":
+                Stop();
+                break;
+            case "Beam":
+                Stop();
+                break;
+            case "Ground":
+                Stop();
+                break;
         }
     }
 
-    public void SetDirection(Transform _firePoint, Transform _aim)
+    private void Stop()
     {
-        lifeTime = 0;
-        gameObject.SetActive(true);
-        hit = false;
-        cC.enabled = true;
+        cc.enabled = false;
+        direction = new Vector3(0, 0, 0);
+        anim.SetTrigger("explode");
+    }
 
-        //  nastavení pozice
-        transform.position = _firePoint.position;
-
-        //  výpočet směru
-        int delta = 1;//_aim.position.x - _firePoint.position.x;
-
-        if (_aim.position.x > _firePoint.position.x )
-            delta = 1;
-        else
-            delta = -1;
-
-        xDir = delta;
-        yDir = ( (_aim.position.y - _firePoint.position.y) / (_aim.position.x - _firePoint.position.x)) * delta;
-
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }

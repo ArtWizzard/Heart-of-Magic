@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8615746779666024783}
   - component: {fileID: 8615746779666024776}
   - component: {fileID: 8615746779666024781}
-  - component: {fileID: 8615746779666024780}
   m_Layer: 13
   m_Name: Enemy_projectile
   m_TagString: Enemy_project_fire
@@ -136,24 +135,4 @@ MonoBehaviour:
   type: 0
   damage: 2
   speed: 3
---- !u!50 &8615746779666024780
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8615746779666024778}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  lifeTime: 5
