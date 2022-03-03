@@ -3012,6 +3012,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 425872808}
+    - target: {fileID: 1859085658855647473, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
+      propertyPath: currentLevel
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1859085659388505382, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
       propertyPath: keyText
       value: 

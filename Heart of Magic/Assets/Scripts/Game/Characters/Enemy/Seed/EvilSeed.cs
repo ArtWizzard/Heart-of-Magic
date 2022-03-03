@@ -17,6 +17,9 @@ public class EvilSeed : MonoBehaviour
     private void Awake()
     {
         rB = GetComponent<Rigidbody2D>();
+
+        if (target == null)
+            target = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     private void Update()

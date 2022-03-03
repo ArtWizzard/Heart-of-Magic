@@ -67898,6 +67898,14 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1818787341}
+    - target: {fileID: 1859085660035203255, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 164.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859085660035203255, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.55
+      objectReference: {fileID: 0}
     - target: {fileID: 1859085660747081106, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
       propertyPath: m_Name
       value: Managers
