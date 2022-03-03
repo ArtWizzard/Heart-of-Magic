@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     [Header ("Position")]
     [SerializeField] private Transform player;
-    [SerializeField] private float y_delta;
+    [SerializeField] private float y_delta = 0.7f;
     [SerializeField] private float x_delta;
 
     private void Awake()

@@ -42,6 +42,11 @@ public class Player_attack : MonoBehaviour
         energy = false;
         bomb = false;
         barrier = false;
+
+        if (mana_controller == null)
+        {
+            mana_controller = GameObject.Find("Mana_bar").GetComponent<Mana_bar>();
+        }
     }
 
     private void Update()

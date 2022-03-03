@@ -8,6 +8,14 @@ public class Background : MonoBehaviour
     private float length, startpos;
     public GameObject cam;
 
+    private void Awake()
+    {
+        if (cam == null)
+        {
+            cam = GameObject.Find("Main Camera");
+        }
+    }
+
     void Start()
     {
         startpos = transform.position.x;
