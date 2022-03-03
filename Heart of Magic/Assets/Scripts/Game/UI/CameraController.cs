@@ -9,6 +9,14 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float y_delta;
     [SerializeField] private float x_delta;
 
+    private void Awake()
+    {
+        if (player == null)
+        {
+            player = GameObject.Find("Player").GetComponent<Transform>();
+        }
+    }
+
     private void Update()
     {
         transform.position = new Vector3(player.position.x, player.position.y + y_delta, transform.position.z);

@@ -35,6 +35,11 @@ public class Item : MonoBehaviour
 
         if(Random.Range(0,100)*reduced >= dRate)
             gameObject.SetActive(false);
+
+        if (IM == null)
+        {
+            IM = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -19,6 +19,11 @@ public class Magic_altar_controller : MonoBehaviour
     private void Awake()
     {
         diaCount = dialoguesHolder.Length;
+        
+        if (DM == null)
+        {
+            DM = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+        }
     }
 
     private void Update()
