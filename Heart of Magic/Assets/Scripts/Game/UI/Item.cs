@@ -27,7 +27,7 @@ public class Item : MonoBehaviour
  
     private void Awake()
     {
-        lvlCleared = GameObject.Find("End").GetComponent<EndOfLevel>().currentLevel < dataStorage.levelsUnlocked;
+        lvlCleared = GameObject.Find("LevelManager").GetComponent<LevelManager>().currentLevel < dataStorage.levelsUnlocked;
         //  Random.Range(0,10);     //  int from 0 to 9
 
         if(lvlCleared)

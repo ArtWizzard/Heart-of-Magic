@@ -47,6 +47,12 @@ public class Player_health : MonoBehaviour
         health_bar.SetHealth(currentHealth);
     }
 
+    public void Kill()
+    {
+        currentHealth = 0;
+        FindObjectOfType<LevelManager>().Respawn();
+    }
+
     private IEnumerator Invunerability()
     {
         Physics2D.IgnoreLayerCollision(10, 13, true);

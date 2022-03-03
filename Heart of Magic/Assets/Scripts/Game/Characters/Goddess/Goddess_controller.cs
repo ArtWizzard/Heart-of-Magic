@@ -7,8 +7,11 @@ public class Goddess_controller : MonoBehaviour
     [Header("Objects")]
     [SerializeField] private GameObject goddess;
     //[SerializeField] private GameObject[] dialogueHolders;
+
+    [Header("Dialogue")]
     [SerializeField] private DialogueManager DM;
-    private Transform child;
+    [SerializeField] GameObject[] dialogueHolder;
+    private GameObject child;
     private int childCount;
     private int direction;
 
@@ -17,7 +20,7 @@ public class Goddess_controller : MonoBehaviour
 
     private void Awake()
     {
-        childCount = transform.childCount - 2;
+        childCount = dialogueHolder.Length;
     }
 
     private void Update()
@@ -28,7 +31,7 @@ public class Goddess_controller : MonoBehaviour
             {
                 if (i < childCount)         //  je potřeba něco říct
                 {
-                    child = transform.GetChild(i);
+                    child = dialogueHolder[i];
                     child.GetComponent<DialogueTrigger>().TriggerDialogue();
                     child.GetComponent<SoundTrigger>().StartDialogue();
                     i ++;

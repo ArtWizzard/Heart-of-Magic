@@ -9,6 +9,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Transform respawnPoint;
     public static LevelManager instance;
 
+    [Header ("Informations")]
+    public int currentLevel;
+
     private void Awake()
     {
         instance = this;

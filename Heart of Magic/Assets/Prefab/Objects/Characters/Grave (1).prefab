@@ -980,6 +980,8 @@ MonoBehaviour:
   damage: 5
   speed: 2
   target: {fileID: 0}
+  stopDistance: 0
+  backDistance: 0
 --- !u!95 &4090832389176793652
 Animator:
   serializedVersion: 3
@@ -1519,6 +1521,8 @@ MonoBehaviour:
   damage: 5
   speed: 2
   target: {fileID: 0}
+  stopDistance: 0
+  backDistance: 0
 --- !u!95 &4090832389453627725
 Animator:
   serializedVersion: 3
@@ -2239,6 +2243,8 @@ MonoBehaviour:
   damage: 5
   speed: 2
   target: {fileID: 0}
+  stopDistance: 0
+  backDistance: 0
 --- !u!95 &4090832390143264155
 Animator:
   serializedVersion: 3
