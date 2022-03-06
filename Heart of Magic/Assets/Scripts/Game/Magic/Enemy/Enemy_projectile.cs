@@ -52,27 +52,21 @@ public class Enemy_projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        switch(collision.tag)
+        bool destroy =  (collision.tag == "Barrier") ||
+                        (collision.tag == "Energy_ball") ||
+                        (collision.tag == "Artilery_ball") ||
+                        (collision.tag == "Beam") ||
+                        (collision.tag == "Ground");
+
+        bool hit =      (collision.tag == "Player");
+
+        if (destroy)
+            Stop();
+
+        if (hit)
         {
-            case "Player":
-                Stop();
-                collision.GetComponent<Player_health>().TakeDamage(damage);
-                break;
-            case "Barrier":
-                Stop();
-                break;
-            case "Energy_ball":
-                Stop();
-                break;
-            case "Artilery_ball":
-                Stop();
-                break;
-            case "Beam":
-                Stop();
-                break;
-            case "Ground":
-                Stop();
-                break;
+            Stop();
+            collision.GetComponent<Player_health>().TakeDamage(damage);
         }
     }
 

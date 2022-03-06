@@ -4,7 +4,9 @@ public class Energy_fireball : MonoBehaviour
 {
     [Header ("Properities")]
     [SerializeField] private float speed;
-    [SerializeField] public int damage;
+    //[SerializeField] 
+    public int damage;
+    [SerializeField] DataStorage storage;
     private float direction;
     private bool hit;
     private float lifeTime;
@@ -17,6 +19,7 @@ public class Energy_fireball : MonoBehaviour
     {
         BoxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        damage = storage.energyBallDamage;
     }
     
     private void Update()

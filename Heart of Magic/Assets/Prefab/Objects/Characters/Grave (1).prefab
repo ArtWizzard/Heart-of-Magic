@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 0
-  MaxHitpoints: 5
+  MaxHitpoints: 100
   HealthBar: {fileID: 4090832389790651185}
 --- !u!114 &4090832389176793648
 MonoBehaviour:
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 0
-  MaxHitpoints: 5
+  MaxHitpoints: 100
   HealthBar: {fileID: 4090832389108499085}
 --- !u!114 &4090832389453627714
 MonoBehaviour:
@@ -2224,7 +2224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 0
-  MaxHitpoints: 5
+  MaxHitpoints: 100
   HealthBar: {fileID: 4090832389152035810}
 --- !u!114 &4090832390143264152
 MonoBehaviour:

@@ -7,7 +7,9 @@ public class Bomb_artilery : MonoBehaviour
     [Header ("Properities")]
     [SerializeField] private float power;
     [SerializeField] private float up;
-    [SerializeField] public int damage;
+    //[SerializeField] 
+    public int damage;
+    [SerializeField] private DataStorage storage;
 
     private float direction; // right or left
     private bool hit;
@@ -26,6 +28,8 @@ public class Bomb_artilery : MonoBehaviour
         cCollider = GetComponent<CircleCollider2D>();
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        damage = storage.earthBallDamage;
     }
     
     private void Update()

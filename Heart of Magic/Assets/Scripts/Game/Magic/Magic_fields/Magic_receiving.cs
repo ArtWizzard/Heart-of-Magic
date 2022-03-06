@@ -13,13 +13,33 @@ public class Magic_receiving : MonoBehaviour
 {
     [Header ("Storage")]
     [SerializeField] private DataStorage dataStorage;
+    public bool unlocked = false;
 
     [Header ("Select")]
     public magic type;
 
+    private void Awake()
+    {
+        switch(type)
+        {
+            case magic.energy:
+                unlocked = dataStorage.energyUnlocked;
+                break;
+            case magic.earth:
+                unlocked = dataStorage.earthUnlocked;
+                break;
+            case magic.barrier:
+                unlocked = dataStorage.barrierUnlocked;
+                break;
+            case magic.beam:
+                unlocked = dataStorage.beamUnlocked;
+                break;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !unlocked)
         {
             switch(type)
             {
@@ -36,6 +56,7 @@ public class Magic_receiving : MonoBehaviour
                     dataStorage.beamUnlocked = true;
                     break;
             }
+            unlocked = true;
         }
     }
 }

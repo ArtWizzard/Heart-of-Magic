@@ -16,6 +16,17 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
+        Actualize();
+        /*
+        runes = dataStorage.runesAmmount;
+        keys = dataStorage.keysAmmount;
+        runeText.text = runes.ToString() + "X";
+        keyText.text = keys.ToString() + "X";
+        */
+    }
+
+    public void Actualize()
+    {
         runes = dataStorage.runesAmmount;
         keys = dataStorage.keysAmmount;
         runeText.text = runes.ToString() + "X";

@@ -6,6 +6,7 @@ public class Seed_attack_detection : MonoBehaviour
 {
     private GameObject seed;
     private int damage;
+    //public bool near = false;
 
     private void Awake()
     {
@@ -17,8 +18,14 @@ public class Seed_attack_detection : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Player_health>().TakeDamage(damage);
-            seed.GetComponent<EvilSeed>().Explode();
+            seed.GetComponent<EvilSeed>().range = true;
+            seed.GetComponent<EvilSeed>().SetExplode();
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+            seed.GetComponent<EvilSeed>().range = false;
     }
 }

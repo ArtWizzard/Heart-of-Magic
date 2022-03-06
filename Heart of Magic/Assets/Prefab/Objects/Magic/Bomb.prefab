@@ -138,6 +138,7 @@ MonoBehaviour:
   power: 5
   up: 5
   damage: 1
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!95 &6181662069532090862
 Animator:
   serializedVersion: 3

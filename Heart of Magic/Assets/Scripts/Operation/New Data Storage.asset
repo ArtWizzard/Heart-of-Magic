@@ -12,18 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98cf39799ed642c4386ca3d762822292, type: 3}
   m_Name: New Data Storage
   m_EditorClassIdentifier: 
-  runesAmmount: 23
-  keysAmmount: 10
-  levelsUnlocked: 0
+  runesAmmount: 200
+  keysAmmount: 0
+  levelsUnlocked: 10
   energyUnlocked: 1
-  earthUnlocked: 0
-  barrierUnlocked: 0
-  beamUnlocked: 0
-  maxHealth: 100
-  maxMana: 100
-  manaRegen: 10
-  energyBallDamage: 9
-  earthBallDamage: 4
-  barrierDuration: 1
-  beamDamage: 10
+  earthUnlocked: 1
+  barrierUnlocked: 1
+  beamUnlocked: 1
+  healthLevel: 10
+  manaLevel: 10
+  healthRegenLevel: 10
+  regenLevel: 10
+  maxHealth: 280
+  maxMana: 140
+  healthRegen: 2.3000002
+  manaRegen: 30
+  healthCost: 2
+  manaCost: 2
+  healthRegenCost: 2
+  regenCost: 2
+  energyLevel: 10
+  earthLevel: 10
+  barrierLevel: 10
+  beamLevel: 10
+  energyBallDamage: 32
+  earthBallDamage: 10
+  barrierDuration: 2.9999998
+  beamDamage: 102
+  energyCost: 1
+  earthCost: 2
+  barrierCost: 3
+  beamCost: 4
   started: 1
+  volume: 0.1

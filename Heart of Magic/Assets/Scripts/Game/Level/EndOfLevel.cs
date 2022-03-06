@@ -23,11 +23,12 @@ public class EndOfLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-    if(collision.tag == "Player")
-        if (activeLevels <= currentLevel)
-        {
-            dataStorage.levelsUnlocked = currentLevel + 1;
-        }
-        FindObjectOfType<LevelManager>().Exit();
+
+        if(collision.tag == "Player")
+            if (activeLevels <= currentLevel)
+            {
+                dataStorage.levelsUnlocked = currentLevel + 1;
+                FindObjectOfType<LevelManager>().Exit();
+            }
     }
 }

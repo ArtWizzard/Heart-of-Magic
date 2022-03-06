@@ -59,8 +59,9 @@ public class Magic_altar_controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !goddess.activeInHierarchy)
+        if (collision.tag == "Player" && !goddess.activeInHierarchy && !gameObject.GetComponent<Magic_receiving>().unlocked)
         {
+            Debug.Log(gameObject.GetComponent<Magic_receiving>().unlocked);
             if (collision.transform.position.x < transform.position.x)
                 direction = -1;
             else

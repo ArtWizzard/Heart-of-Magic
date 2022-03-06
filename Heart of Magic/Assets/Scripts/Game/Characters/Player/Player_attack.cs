@@ -9,10 +9,10 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private float magicDelay;
     [Header ("Mana management")]
     [SerializeField] private Mana_bar mana_controller;
-    [SerializeField] private int energyCost;
-    [SerializeField] private int earthCost;
-    [SerializeField] private int barrierCost;
-    [SerializeField] private int beamCost;
+    [SerializeField] private int energyCost = 10;
+    [SerializeField] private int earthCost = 20;
+    [SerializeField] private int barrierCost = 30;
+    [SerializeField] private int beamCost = 50;
     [Header ("Magic objects")]
     [SerializeField] private GameObject[] energyballs;
     [SerializeField] private GameObject[] bombsartilery;
@@ -27,11 +27,11 @@ public class Player_attack : MonoBehaviour
     private Player_movement playerMovement;
     //  Counters
     private float cooldownTimer = Mathf.Infinity;
-    private float DelayTimer = Mathf.Infinity;
+    //private float DelayTimer = Mathf.Infinity;
     //  Data package
-    private bool energy;
-    private bool bomb;
-    private bool barrier;
+    //private bool energy;
+    //private bool bomb;
+    //private bool barrier;
     //private Dictionary<string, int> magic;
 
     private void Awake()
@@ -39,9 +39,9 @@ public class Player_attack : MonoBehaviour
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<Player_movement>();
 
-        energy = false;
-        bomb = false;
-        barrier = false;
+        //energy = false;
+        //bomb = false;
+        //barrier = false;
 
         if (mana_controller == null)
         {
@@ -51,7 +51,7 @@ public class Player_attack : MonoBehaviour
 
     private void Update()
     { 
-        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs() && BombsExploded() && !FindObjectOfType<Player_movement>().isMoving() && !(energy || bomb))
+        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs() && BombsExploded() && !FindObjectOfType<Player_movement>().isMoving()) // && !(energy || bomb)
         {
             switch (Input.inputString)
             {

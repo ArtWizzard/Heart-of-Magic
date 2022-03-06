@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  duration: 5
   damage: 0
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
   damageFrequency: 0
 --- !u!95 &8206772895563073337
 Animator:

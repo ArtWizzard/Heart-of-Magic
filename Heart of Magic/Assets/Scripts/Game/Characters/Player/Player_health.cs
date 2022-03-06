@@ -6,8 +6,13 @@ public class Player_health : MonoBehaviour
 {
     [Header ("Health")]
     private int maxtHealth;
-    public int currentHealth;
+    public float currentHealth;
+    private float healthRegen;
     //private bool dead;
+
+    [Header ("Regeneration")]
+    [SerializeField] private float timeToRegen;
+    private float recoveryTime = Mathf.Infinity;
 
     [Header ("iFrame")]
     [SerializeField] private float iFrameDuration;
@@ -23,7 +28,31 @@ public class Player_health : MonoBehaviour
     void Start()
     {
         ResetHealth();
+    }
+
+    private void Awake()
+    {
         spriteRend = GetComponent<SpriteRenderer>();
+        healthRegen = dataStorage.healthRegen;
+    }
+
+    private void Update()
+    {
+        if (recoveryTime >= timeToRegen)
+        {
+            if (currentHealth < dataStorage.maxHealth)
+            {
+                if (dataStorage.maxHealth - currentHealth >= healthRegen)
+                {
+                    currentHealth += healthRegen * Time.deltaTime;
+                } else
+                {
+                    currentHealth = (float)dataStorage.maxHealth;
+                }
+            }
+            Draw();
+        }
+        recoveryTime += Time.deltaTime;
     }
     
     public void ResetHealth()
@@ -39,18 +68,19 @@ public class Player_health : MonoBehaviour
                 currentHealth = 0;
                 //dead = true;
                 //Debug.Log("Current health: " + currentHealth.ToString());
-                FindObjectOfType<LevelManager>().Respawn();
+                //FindObjectOfType<LevelManager>().Respawn();
+                FindObjectOfType<GameManager>().EndGame();
             }
 
         StartCoroutine(Invunerability());
         SoundManager.PlaySound("wizzard_hit");
-        health_bar.SetHealth(currentHealth);
+        Draw();
+        recoveryTime = 0;
     }
 
     public void Kill()
     {
         currentHealth = 0;
-        FindObjectOfType<LevelManager>().Respawn();
     }
 
     private IEnumerator Invunerability()
@@ -66,5 +96,10 @@ public class Player_health : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(10, 13, false);
 
+    }
+
+    private void Draw()
+    {
+        health_bar.SetHealth((int)currentHealth);
     }
 }

@@ -29,7 +29,6 @@ public class Item : MonoBehaviour
     {
         lvlCleared = GameObject.Find("LevelManager").GetComponent<LevelManager>().currentLevel < dataStorage.levelsUnlocked;
         //  Random.Range(0,10);     //  int from 0 to 9
-
         if(lvlCleared)
             reduced = 2;
 

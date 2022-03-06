@@ -19,7 +19,7 @@ public class Item_drop_controller : MonoBehaviour
     [SerializeField] private GameObject key;
     [SerializeField] private GameObject rune;
 
-    private void OnDisable()
+    private void Throw()
     {
         ItemDrop();
     }

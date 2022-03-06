@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53dd98d3ac51e847888a186d7f97dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!1 &1859085658855647472
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawnPoint: {fileID: 1859085660650208001}
+  currentLevel: 0
 --- !u!1 &1859085659388505380
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97e65193167a8c43a0b7e3909350a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 0
   dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!1 &1859085660650208000
 GameObject:

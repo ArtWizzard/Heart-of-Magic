@@ -14,6 +14,29 @@ public class Enemy_health : MonoBehaviour
         HealthBar.Sethealth(Hitpoints,MaxHitpoints);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (gameObject.GetComponent<Collider2D>().tag == "Enemy")
+        {
+            if (collision.tag == "Energy_ball")
+            {
+                TakeHit(collision.GetComponent<Energy_fireball>().damage);
+            }
+            else if (collision.tag == "Artilery_ball")
+            {
+                TakeHit(collision.GetComponent<Bomb_artilery>().damage);
+            }
+            else if (collision.tag == "Barrier")
+            {
+                TakeHit(collision.GetComponent<Barrier>().damage);
+            }
+            else if (collision.tag == "Beam")
+            {
+                TakeHit(collision.GetComponent<Beam>().damage);
+            }
+        }
+
+    }
     public void TakeHit(float damage)
     {
         Hitpoints -= damage;

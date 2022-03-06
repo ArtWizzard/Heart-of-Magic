@@ -39,14 +39,13 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        //Debug.Log("Loading menu...");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
     public void ExitGame()
     {
-        Debug.Log("Quitting game level");
-        // load level selection
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("LevelSelect");
     }
 }

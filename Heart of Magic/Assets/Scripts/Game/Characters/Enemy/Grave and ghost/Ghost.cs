@@ -27,6 +27,8 @@ public class Ghost : MonoBehaviour
     void Awake()
     {
         transform.position = spawnPoint.position;
+        if (target == null)
+            target = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     void Update()
@@ -56,6 +58,7 @@ public class Ghost : MonoBehaviour
         {
             collision.GetComponent<Player_health>().TakeDamage(damage);
         }
+        /*
         else if (collision.tag == "Energy_ball")
         {
             health.TakeHit(collision.GetComponent<Energy_fireball>().damage);
@@ -67,8 +70,12 @@ public class Ghost : MonoBehaviour
         else if (collision.tag == "Barrier")
         {
             health.TakeHit(collision.GetComponent<Barrier>().damage);
+        } 
+        else if (collision.tag == "Beam")
+        {
+            health.TakeHit(collision.GetComponent<Beam>().damage);
         }
-
+*/
     }
 
     public void ReSpawn()

@@ -8,8 +8,10 @@ public class Barrier : MonoBehaviour
     [SerializeField] private Transform target;
 
     [Header ("Properities")]
-    [SerializeField] private float duration;
+    //[SerializeField] 
+    private float duration;
     [SerializeField] public int damage;
+    [SerializeField] private DataStorage storage;
     [SerializeField] private float damageFrequency;
     private float actualFTime = Mathf.Infinity;
     private float actualTime = Mathf.Infinity;
@@ -18,7 +20,11 @@ public class Barrier : MonoBehaviour
 
     private void Awake()
     {
-         circleCollider = GetComponent<CircleCollider2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
+        if (target == null)
+            target = GameObject.Find("Player").GetComponent<Transform>();
+
+        duration = storage.barrierDuration;
     }
 
     private void Update()

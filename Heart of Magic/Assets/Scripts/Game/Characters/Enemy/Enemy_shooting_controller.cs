@@ -35,10 +35,10 @@ public class Enemy_shooting_controller : MonoBehaviour
             float xDir = target.position.x - transform.position.x;
             float yDir = target.position.y - transform.position.y;
 
-            GameObject projectile = projectiles[FindProjectile()];
+            //GameObject projectile = projectiles[FindProjectile()];
 
-            projectile.transform.position = firePoint.position;
-            projectile.GetComponent<Enemy_projectile>().SetDirection(new Vector3(xDir, yDir, 0).normalized);
+            projectiles[FindProjectile()].transform.position = firePoint.position;
+            projectiles[FindProjectile()].GetComponent<Enemy_projectile>().SetDirection(new Vector3(xDir, yDir, 0).normalized);
         }
     }
 
