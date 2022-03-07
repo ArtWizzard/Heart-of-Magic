@@ -15,6 +15,9 @@ public class Enemy_shooting_controller : MonoBehaviour
     private void Awake()
     {
         actualTime = 0;
+
+        if (target == null)
+            target = target = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     private void Update()

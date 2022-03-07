@@ -24,6 +24,11 @@ public class Player_movement : MonoBehaviour
 
     private void Update()
     {
+        SelfMovement();
+    }
+
+    private void SelfMovement()
+    {
         // Pohyb do stran
         HorizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(HorizontalInput * speed, body.velocity.y);
@@ -45,12 +50,11 @@ public class Player_movement : MonoBehaviour
         anim.SetBool("Run", HorizontalInput != 0);      // Začne 
         anim.SetBool("Jump", !isGrounded());            // Dopadne
         anim.SetFloat("yVelocity", body.velocity.y);    // Fáze skoku/pádu
-
     }
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(circleCollider.bounds.center, circleCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D raycastHit =   Physics2D.BoxCast(circleCollider.bounds.center, circleCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
 

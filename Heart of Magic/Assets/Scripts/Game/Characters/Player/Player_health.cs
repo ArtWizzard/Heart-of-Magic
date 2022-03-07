@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_health : MonoBehaviour
 {
     [Header ("Health")]
-    private int maxtHealth;
+    public int maxHealth;
     public float currentHealth;
     private float healthRegen;
     //private bool dead;
@@ -25,29 +25,26 @@ public class Player_health : MonoBehaviour
     [Header("References")]
     public Health_bar health_bar;
 
-    void Start()
-    {
-        ResetHealth();
-    }
-
     private void Awake()
     {
         spriteRend = GetComponent<SpriteRenderer>();
         healthRegen = dataStorage.healthRegen;
+        maxHealth = dataStorage.maxHealth;
+        ResetHealth();
     }
 
     private void Update()
     {
         if (recoveryTime >= timeToRegen)
         {
-            if (currentHealth < dataStorage.maxHealth)
+            if (currentHealth < maxHealth)
             {
-                if (dataStorage.maxHealth - currentHealth >= healthRegen)
+                if (maxHealth - currentHealth >= healthRegen)
                 {
                     currentHealth += healthRegen * Time.deltaTime;
                 } else
                 {
-                    currentHealth = (float)dataStorage.maxHealth;
+                    currentHealth = (float)maxHealth;
                 }
             }
             Draw();
@@ -57,8 +54,8 @@ public class Player_health : MonoBehaviour
     
     public void ResetHealth()
     {
-        currentHealth = dataStorage.maxHealth;
-        health_bar.SetMaxHealth(dataStorage.maxHealth); 
+        currentHealth = maxHealth;
+        health_bar.SetMaxHealth(maxHealth); 
     }
     public void TakeDamage(int _damage)
     {
@@ -85,7 +82,7 @@ public class Player_health : MonoBehaviour
 
     private IEnumerator Invunerability()
     {
-        Physics2D.IgnoreLayerCollision(10, 13, true);
+        Invicibly(true);
         //Invunerability duration
         for (int i = 0; i < numberOfFlashes; i++)
         {
@@ -94,8 +91,15 @@ public class Player_health : MonoBehaviour
             spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes * 2));
         }
-        Physics2D.IgnoreLayerCollision(10, 13, false);
+        Invicibly(false);
 
+    }
+
+    private void Invicibly(bool _set)
+    {
+        Physics2D.IgnoreLayerCollision(10, 13, _set);
+        Physics2D.IgnoreLayerCollision(10, 12, _set);
+        Physics2D.IgnoreLayerCollision(10, 15, _set);
     }
 
     private void Draw()

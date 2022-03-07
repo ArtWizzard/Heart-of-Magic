@@ -15,19 +15,25 @@ public class Mana_bar : MonoBehaviour
     [SerializeField] private float animSpeed;
     public Slider slider;
     private float mana;
+
+    private int maxMana;
+    private float manaRegen;
     
     private void Awake()
     {
         SetMaxMana(storage.maxMana);
+        
+        maxMana = storage.maxMana;
+        manaRegen = storage.manaRegen;
     }
 
     private void Update()
     {
         slider.value = mana;
-        if (mana < storage.maxMana)
-            mana += storage.manaRegen * Time.deltaTime;
+        if (mana < maxMana)
+            mana += manaRegen * Time.deltaTime;
         else
-            mana = storage.maxMana;
+            mana = maxMana;
 
         Rect uvRect = barRawImage.uvRect;
         uvRect.x += animSpeed * Time.deltaTime;

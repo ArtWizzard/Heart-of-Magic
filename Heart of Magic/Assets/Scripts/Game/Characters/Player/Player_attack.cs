@@ -22,6 +22,8 @@ public class Player_attack : MonoBehaviour
     [SerializeField] private float deltaXBeam;
     [Header ("Data storage")]
     [SerializeField] private DataStorage storage;
+    [Header ("Side effects")]
+    [SerializeField] private int beamInjury = 10;
 
     private Animator anim;
     private Player_movement playerMovement;
@@ -51,7 +53,7 @@ public class Player_attack : MonoBehaviour
 
     private void Update()
     { 
-        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs() && BombsExploded() && !FindObjectOfType<Player_movement>().isMoving()) // && !(energy || bomb)
+        if( cooldownTimer >= attackCooldown && 0 <= FindEnergyballs() && BombsExploded()) //&& !FindObjectOfType<Player_movement>().isMoving()
         {
             switch (Input.inputString)
             {
@@ -177,5 +179,7 @@ public class Player_attack : MonoBehaviour
 
         beams[0].transform.position = beamDir;
         beams[0].GetComponent<Beam>().Shoot();
+
+        transform.GetComponent<Player_health>().TakeDamage(beamInjury);
     }
 } // -------------------------- closing class

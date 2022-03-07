@@ -236,7 +236,7 @@ MonoBehaviour:
   energyCost: 5
   earthCost: 10
   barrierCost: 20
-  beamCost: 50
+  beamCost: 100
   energyballs:
   - {fileID: 0}
   - {fileID: 0}
@@ -267,9 +267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42007ec0ac634fe44aeb55dc268d0073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   currentHealth: 100
   timeToRegen: 5
-  iFrameDuration: 1.5
+  iFrameDuration: 0.75
   numberOfFlashes: 3
   dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
   health_bar: {fileID: 0}
