@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Mosquito : MonoBehaviour
+public class SpikyBall : MonoBehaviour
 {
     [Header ("Power")]
     [SerializeField] private int damage; 

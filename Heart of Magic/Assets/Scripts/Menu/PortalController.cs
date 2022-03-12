@@ -9,11 +9,13 @@ public class PortalController : MonoBehaviour
     [SerializeField] private string target; 
     private bool inside;
 
+    private AudioSource audi;
     private Animator anim;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        audi = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class PortalController : MonoBehaviour
         {
             inside = true;
             anim.SetBool("inside", true);
+            audi.mute = false;
         }
     }
 
@@ -37,6 +40,7 @@ public class PortalController : MonoBehaviour
         {
             inside = false;
             anim.SetBool("inside", false);
+            audi.mute = true;
         }
     }
 }

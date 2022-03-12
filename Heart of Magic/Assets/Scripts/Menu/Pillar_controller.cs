@@ -36,12 +36,12 @@ public class Pillar_controller : MonoBehaviour
     };
 
     [Header ("Level steps")]
-    [SerializeField] private float energyStep =     3.0f;
-    [SerializeField] private float earthStep =      1.0f;
-    [SerializeField] private float barrierStep =    0.3f;
-    [SerializeField] private float beamStep =       8.0f;
+    [SerializeField] private float energyStep =     4.0f;
+    [SerializeField] private float earthStep =      3.0f;
+    [SerializeField] private float barrierStep =    0.1f;
+    [SerializeField] private float beamStep =       10.0f;
     [SerializeField] private float healthStep =     20.0f;
-    [SerializeField] private float healthRStep =    0.2f;
+    [SerializeField] private float healthRStep =    1f;
     [SerializeField] private float manaStep =       10.0f;
     [SerializeField] private float manaRStep =      0.5f;
 
@@ -86,6 +86,7 @@ public class Pillar_controller : MonoBehaviour
         {
             if(rAN <= dataStorage.runesAmmount && active && level < 10)
             {
+                SoundManager.PlaySound("upgrade");
                 switch(atribut)
                 {
                     case atributName.EnergyBall:        //  int
@@ -131,6 +132,7 @@ public class Pillar_controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Actualize();
+        SoundManager.PlaySound("choose");
 
         if (active)
         {

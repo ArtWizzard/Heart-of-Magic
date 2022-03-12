@@ -25,6 +25,9 @@ public class WoodenBoss_evocate : MonoBehaviour
     [Header ("Interaction")]
     [SerializeField] private LayerMask groundLayer;
 
+    [Header ("Body damage")]
+    [SerializeField] private int damage;
+
     private BoxCollider2D boxCollider;
     private ImpactState state;
 
@@ -36,6 +39,17 @@ public class WoodenBoss_evocate : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         active = false;
         //boxcollider.enabled = false; 
+    }
+
+     private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.tag == "Player")
+        {
+            int _damage = damage;
+            if (active)
+                _damage = damage * 2;
+            coll.GetComponent<Player_health>().TakeDamage(_damage);
+        }
     }
 
     private void Update()
@@ -83,14 +97,6 @@ public class WoodenBoss_evocate : MonoBehaviour
     {
         RaycastHit2D raycastHit =   Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
-    }
-
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.tag == "Player")
-        {
-            Debug.Log("Damage playere");
-        }
     }
 
     private void Evocate()  // works

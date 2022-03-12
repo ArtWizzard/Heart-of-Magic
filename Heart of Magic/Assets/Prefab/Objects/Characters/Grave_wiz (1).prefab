@@ -1053,7 +1053,7 @@ MonoBehaviour:
   ghosts:
   - {fileID: 7816561915904142847}
   - {fileID: 4439131683387543722}
-  SpawnInterval: 4
+  SpawnInterval: 5
   health: {fileID: 7816561915974733066}
   playerInRagne: 0
 --- !u!114 &7816561915974733066
@@ -1069,12 +1069,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hitpoints: 15
-  MaxHitpoints: 5
+  MaxHitpoints: 150
   HealthBar: {fileID: 7816561916882116303}
   startWithDeath: 0
   objectsToActive: []
   objectsToDeactive: []
-  instantDrop: 0
+  instantDrop: 1
 --- !u!61 &7816561915974733060
 BoxCollider2D:
   m_ObjectHideFlags: 0
