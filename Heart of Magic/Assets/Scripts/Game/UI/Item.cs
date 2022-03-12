@@ -7,15 +7,18 @@ public class Item : MonoBehaviour
     //  public InteractionType type;
     [Header("Manager")]
     [SerializeField] public InventoryManager IM;
+
     [Header("Properities")]
     [SerializeField] private ItemType type;
-    [SerializeField] private int value;
+    [SerializeField] public int value;
     private CircleCollider2D CircleCollider;
     private bool taken = false;
     private string item_type;
+
     [Header("Droprate [%]")]
     [SerializeField] private int dRate = 0;
     private int reduced = 1;    //  1 - normální drop-rate, 2 - poloviční drop-rate
+    
     [Header("Storages")]
     [SerializeField] private DataStorage dataStorage;
     private bool lvlCleared;
@@ -52,7 +55,8 @@ public class Item : MonoBehaviour
                 item_type = "Rune";
 
             IM.Pick(item_type, value);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 

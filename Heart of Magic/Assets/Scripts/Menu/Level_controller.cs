@@ -34,8 +34,8 @@ public class Level_controller : MonoBehaviour
     };
 
     [Header ("Select")]
-    [SerializeField] private LevelSelector manager;
-    public nameState name;
+    [SerializeField] private LevelSelector manager; 
+    public nameState nameLevel; // name
     public bool Locked = true;
     private string level;
     private bool chosen = false;
@@ -53,12 +53,12 @@ public class Level_controller : MonoBehaviour
 
     private void Awake()
     {
-        Locked = (dataStorage.levelsUnlocked >= translation[name]);
-        level = "Level_" + translation[name].ToString();
+        Locked = (dataStorage.levelsUnlocked >= translation[nameLevel]);
+        level = "Level_" + translation[nameLevel].ToString();
 
         //  locked/unlocked
         Locked = true;
-        if (translation[name] <= dataStorage.levelsUnlocked)
+        if (translation[nameLevel] <= dataStorage.levelsUnlocked)
             Locked = false;
 
         //  visualization

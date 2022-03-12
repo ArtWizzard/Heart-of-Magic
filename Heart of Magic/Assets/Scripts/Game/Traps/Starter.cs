@@ -16,6 +16,7 @@ public class Starter : MonoBehaviour
             {
                 bucket[i].SetActive(true);
             }
+            gameObject.SetActive(false);
         }
     }
 }

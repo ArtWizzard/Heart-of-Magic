@@ -9,6 +9,12 @@ public enum Direction{
     Left
 };
 
+public enum Mat{
+    Wood,
+    Stone,
+    Crystal
+};
+
 public class Turret : MonoBehaviour
 {
     [Header ("Projectiles")]
@@ -20,11 +26,20 @@ public class Turret : MonoBehaviour
     public Direction direction;
     [SerializeField] private float shootingDelay;
 
+    [Header ("Appearance")]
+    public Mat mat;
+    [SerializeField] private Sprite wood;
+    [SerializeField] private Sprite stone;
+    [SerializeField] private Sprite crystal;
+
+    private SpriteRenderer pic;
+
     private float actualTime = Mathf.Infinity;
 
     private void Awake()
     {
         actualTime = Random.Range(0, shootingDelay);
+        pic = GetComponent<SpriteRenderer>();
 
         switch(direction)
         {
@@ -39,6 +54,19 @@ public class Turret : MonoBehaviour
                 break;
             case Direction.Left:
                 dir = new Vector3(-1, 0, 0);
+                break;
+        }
+
+        switch (mat)
+        {
+            case Mat.Wood:
+                pic.sprite = wood;
+                break;
+            case Mat.Stone:
+                pic.sprite = stone;
+                break;
+            case Mat.Crystal:
+                pic.sprite = crystal;
                 break;
         }
     }

@@ -372,6 +372,10 @@ MonoBehaviour:
   Hitpoints: 0
   MaxHitpoints: 5
   HealthBar: {fileID: 6949301387182193495}
+  startWithDeath: 0
+  objectsToActive: []
+  objectsToDeactive: []
+  instantDrop: 0
 --- !u!114 &1834838994872113126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +453,8 @@ MonoBehaviour:
   yDelta: 0.5
   key: {fileID: 7227820772538516407, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
   rune: {fileID: 8041193737449226625, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
+  ammount: 1
+  loot: {fileID: 0}
 --- !u!1 &5760186148261252392
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +864,10 @@ MonoBehaviour:
   Hitpoints: 0
   MaxHitpoints: 5
   HealthBar: {fileID: 7816561917651390670}
+  startWithDeath: 0
+  objectsToActive: []
+  objectsToDeactive: []
+  instantDrop: 1
 --- !u!114 &7816561915904142840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +945,8 @@ MonoBehaviour:
   yDelta: 0.5
   key: {fileID: 7227820772538516407, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
   rune: {fileID: 8041193737449226625, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
+  ammount: 1
+  loot: {fileID: 0}
 --- !u!1 &7816561915974733065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1071,10 @@ MonoBehaviour:
   Hitpoints: 15
   MaxHitpoints: 5
   HealthBar: {fileID: 7816561916882116303}
+  startWithDeath: 0
+  objectsToActive: []
+  objectsToDeactive: []
+  instantDrop: 0
 --- !u!61 &7816561915974733060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1102,6 +1118,8 @@ MonoBehaviour:
   yDelta: 0.5
   key: {fileID: 7227820772538516407, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
   rune: {fileID: 8041193737449226625, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
+  ammount: 1
+  loot: {fileID: 0}
 --- !u!1 &7816561916122219318
 GameObject:
   m_ObjectHideFlags: 0

@@ -291,6 +291,10 @@ MonoBehaviour:
   Hitpoints: 0
   MaxHitpoints: 5
   HealthBar: {fileID: 3720348518478995855}
+  startWithDeath: 0
+  objectsToActive: []
+  objectsToDeactive: []
+  instantDrop: 1
 --- !u!114 &3720348518300613172
 MonoBehaviour:
   m_ObjectHideFlags: 0

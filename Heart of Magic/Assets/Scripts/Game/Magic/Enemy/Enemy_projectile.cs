@@ -23,7 +23,7 @@ public class Enemy_projectile : MonoBehaviour
 
     private CircleCollider2D cc;
     private Animator anim;
-    private bool hitLogic;
+    //private bool hitLogic;
 
     private void Awake()
     {
@@ -44,6 +44,7 @@ public class Enemy_projectile : MonoBehaviour
 
     public void SetDirection(Vector3 _direction)
     {
+        //Debug.Log("SetDirection");
         direction = _direction;     // nastaví aktuální směr
         gameObject.SetActive(true); // rožne objekt
         cc.enabled = true;          // zapne collider

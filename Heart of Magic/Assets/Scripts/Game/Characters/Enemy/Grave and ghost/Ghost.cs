@@ -77,6 +77,11 @@ public class Ghost : MonoBehaviour
         }
 */
     }
+    public void DistantRespawn(Vector3 _spawn)
+    {
+        gameObject.SetActive(true);
+        transform.position = _spawn;
+    }
 
     public void ReSpawn()
     {

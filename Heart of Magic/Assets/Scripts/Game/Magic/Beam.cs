@@ -6,13 +6,13 @@ public class Beam : MonoBehaviour
 {
     [SerializeField] private DataStorage storage;
     [SerializeField] private float duration;
-    private CapsuleCollider2D collider;
+    private CapsuleCollider2D coll;
     private float actualTime = 0;
     public int damage;
 
     private void Awake()
     {
-        collider = GetComponent<CapsuleCollider2D>();
+        coll = GetComponent<CapsuleCollider2D>();
         damage = storage.beamDamage;
         RunOut();
     }
@@ -34,11 +34,12 @@ public class Beam : MonoBehaviour
     public void Shoot()
     {
         gameObject.SetActive(true);
-        collider.enabled = true;
+        coll.enabled = true;
     }
 
     private void RunOut()
     {
-        collider.enabled = false;
+        coll.enabled = false;
     }
+    
 }
