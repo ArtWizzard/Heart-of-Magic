@@ -14,21 +14,22 @@ public class InventoryManager : MonoBehaviour
     [Header("Storages")]
     [SerializeField] private DataStorage dataStorage;
 
+    private int runeTempStorage;
+    private int keyTempStorage;
+
     private void Awake()
     {
         Actualize();
-        /*
-        runes = dataStorage.runesAmmount;
-        keys = dataStorage.keysAmmount;
-        runeText.text = runes.ToString() + "X";
-        keyText.text = keys.ToString() + "X";
-        */
     }
 
     public void Actualize()
     {
         runes = dataStorage.runesAmmount;
         keys = dataStorage.keysAmmount;
+
+        runeTempStorage = 0;
+        runeTempStorage = 0;
+
         runeText.text = runes.ToString() + "X";
         keyText.text = keys.ToString() + "X";
     }
@@ -40,17 +41,28 @@ public class InventoryManager : MonoBehaviour
             case "Key":
                 keys += _ammount;
                 keyText.text = keys.ToString() + "X";
+
+                keyTempStorage += _ammount;
+                dataStorage.keysAmmount += _ammount;
+
                 break;
             case "Rune":
                 runes += _ammount;
                 runeText.text = runes.ToString() + "X";
                 
                 dataStorage.runesAmmount += _ammount;
+                runeTempStorage += _ammount;
 
                 break;
             default:
                 Debug.Log("Wrong item name");
                 break;
         }
+    }
+
+    public void Tax()
+    {
+        dataStorage.keysAmmount -= keyTempStorage / 2;
+        dataStorage.runesAmmount -= runeTempStorage / 2;
     }
 }

@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &38302646 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 730941688315198025, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 221156177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &56999326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5594155730827651201, guid: 6f5ece164b47ae941938be841a22f3d9, type: 3}
@@ -133,6 +138,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5594155730827651210, guid: 6f5ece164b47ae941938be841a22f3d9, type: 3}
   m_PrefabInstance: {fileID: 1761176454}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &72029773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72029774}
+  - component: {fileID: 72029776}
+  - component: {fileID: 72029775}
+  m_Layer: 0
+  m_Name: Conv (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &72029774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72029773}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 923272661}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72029775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72029773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &72029776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72029773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u010Carod\u011Bj"
+    sentences:
+    - "Tak to se s t\u011Bmi v\u011Bcmi ani nepotk\xE1m."
 --- !u!114 &87147778 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1044271479964282603, guid: 3c107fe84c3c0f74fb073c097ca1a67f, type: 3}
@@ -144,6 +210,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1cfbb9d08b3a644b109b6522f2164e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &117019226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117019227}
+  - component: {fileID: 117019229}
+  - component: {fileID: 117019228}
+  m_Layer: 0
+  m_Name: Conv (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117019227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117019226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 38302646}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &117019228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117019226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &117019229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117019226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Potuln\xFD mnich"
+    sentences:
+    - "Nesm\xED\u0161 se jich dotknout. Ale kdy\u017E n\u011Bjak\xE9ho uvid\xED\u0161,
+      tak se i bra\u0148. "
+    - "Ale m\u011Bj na pam\u011Bti jednu v\u011Bc, jestli nezni\u010D\xED\u0161 zdroj
+      jejich s\xEDli, budou se objevovat po\u0159\xE1d dokola."
 --- !u!1 &168734368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 549382188827508501, guid: 9f6772faf1ea60f47998bdd3f5ffd21f, type: 3}
@@ -154,6 +284,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 549382188827508498, guid: 9f6772faf1ea60f47998bdd3f5ffd21f, type: 3}
   m_PrefabInstance: {fileID: 1767806896}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &176789936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176789937}
+  - component: {fileID: 176789939}
+  - component: {fileID: 176789938}
+  m_Layer: 0
+  m_Name: Conv (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &176789937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176789936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1032725359}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &176789938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176789936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &176789939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176789936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u010Cardo\u011Bj"
+    sentences:
+    - "Tak \u0161\u0165astnou cestu! Kdyby jsi ov\u0161em pot\u0159eboval n\u011Bjakou
+      radu, v\u017Edy m\u016F\u017Ee\u0161 za mnou p\u0159ij\xEDt."
 --- !u!1 &178793455
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,16 +373,11 @@ Transform:
   m_LocalPosition: {x: 2.6176257, y: 0.3443832, z: 4.2600784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 180075039}
   - {fileID: 1536790849}
+  - {fileID: 1725180502}
   m_Father: {fileID: 471040713}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &180075039 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-  m_PrefabInstance: {fileID: 3558737620477916179}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &186150791
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +444,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8041193737449226624, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
   m_PrefabInstance: {fileID: 8041193737559980933}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &221156177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1884616920}
+    m_Modifications:
+    - target: {fileID: 1902272481625829272, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Nu dobr\xE1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 134.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548242, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_Name
+      value: MonkTraveller (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Tato cesta je jen pro odv\xE1\u017En\xE9, hochu!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Mrtv\xED tady vyl\xE9zaj\xED z hrobu a stra\u0161\xED ka\u017Ed\xE9ho,
+        kdo se dostane do jejich bl\xEDzkosti."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Rad\u011Bji od takov\xFDch v\u011Bc\xED rychle ute\u010D."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
 --- !u!1 &254885655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5594155730827651201, guid: 6f5ece164b47ae941938be841a22f3d9, type: 3}
@@ -327,7 +592,7 @@ MonoBehaviour:
   dialogue:
     name: "\u010Carod\u011Bj"
     sentences:
-    - Dikec
+    - "Rozum\xEDm."
 --- !u!1 &288392187
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +624,67 @@ Transform:
   m_Father: {fileID: 1894189961}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &302195893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302195894}
+  - component: {fileID: 302195896}
+  - component: {fileID: 302195895}
+  m_Layer: 0
+  m_Name: Conv (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &302195894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302195893}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 38302646}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302195895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302195893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &302195896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302195893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u010Carod\u011Bj"
+    sentences:
+    - "A m\u016F\u017Eou mi ubl\xED\u017Eit?"
 --- !u!1 &308108866
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404248667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48.09, y: 1.71, z: 0}
+  m_LocalPosition: {x: 65.71, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2140920076}
@@ -591,7 +917,7 @@ MonoBehaviour:
   IM: {fileID: 519685538}
   type: 1
   value: 1
-  dRate: 70
+  dRate: 100
   dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!58 &404248672
 CircleCollider2D:
@@ -680,6 +1006,91 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3244516463262921298, guid: 4410cb1207efd8b4a843e2f9a70fdc9a, type: 3}
   m_PrefabInstance: {fileID: 3244516462066798762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &544397635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 178793456}
+    m_Modifications:
+    - target: {fileID: 4090832388606824153, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: SpawnInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824154, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_Name
+      value: Grave (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 147.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: MaxHitpoints
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832389176793649, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: MaxHitpoints
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832389453627715, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: MaxHitpoints
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832389556247806, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090832390143264153, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: MaxHitpoints
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449255082037094062, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+      propertyPath: m_Radius
+      value: 6.1838756
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
 --- !u!114 &570233464 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2149130345628753237, guid: 3c107fe84c3c0f74fb073c097ca1a67f, type: 3}
@@ -813,8 +1224,9 @@ MonoBehaviour:
   dialogue:
     name: "Bohyn\u011B"
     sentences:
-    - "Jdi tedy do m\xE9ho chr\xE1mu, tam ti mohu p\u0159edat v\u011Bd\u011Bn\xED
-      magie, ale dej si pozor, po cest\u011B se mohou objevit r\u016Fzn\xE9 pasti."
+    - "Neboj se, jdi do m\xE9ho chr\xE1mu, tam ti mohu p\u0159edat v\u011Bd\u011Bn\xED
+      magie. Pomoc\xED n\xED bude\u0161 schopn\xFD toho zlo\u010Dince porazit, ale
+      dej si pozor, po cest\u011B se mohou objevit r\u016Fzn\xE9 pasti."
 --- !u!4 &604890229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2711392297910205745, guid: bd6e543684b6d0a4c915bdbf5e5622e6, type: 3}
@@ -952,6 +1364,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 549382188827508498, guid: 9f6772faf1ea60f47998bdd3f5ffd21f, type: 3}
   m_PrefabInstance: {fileID: 838249221}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &662457906 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 221156177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &722680873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1483,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5594155730827651210, guid: 6f5ece164b47ae941938be841a22f3d9, type: 3}
   m_PrefabInstance: {fileID: 1324414603}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &889639557 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 1712747642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &896329626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1550,15 @@ MonoBehaviour:
     sentences:
     - "Proch\xE1zej dal\u0161\xED chr\xE1my a olt\xE1\u0159e a z\xEDsk\xE1vej informace,
       jakmile si osvoj\xED\u0161 sv\xE9 znalosti, bude\u0161 moct se nau\u010Dit
-      dal\u0161\xED magie. \u0160\u0165astnou tedy cestu!"
+      dal\u0161\xED magie. "
+    - "V p\u0159\xEDpad\u011B, \u017Ee projde\u0161 tyrkysov\xFDm port\xE1lem, bude\u0161
+      si moct svou magii vylep\u0161ovat, tak nezapom\xEDnej sb\xEDrat runy v\u011Bd\u011Bn\xED."
+    - " \u0160\u0165astnou tedy cestu!"
+--- !u!4 &896649148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 2000115653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &923264088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1632,7 @@ TilemapRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.003937006, y: 0.003937006, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -2305,6 +2735,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &923272661 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 730941688315198025, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 1712747642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &930849796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2775,67 @@ Transform:
   m_Father: {fileID: 1032214512}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &935056103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 935056104}
+  - component: {fileID: 935056106}
+  - component: {fileID: 935056105}
+  m_Layer: 0
+  m_Name: Conv (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &935056104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935056103}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1032725359}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935056105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935056103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &935056106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935056103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Potuln\xFD mnich"
+    sentences:
+    - "E-ehm, hal\xF3?"
 --- !u!1 &942987879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,13 +2896,12 @@ MonoBehaviour:
   dialogue:
     name: "Bohyn\u011B"
     sentences:
-    - "Vz\xE1cn\xFD poutn\xEDku, nech si t\u011Bch vtip\u016F. Jsem bohyn\u011B \u017Eivota.
-      P\u0159i\u0161la jsem ve v\xE1\u017En\xE9 situaci. Z m\xE9ho chr\xE1mu byl
-      ukraden vz\xE1cn\xFD artefakt - magick\xE9 srdce. Je to zdroj m\xE9 s\xEDly.
-      Te\u010F jej m\xE1 ve sv\xE9 moci temn\xE1 osoba, \u0159\xEDk\xE1 si PATVAR.
-      \u017D\xE1d\xE1m t\u011B tedy, jestli p\u0159ijme\u0161 toto b\u0159\xEDm\u011B
-      a navr\xE1t\xED\u0161 tento artefakt a\u017E se op\u011Bt nastol\xED rovnov\xE1ha
-      ve sv\u011Bt\u011B."
+    - "Vz\xE1cn\xFD poutn\xEDku, jsem bohyn\u011B \u017Eivota. P\u0159i\u0161la jsem
+      ve v\xE1\u017En\xE9 situaci. Z m\xE9ho chr\xE1mu byl ukraden vz\xE1cn\xFD artefakt
+      - magick\xE9 srdce. Je to zdroj m\xE9 s\xEDly. Te\u010F jej m\xE1 ve sv\xE9
+      moci temn\xE1 osoba, \u0159\xEDk\xE1 si Kroman. \u017D\xE1d\xE1m t\u011B tedy,
+      jestli p\u0159ijme\u0161 toto b\u0159\xEDm\u011B a navr\xE1t\xED\u0161 tento
+      artefakt, a\u0165 se op\u011Bt nastol\xED rovnov\xE1ha ve sv\u011Bt\u011B."
 --- !u!1 &1032214511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,6 +2997,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f5ece164b47ae941938be841a22f3d9, type: 3}
+--- !u!4 &1032725359 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 730941688315198025, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 5641277306705580040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1070793105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1070793106}
+  - component: {fileID: 1070793108}
+  - component: {fileID: 1070793107}
+  m_Layer: 0
+  m_Name: Conv (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1070793106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070793105}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1032725359}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070793107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070793105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &1070793108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070793105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Potuln\xFD mnich"
+    sentences:
+    - "Kudy kr\xE1\u010D\xED\u0161 poutn\xEDku?"
+    - "Rad\u011Bji by jsi m\u011Bl b\xFDt opatrn\xFD, m\xE1m tu\u0161en\xED, \u017Ee
+      se n\u011Bco zl\xE9ho stane."
 --- !u!1001 &1079360551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2727,7 +3290,7 @@ MonoBehaviour:
   dialogue:
     name: "Bohyn\u011B"
     sentences:
-    - "Vid\xEDm, \u017Ee t\u011B \u0161pr\xFDmy neopustily. Zde tedy p\u0159\xEDjmy
+    - "Ano, toto je m\u016Fj chr\xE1m v\u011Bd\u011Bn\xED. Zde tedy p\u0159\xEDjmy
       v\u011Bd\u011Bn\xED energie. Pom\u016F\u017Ee ti v boji proti nep\u0159\xE1tel\u016Fm."
 --- !u!1001 &1280380036
 PrefabInstance:
@@ -2871,7 +3434,7 @@ MonoBehaviour:
   dialogue:
     name: "\u010Carod\u011Bj"
     sentences:
-    - Tak nazdar!
+    - "Jsem poct\u011Bn t\xEDmto \xFAkolem, ur\u010Dit\u011B v\xE1s nezklamu."
 --- !u!1001 &1324414603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3130,7 +3693,8 @@ MonoBehaviour:
   dialogue:
     name: "\u010Carod\u011Bj"
     sentences:
-    - "Jasn\xE1 p\xE1ka!"
+    - "To nezn\xED moc dob\u0159e. I v\u011Bk u\u017E mi \u0161lape na paty, budu
+      schopn\xFD splnit tento \xFAkol?"
 --- !u!1001 &1599007113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3302,7 +3866,7 @@ TilemapRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.003937006, y: 0.003937006, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -44625,6 +45189,152 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1697319409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697319410}
+  - component: {fileID: 1697319412}
+  - component: {fileID: 1697319411}
+  m_Layer: 0
+  m_Name: Conv (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697319410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697319409}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 923272661}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1697319411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697319409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &1697319412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697319409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Potuln\xFD mnich"
+    sentences:
+    - "To ano, ale v\u017Edy se pod\xEDvej, jestli z takov\xFDch v\u011Bc\xED n\u011Bco
+      nevypadlo, m\u016F\u017Ee se ti to v budoucnu hodit."
+--- !u!1001 &1712747642
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1884616920}
+    m_Modifications:
+    - target: {fileID: 1902272481625829272, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Nu dobr\xE1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548242, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_Name
+      value: MonkTraveller (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "M\u011Bj o\u010Di na \u0161\u0165opk\xE1ch, nikdy nev\xED\u0161, na
+        co naraz\xED\u0161!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "N\u011Bco le\u017E\xED na zemi, n\u011Bco na tebe m\u016F\u017Ee spadnou
+        z v\xFD\u0161ky."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Rad\u011Bji od takov\xFDch v\u011Bc\xED rychle ute\u010D."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+--- !u!4 &1725180502 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4090832388606824155, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
+  m_PrefabInstance: {fileID: 544397635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1744136877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9184804406359983147, guid: 4784b6139fe47e3439892a68df4753db, type: 3}
@@ -44806,6 +45516,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6162402855758250117}
+  - {fileID: 896649148}
+  - {fileID: 889639557}
+  - {fileID: 662457906}
   m_Father: {fileID: 471040713}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44969,10 +45682,73 @@ MonoBehaviour:
   dialogue:
     name: "Bohyn\u011B"
     sentences:
-    - "Ta divn\xE1 entita, co ukradla m\xE9 srdce, ho m\u016F\u017Ee dle libosti
-      pou\u017E\xEDvat. Rozs\xE9v\xE1 tak po zemi mal\xE9 patvary, kter\xE9 lecco
-      prom\u011Bn\xED v obludu. D\xE1vej na sv\xE9 cest\u011B pozor, prvn\xED zkou\u0161ka
-      t\u011B \u010Dek\xE1 d\u0159\xEDve, ne\u017E bys \u010Dekal."
+    - "Ten zlosyn, co ukradl m\xE9 srdce, ho m\u016F\u017Ee dle libosti pou\u017E\xEDvat.
+      Rozs\xE9v\xE1 tak po zemi mal\xE9 patvary, kter\xE9 lecco prom\u011Bn\xED v
+      obludu. D\xE1vej na sv\xE9 cest\u011B pozor, prvn\xED zkou\u0161ka t\u011B
+      \u010Dek\xE1 d\u0159\xEDve, ne\u017E bys \u010Dekal."
+--- !u!1 &1903877460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903877461}
+  - component: {fileID: 1903877463}
+  - component: {fileID: 1903877462}
+  m_Layer: 0
+  m_Name: Conv (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1903877461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903877460}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1032725359}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903877462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903877460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &1903877463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903877460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u010Cardo\u011Bj"
+    sentences:
+    - "Moudr\xE1 slova mnichu, tak\xE9 m\xE1m podobn\xE9 tu\u0161en\xED."
+    - "Pokud se ale n\u011Bco opravdu stalo, tak by s t\xEDm m\u011Bl n\u011Bkdo
+      n\u011Bco ud\u011Blat."
 --- !u!1 &1918578328
 GameObject:
   m_ObjectHideFlags: 0
@@ -45046,7 +45822,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.003937006, y: 0.003937006, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -67314,6 +68090,84 @@ Transform:
   m_Father: {fileID: 1894189961}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2000115653
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1884616920}
+    m_Modifications:
+    - target: {fileID: 1902272481625829272, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Nu dobr\xE1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548242, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_Name
+      value: MonkTraveller (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Zadr\u017E!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Ne ka\u017Ed\xE1 cesta je pe\u0159\xED\u010Dko, pod\xEDvej se po\u0159\xE1dn\u011B. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Ta pichlav\xE1 zem by nebyla nic p\u0159\xEDjemn\xE9ho. Na\u0161lapuj
+        opatrn\u011B a sna\u017E se j\xED vyh\xFDbat."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
 --- !u!114 &2034803361 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1859085659834059301, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
@@ -67641,7 +68495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3671767963925293836, guid: bd6e543684b6d0a4c915bdbf5e5622e6, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: "\u010Cau ko\u010Dko!"
+      value: "Zase se shled\xE1v\xE1me. Dorazil jsem na spr\xE1vn\xE9 m\xEDsto?"
       objectReference: {fileID: 0}
     - target: {fileID: 3914610676506277783, guid: bd6e543684b6d0a4c915bdbf5e5622e6, type: 3}
       propertyPath: m_SortingLayer
@@ -68469,7 +69323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3244516463262921296, guid: 4410cb1207efd8b4a843e2f9a70fdc9a, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: "\u010Cau ko\u010Dko!"
+      value: O-oh, kdo jsi?
       objectReference: {fileID: 0}
     - target: {fileID: 7340245129535713456, guid: 4410cb1207efd8b4a843e2f9a70fdc9a, type: 3}
       propertyPath: m_RootOrder
@@ -68481,63 +69335,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4410cb1207efd8b4a843e2f9a70fdc9a, type: 3}
---- !u!1001 &3558737620477916179
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 178793456}
-    m_Modifications:
-    - target: {fileID: 3558737620653313545, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_Name
-      value: SpikyBall
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 140.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.4622674
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3558737620653313548, guid: 6d7734f2193c705498395688978b3478, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6d7734f2193c705498395688978b3478, type: 3}
 --- !u!1001 &4248610437636231714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68985,11 +69782,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8041193737449226624, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.55
+      value: -19.39
       objectReference: {fileID: 0}
     - target: {fileID: 8041193737449226624, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.83
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 8041193737449226624, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69054,11 +69851,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9184804406359983147, guid: 4784b6139fe47e3439892a68df4753db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.72
+      value: 40.76
       objectReference: {fileID: 0}
     - target: {fileID: 9184804406359983147, guid: 4784b6139fe47e3439892a68df4753db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45
+      value: -2.55
       objectReference: {fileID: 0}
     - target: {fileID: 9184804406359983147, guid: 4784b6139fe47e3439892a68df4753db, type: 3}
       propertyPath: m_LocalPosition.z

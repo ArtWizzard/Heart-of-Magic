@@ -22,6 +22,8 @@ public class Item : MonoBehaviour
     [Header("Storages")]
     [SerializeField] private DataStorage dataStorage;
     private bool lvlCleared;
+
+    private SpriteRenderer runeImage;
     
     public enum ItemType{
         Key,
@@ -42,6 +44,12 @@ public class Item : MonoBehaviour
         {
             IM = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
         }
+
+        runeImage = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        if (value >= 10 && type == ItemType.Rune)
+            runeImage.color = Color.yellow;
+        if (value >= 2 && type == ItemType.Key)
+            runeImage.color = Color.yellow;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

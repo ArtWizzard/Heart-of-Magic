@@ -31,6 +31,10 @@ public class Player_health : MonoBehaviour
         healthRegen = dataStorage.healthRegen;
         maxHealth = dataStorage.maxHealth;
         ResetHealth();
+
+        Physics2D.IgnoreLayerCollision(10, 13, false);
+        Physics2D.IgnoreLayerCollision(10, 12, false);
+        Physics2D.IgnoreLayerCollision(10, 15, false);
     }
 
     private void Update()

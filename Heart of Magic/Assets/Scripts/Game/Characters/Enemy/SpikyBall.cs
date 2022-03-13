@@ -17,6 +17,8 @@ public class SpikyBall : MonoBehaviour
     {
         leftEdge = transform.position.x - distance;
         rightEdge = transform.position.x + distance;
+        if (speed != 0)
+            transform.position = transform.position + new Vector3(Random.Range(-distance, distance), 0, 0);
     }
 
     void Update()

@@ -40,12 +40,16 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
+        if (GameObject.Find("InventoryManager") != null)
+            GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();
         SceneManager.LoadScene("Menu");
     }
 
     public void ExitGame()
     {
         Time.timeScale = 1f;
+        if (GameObject.Find("InventoryManager") != null)
+            GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();
         SceneManager.LoadScene("LevelSelect");
     }
 }

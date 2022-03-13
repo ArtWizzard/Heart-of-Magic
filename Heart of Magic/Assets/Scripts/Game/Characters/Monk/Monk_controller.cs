@@ -9,18 +9,27 @@ public class Monk_controller : MonoBehaviour
 
     [Header("Dialogue")]
     [SerializeField] private DialogueManager DM;
-    [SerializeField] GameObject[] dialogueHolder;
-    private GameObject child;
+    [SerializeField] private GameObject dialogueHolder;
+    private Transform child;
     private int childCount;
 
     private bool dialogueRuns = false;
-    private int i = 0;
+    private int i;
 
     private void Awake()
     {
-        childCount = dialogueHolder.Length;
+        childCount = dialogueHolder.transform.childCount;
         if (DM == null)
             DM = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+
+        i = 0;
+
+        /*
+        for (int i = 0; i < dialogueHolder.childCount; i++)
+        {
+            child.
+        }
+        */
     }
 
     private void Update()
@@ -31,7 +40,7 @@ public class Monk_controller : MonoBehaviour
             {
                 if (i < childCount)         //  je potřeba něco říct
                 {
-                    child = dialogueHolder[i];
+                    child = dialogueHolder.transform.GetChild(i);
                     child.GetComponent<DialogueTrigger>().TriggerDialogue();
                     child.GetComponent<SoundTrigger>().StartDialogue();
                     i ++;

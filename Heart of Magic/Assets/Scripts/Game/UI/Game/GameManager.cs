@@ -23,18 +23,24 @@ public class GameManager : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
+        if (GameObject.Find("InventoryManager") != null)
+            GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();
         SceneManager.LoadScene("Menu");
     }
 
     public void ExitGame()
     {
         Time.timeScale = 1f;
+        if (GameObject.Find("InventoryManager") != null)
+            GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();
         SceneManager.LoadScene("LevelSelect");
     }
 
     public void Restart()
     {
         Time.timeScale = 1f;
+        if (GameObject.Find("InventoryManager") != null)
+            GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();
         SceneManager.LoadScene(scene.name);
     }
 }

@@ -33,7 +33,7 @@ public class Item_drop_controller : MonoBehaviour
         pos = new Vector3(transform.position.x, transform.position.y + yDelta, transform.position.z);
         
         bool dropping = Random.Range(0,100) <= dropRate;
-        Debug.Log(dropping);
+        //Debug.Log(dropping);
 
         if(dropping)
         {

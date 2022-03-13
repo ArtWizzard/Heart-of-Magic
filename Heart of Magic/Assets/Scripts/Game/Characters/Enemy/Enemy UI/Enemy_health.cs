@@ -14,6 +14,8 @@ public class Enemy_health : MonoBehaviour
     [SerializeField] private GameObject[] objectsToDeactive;
     [SerializeField] private bool instantDrop = false;
 
+    //[SerializeField] private string deathAction;
+
     void Start()
     {
         Hitpoints = MaxHitpoints;
@@ -54,7 +56,11 @@ public class Enemy_health : MonoBehaviour
             //Destroy(gameObject);
             if (startWithDeath)
                 Death();
-            gameObject.SetActive(false);
+           gameObject.SetActive(false);
+            /*
+            if (gameObject.GetComponent<Death>() != null)
+                gameObject.GetComponent<Death>().Kill(deathAction);
+*/
             if (instantDrop)
                 if(gameObject.GetComponent("Item_drop_controller") != null)
                     gameObject.GetComponent<Item_drop_controller>().ItemDrop();
@@ -78,5 +84,10 @@ public class Enemy_health : MonoBehaviour
         {
             objectsToDeactive[i].SetActive(false);
         }
+    }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }
