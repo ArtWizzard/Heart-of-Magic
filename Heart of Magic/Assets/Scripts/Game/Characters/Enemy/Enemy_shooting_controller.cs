@@ -17,7 +17,7 @@ public class Enemy_shooting_controller : MonoBehaviour
         actualTime = 0;
 
         if (target == null)
-            target = target = GameObject.Find("Player").GetComponent<Transform>();
+            target = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     private void Update()
@@ -35,6 +35,7 @@ public class Enemy_shooting_controller : MonoBehaviour
     {
         if (FindProjectile() != -1)
         {
+            SoundManager.PlaySound("magic_shoot");
             float xDir = target.position.x - transform.position.x;
             float yDir = target.position.y - transform.position.y;
 
@@ -42,6 +43,7 @@ public class Enemy_shooting_controller : MonoBehaviour
 
             projectiles[FindProjectile()].transform.position = firePoint.position;
             projectiles[FindProjectile()].GetComponent<Enemy_projectile>().SetDirection(new Vector3(xDir, yDir, 0).normalized);
+            
         }
     }
 

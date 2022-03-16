@@ -57,6 +57,7 @@ public class WoodenBoss_spawn : MonoBehaviour
             Vector3 area = new Vector3(Random.Range(-spawnDistance, spawnDistance), Random.Range(-spawnDistance, spawnDistance), 0);
 
             ghosts[FindGhost(ghosts)].GetComponent<Ghost>().DistantRespawn(spawnPoint.position + area);
+            SoundManager.PlaySound("wizzard_fc");
         } else {
             if (FindGhost(wizGhosts) == -1)
             {
@@ -68,6 +69,7 @@ public class WoodenBoss_spawn : MonoBehaviour
             Vector3 area = new Vector3(Random.Range(-spawnDistance, spawnDistance), Random.Range(-spawnDistance, spawnDistance), 0);
 
             wizGhosts[FindGhost(wizGhosts)].GetComponent<Ghost>().DistantRespawn(spawnPoint.position + area);
+            SoundManager.PlaySound("wizzard_fc");
         }
     }
 

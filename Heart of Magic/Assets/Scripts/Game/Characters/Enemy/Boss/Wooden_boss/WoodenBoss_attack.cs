@@ -56,6 +56,7 @@ public class WoodenBoss_attack : MonoBehaviour
         if (Random.Range(0,2) != 0)
         {
             Fire();
+            SoundManager.PlaySound("magic_shoot");
             //Debug.Log("fire");
         } else {
             loadedMissiles = missiles.Length;
@@ -90,6 +91,7 @@ public class WoodenBoss_attack : MonoBehaviour
         if (FindMissile() != -1)
         {
             missiles[FindMissile()].GetComponent<Enemy_missile>().Shoot(firePoint);
+            SoundManager.PlaySound("magic_shoot");
         }
     }
 

@@ -42,6 +42,7 @@ public class Energy_fireball : MonoBehaviour
             hit = true;
             BoxCollider.enabled = false;
             anim.SetTrigger("explode");
+            SoundManager.PlaySound("magic_energy");
         }
     }
 

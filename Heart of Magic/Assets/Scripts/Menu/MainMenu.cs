@@ -33,6 +33,11 @@ public class MainMenu : MonoBehaviour
         storage.volume = sliderVolume.value;
     }
 
+    public void ClickSound()
+    {
+        SoundManager.PlaySound("click");
+    }
+
     public void SetEffects()
     {
         storage.effects = sliderEffects.value;
@@ -41,6 +46,12 @@ public class MainMenu : MonoBehaviour
     public void SetDialogues()
     {
         storage.dialogues = sliderDialogues.value;
+    }
+
+    public void QuitApplication()
+    {
+        Debug.Log("App has quit");
+        Application.Quit();
     }
 
     public void RestartGame()

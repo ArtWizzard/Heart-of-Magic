@@ -71,6 +71,7 @@ public class Magic_altar_controller : MonoBehaviour
             goddess.GetComponent<Goddess_teleportation>().ShowGoddess(transform, direction);
             dialogueRuns = true;
             once = true;
+            //SoundManager.PlaySound("tp");
             //Debug.Log(transform);
         }
     }

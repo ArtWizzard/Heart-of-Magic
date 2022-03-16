@@ -63,6 +63,7 @@ public class EvilSeed : MonoBehaviour
     public void SetExplode()
     {
         anim.SetTrigger("Explode");
+        SoundManager.PlaySound("explo1");
         movSpeed = movSpeed / 2;
     }
 
@@ -74,6 +75,7 @@ public class EvilSeed : MonoBehaviour
 
     public void Explode()
     {
+
         gameObject.SetActive(false);
     }
 }

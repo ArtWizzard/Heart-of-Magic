@@ -21,6 +21,9 @@ public class Goddess_controller : MonoBehaviour
     private void Awake()
     {
         childCount = dialogueHolder.Length;
+
+        if (DM == null)
+            DM = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
     }
 
     private void Update()

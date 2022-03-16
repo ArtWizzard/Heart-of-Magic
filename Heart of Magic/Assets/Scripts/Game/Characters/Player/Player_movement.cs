@@ -13,6 +13,8 @@ public class Player_movement : MonoBehaviour
     private Animator anim;
     private float HorizontalInput;
 
+    private bool minule;
+
     private void Awake()
     {
         //Grap references to rigidbody, boxcollider, animator from object
@@ -20,6 +22,7 @@ public class Player_movement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         circleCollider = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
+        minule = isGrounded();
     }
 
     private void Update()
@@ -45,6 +48,32 @@ public class Player_movement : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, jump_power);
             anim.SetBool("Jump", true);
         }
+
+        if (minule == false && isGrounded())
+        {
+            if (Random.value > 0.93f)
+            {
+                string sound = "wizzard_break";
+                switch(Random.Range(0,4))
+                {
+                    case 0:
+                        sound = "wizzard_break";
+                        break;
+                    case 1:
+                        sound = "wizzard_zada2";
+                        break;
+                    case 2:
+                        sound = "wizzard_zada1";
+                        break;
+                    case 3:
+                        sound = "wizzard_kolena";
+                        break;
+                }
+                SoundManager.PlaySound(sound);
+            }
+                    
+        }
+        minule = isGrounded();
 
         // Set animator parameters
         anim.SetBool("Run", HorizontalInput != 0);      // Začne 

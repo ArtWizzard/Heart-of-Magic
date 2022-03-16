@@ -56,7 +56,7 @@ public class Enemy_health : MonoBehaviour
             //Destroy(gameObject);
             if (startWithDeath)
                 Death();
-           gameObject.SetActive(false);
+            gameObject.SetActive(false);
             /*
             if (gameObject.GetComponent<Death>() != null)
                 gameObject.GetComponent<Death>().Kill(deathAction);

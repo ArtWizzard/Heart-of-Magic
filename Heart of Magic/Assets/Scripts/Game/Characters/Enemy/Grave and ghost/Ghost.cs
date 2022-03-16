@@ -24,11 +24,17 @@ public class Ghost : MonoBehaviour
     private float xPosT;
     private float yPosT;
 
+    private float lowDuration = 5;
+    private float highDuration = 10;
+    private float soundDuration;
+    private float soundTime = 0;
+
     void Awake()
     {
         transform.position = spawnPoint.position;
         if (target == null)
             target = GameObject.Find("Player").GetComponent<Transform>();
+        soundDuration = Random.Range(lowDuration, highDuration);
     }
 
     void Update()
@@ -47,6 +53,15 @@ public class Ghost : MonoBehaviour
             transform.position = transform.position;
         else
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
+    //
+        if (soundTime >= soundDuration)
+        {
+            SoundManager.PlaySound("ghost");
+            soundTime = 0;
+            soundDuration = Random.Range(lowDuration, highDuration);
+        }
+        soundTime += Time.deltaTime;
 
     }
 

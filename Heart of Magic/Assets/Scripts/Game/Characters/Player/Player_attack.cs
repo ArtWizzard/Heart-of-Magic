@@ -101,6 +101,8 @@ public class Player_attack : MonoBehaviour
             if (enoughMana)
             {
                 anim.SetTrigger("attack");
+                if (Random.value > 0.7f)
+                    SoundManager.PlaySound("wizzard_attack");
                 return true;
             } else
                 return false;

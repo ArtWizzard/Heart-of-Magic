@@ -594,6 +594,67 @@ Transform:
   m_Father: {fileID: 198153284}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &191345565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 191345566}
+  - component: {fileID: 191345568}
+  - component: {fileID: 191345567}
+  m_Layer: 0
+  m_Name: Conv (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &191345566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191345565}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1083798434}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &191345567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191345565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &191345568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191345565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u010Carod\u011Bj"
+    sentences:
+    - "D\xE1m si pozor"
 --- !u!1 &198153283
 GameObject:
   m_ObjectHideFlags: 0
@@ -53644,6 +53705,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9184804406359983147, guid: 4784b6139fe47e3439892a68df4753db, type: 3}
   m_PrefabInstance: {fileID: 404001945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &405550822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 405550823}
+  - component: {fileID: 405550825}
+  - component: {fileID: 405550824}
+  m_Layer: 0
+  m_Name: Conv (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405550823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405550822}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1957312407}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &405550824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405550822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &405550825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405550822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u010Carod\u011Bj"
+    sentences:
+    - "M\xE1m d\u016Fle\u017Eit\xFD \xFAkol"
 --- !u!1001 &407915021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80972,7 +81094,8 @@ MonoBehaviour:
     name: "Moudr\xFD mnich"
     sentences:
     - "V\xEDt\xE1m t\u011B."
-    - 
+    - "Vypad\xE1\u0161 celkem ve sp\u011Bchu. Bu\u010F ale opatrn\xFD, sta\u010D\xED
+      mal\xE9 uklouznut\xED a je konec."
 --- !u!1001 &905671738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81944,6 +82067,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1083798433}
+  - {fileID: 1957312406}
   m_Father: {fileID: 1561655734}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82635,6 +82759,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c107fe84c3c0f74fb073c097ca1a67f, type: 3}
+--- !u!114 &1460041784 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2149130346625741088, guid: 3c107fe84c3c0f74fb073c097ca1a67f, type: 3}
+  m_PrefabInstance: {fileID: 1460041783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1460041785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2149130345628753237, guid: 3c107fe84c3c0f74fb073c097ca1a67f, type: 3}
+  m_PrefabInstance: {fileID: 1460041783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1460041786 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2149130346062375076, guid: 3c107fe84c3c0f74fb073c097ca1a67f, type: 3}
+  m_PrefabInstance: {fileID: 1460041783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1468095787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83482,6 +83633,18 @@ PrefabInstance:
       propertyPath: runeText
       value: 
       objectReference: {fileID: 1228875098}
+    - target: {fileID: 1859085659834059301, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1460041786}
+    - target: {fileID: 1859085659834059301, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1460041785}
+    - target: {fileID: 1859085659834059301, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1460041784}
     - target: {fileID: 1859085660035203250, guid: db5f6723e615e9b409d2b8ffd8c6674d, type: 3}
       propertyPath: currentLevel
       value: 1
@@ -84460,6 +84623,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1957312405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1136814883}
+    m_Modifications:
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 96.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003142428780548242, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: m_Name
+      value: MonkTraveller (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.name
+      value: Mnich
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006132877685310640, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Kam kr\xE1\u010D\xED\u0161?"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+--- !u!4 &1957312406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2003142428780548237, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 1957312405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1957312407 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 730941688315198025, guid: f8af6e4008847f74ab90d3b544036515, type: 3}
+  m_PrefabInstance: {fileID: 1957312405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1976098820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84527,6 +84765,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8041193737449226624, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
   m_PrefabInstance: {fileID: 2025381807}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1982909343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982909344}
+  - component: {fileID: 1982909346}
+  - component: {fileID: 1982909345}
+  m_Layer: 0
+  m_Name: Conv (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1982909344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982909343}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4487805, y: 0.38993835, z: 74.57003}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1957312407}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1982909345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982909343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadfb5eeaebb7c4eb1eb0df4efec052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: []
+--- !u!114 &1982909346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982909343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4ad5c73be5cb440973f9a59180ffb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Mnich
+    sentences:
+    - "Tak to mus\xED b\xFDt nal\xE9hav\xFD \xFAkol, kdy\u017E tak sp\u011Bch\xE1\u0161."
+    - "N\u011Bkter\xE9 cesty v\u0161ak nevedou k c\xEDli, vyb\xEDrej moud\u0159e."
+    - "Pokud se v\u0161ak vyd\xE1\u0161 \u0161patn\xFDm sm\u011Brem, nezoufej, takov\xE9
+      m\xEDsta neb\xFDvaj\xED prozkouman\xE1 a sk\xFDtaj\xED \u0159adu poklad\u016F!"
+    - "N\u011Bkdy se cesta zd\xE1 b\xFDt i neprostupn\xE1, ale skute\u010Dnost je
+      jin\xE1."
 --- !u!1001 &1997407052
 PrefabInstance:
   m_ObjectHideFlags: 0

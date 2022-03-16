@@ -5,7 +5,7 @@ using UnityEngine;
 public class Beam : MonoBehaviour
 {
     [SerializeField] private DataStorage storage;
-    [SerializeField] private float duration;
+    [SerializeField] public float duration;
     private CapsuleCollider2D coll;
     private float actualTime = 0;
     public int damage;
@@ -34,6 +34,7 @@ public class Beam : MonoBehaviour
     public void Shoot()
     {
         gameObject.SetActive(true);
+        gameObject.GetComponent<MagicSound_duration>().StartSound();
         coll.enabled = true;
     }
 

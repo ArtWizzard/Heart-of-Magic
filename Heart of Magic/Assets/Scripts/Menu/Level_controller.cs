@@ -79,7 +79,11 @@ public class Level_controller : MonoBehaviour
             //Debug.Log(Locked);
 
             if (!Locked)               // odemčen
+            {
+                SoundManager.PlaySound("upgrade");
                 SceneManager.LoadScene(level);
+            }
+                
         }
     }
 
@@ -87,6 +91,7 @@ public class Level_controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         chosen = true;
+        SoundManager.PlaySound("choose");
         Change();
     }
 

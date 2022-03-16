@@ -22,6 +22,12 @@ public class GateController : MonoBehaviour
     [Header("Properities")]
     [SerializeField] private int keys_needed;
 
+    private void Awake()
+    {
+        if (IM == null)
+            IM = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && inside)

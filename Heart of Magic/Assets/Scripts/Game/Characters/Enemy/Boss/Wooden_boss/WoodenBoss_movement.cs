@@ -68,6 +68,7 @@ public class WoodenBoss_movement : MonoBehaviour
     public void SetPlace()
     {
         transform.position = future.position;
+        SoundManager.PlaySound("tp");
     }
 
     private Transform RandomChoose()

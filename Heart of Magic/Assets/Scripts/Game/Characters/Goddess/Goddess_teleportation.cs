@@ -20,18 +20,24 @@ public class Goddess_teleportation : MonoBehaviour
         //Debug.Log(_place.position.y);
         transform.localScale = new Vector3(_direction, 1, 1);
         anim.SetBool("Visible", true);
+        TPsound();
         active = true;
     }
 
     public void HideGoddess()
     {
         anim.SetBool("Visible", false);
-        
+        //SoundManager.PlaySound("tp");
         active = false;
     }
 
     public void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    public void TPsound()
+    {
+        SoundManager.PlaySound("tp");
     }
 }

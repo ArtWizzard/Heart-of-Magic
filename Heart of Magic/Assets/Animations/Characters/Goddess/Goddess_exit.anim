@@ -24,7 +24,7 @@ AnimationClip:
     - time: 0.16666667
       value: {fileID: -1436500064320731867, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - time: 0.33333334
-      value: {fileID: 1754026059101257400, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
+      value: {fileID: -830936044089428580, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - time: 0.5
       value: {fileID: -2875379149071749778, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - time: 0.6666667
@@ -60,7 +60,7 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 3911763735520675852, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - {fileID: -1436500064320731867, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
-    - {fileID: 1754026059101257400, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
+    - {fileID: -830936044089428580, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - {fileID: -2875379149071749778, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - {fileID: 3388361628876228320, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
     - {fileID: -1338994110116042559, guid: b7bce9b1a72575a45bcbd58f6128a0df, type: 3}
@@ -95,6 +95,13 @@ AnimationClip:
   m_Events:
   - time: 0
     functionName: UnsetFloating
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: TPsound
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

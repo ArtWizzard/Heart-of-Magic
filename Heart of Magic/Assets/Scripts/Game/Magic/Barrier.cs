@@ -9,7 +9,7 @@ public class Barrier : MonoBehaviour
 
     [Header ("Properities")]
     //[SerializeField] 
-    private float duration;
+    public float duration;
     [SerializeField] public int damage;
     [SerializeField] private DataStorage storage;
     [SerializeField] private float damageFrequency;
@@ -51,6 +51,7 @@ public class Barrier : MonoBehaviour
     {
         actualTime = 0;
         gameObject.SetActive(true);
+        gameObject.GetComponent<BarrierSound_duration>().StartSound();
         
     }
 

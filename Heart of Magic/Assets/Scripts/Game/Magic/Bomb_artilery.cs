@@ -53,6 +53,7 @@ public class Bomb_artilery : MonoBehaviour
             cCollider.enabled = false;
             //gameObject.SetActive(false);
             anim.SetTrigger("explode");
+            SoundManager.PlaySound("explode3");
         }
     }
 

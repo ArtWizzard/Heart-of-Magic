@@ -21,6 +21,8 @@ public class Enemy_projectile : MonoBehaviour
     private float actualTime;
     private Vector3 direction;
 
+    private Transform target;
+
     private CircleCollider2D cc;
     private Animator anim;
     //private bool hitLogic;
@@ -29,6 +31,8 @@ public class Enemy_projectile : MonoBehaviour
     {
         cc = GetComponent<CircleCollider2D>();
         anim = GetComponent<Animator>();
+        if (target == null)
+            target = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     private void Update()
@@ -49,6 +53,7 @@ public class Enemy_projectile : MonoBehaviour
         gameObject.SetActive(true); // rožne objekt
         cc.enabled = true;          // zapne collider
         actualTime = 0;             // spustí čas života
+        //SoundManager.PlaySound("magic_shoot");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,11 +80,50 @@ public class Enemy_projectile : MonoBehaviour
     {
         cc.enabled = false;
         direction = new Vector3(0, 0, 0);
+
         anim.SetTrigger("explode");
+        /*
+        string sound = "explode1";
+        switch(Random.Range(0,3))
+        {
+            case 0:
+                sound = "explode1";
+                break;
+            case 1:
+                sound = "explode2";
+                break;
+            case 2:
+                sound = "explode3";
+                break;
+        }
+        SoundManager.PlaySound(sound);*/
     }
 
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    public void DistantRespawn(Vector3 _spawn)
+    {
+        transform.position = _spawn;
+    }
+
+    public void DelayedShoot()
+    {
+        /*
+        float rozptylX = Random.Range(-_rozptyl, _rozptyl);
+        float rozptylY = Random.Range(-_rozptyl, _rozptyl);
+
+        Debug.Log(rozptylX);
+        Debug.Log(rozptylY);
+*/
+        Vector3 direct = target.position - transform.position;
+        /*direct = direct.normalized;
+        direct = new Vector3(   direct.x + rozptylX, 
+                                direct.y + rozptylY, 
+                                0).normalized;
+*/
+        SetDirection(direct.normalized);
     }
 }

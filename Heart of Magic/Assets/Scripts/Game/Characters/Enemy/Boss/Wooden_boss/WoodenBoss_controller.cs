@@ -61,7 +61,7 @@ public class WoodenBoss_controller : MonoBehaviour
 
                     gameObject.GetComponent<Levitation>().UnsetFloating();
                     anim.SetTrigger("Teleport");
-
+                    SoundManager.PlaySound("tp");
                     RandomAction();
                     break;
 

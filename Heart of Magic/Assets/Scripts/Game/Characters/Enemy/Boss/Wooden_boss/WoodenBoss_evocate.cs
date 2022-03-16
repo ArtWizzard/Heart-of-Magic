@@ -79,6 +79,7 @@ public class WoodenBoss_evocate : MonoBehaviour
                 //transform.position = tp_pos.position;
                 state = ImpactState.Flying;
                 Evocate();
+                SoundManager.PlaySound("impact");
             }
         }
     }

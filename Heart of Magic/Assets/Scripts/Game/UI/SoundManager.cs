@@ -6,7 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     public static AudioClip wizzard_fc_sound, wizzard_hit_sound, wizzard_at_sound; // wizzard
     public static AudioClip wizzard_ai_sound, wizzard_kolena_sound, wizzard_break_sound, wizzard_ohh_zada_sound, wizzard_ty_zada_sound;// wizzard saying
-    public static AudioClip magic_barrier_sound, magic_beam_sound, magic_energy_sound, magic_shoot_sound; // magic
+    public static AudioClip magic_barrier_sound, /*magic_beam_sound,*/ magic_energy_sound, magic_shoot_sound; // magic
     public static AudioClip explode_1_sound, explode_2_sound, explode_3_sound; // explode
     public static AudioClip click_sound, choose_sound, /*portal_sound,*/ upgrade_sound; // menu
     public static AudioClip ghost_sound, impact_sound, tp_sound; // enemy
@@ -15,8 +15,8 @@ public class SoundManager : MonoBehaviour
     private static AudioSource audioSrc;
     [SerializeField] private DataStorage storage;
     private float volume;
-    private float effectsVolume;
-    private float dialogueVolume;
+    //private float effectsVolume;
+    //private float dialogueVolume;
 
     private void Start()
     {
@@ -30,8 +30,8 @@ public class SoundManager : MonoBehaviour
         wizzard_break_sound = Resources.Load<AudioClip>("brok");
         wizzard_fc_sound = Resources.Load<AudioClip>("fc");
         // magic
-        magic_barrier_sound = Resources.Load<AudioClip>("barrier");
-        magic_beam_sound = Resources.Load<AudioClip>("beam");
+        magic_barrier_sound = Resources.Load<AudioClip>("barrier"); // hotovo
+        //magic_beam_sound = Resources.Load<AudioClip>("beam");
         magic_energy_sound = Resources.Load<AudioClip>("electro");
         magic_shoot_sound = Resources.Load<AudioClip>("shoot");
         // explode
@@ -52,14 +52,14 @@ public class SoundManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
         
         //storage = Resources.Load<DataStorage>("Scripts/Operation/New Data Storage");
-
+/*
         effectsVolume = storage.effects * storage.volume;
         dialogueVolume = storage.dialogues * storage.volume;
         if (effectsVolume > 1)
             effectsVolume = 1;
         if (dialogueVolume > 1)
-            dialogueVolume = 1;
-        audioSrc.volume = volume;
+            dialogueVolume = 1;*/
+        audioSrc.volume = storage.volume;
     }
 /*
     private void Update()
@@ -106,9 +106,10 @@ public class SoundManager : MonoBehaviour
             case "magic_barrier":
                 audioSrc.PlayOneShot(magic_barrier_sound);
                 break;
+                /*
             case "magic_beam":
                 audioSrc.PlayOneShot(magic_beam_sound);
-                break;
+                break;*/
             case "magic_energy":
                 audioSrc.PlayOneShot(magic_energy_sound);
                 break;
