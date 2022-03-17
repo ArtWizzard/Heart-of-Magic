@@ -24,6 +24,9 @@ public class Boss_controller : MonoBehaviour
     [SerializeField] private GameObject hittableBody;
     [SerializeField] public int damage;
 
+    [Header ("Data storage")]
+    [SerializeField] private DataStorage storage;
+
     private Animator anim;
 
     private void Awake()
@@ -37,6 +40,8 @@ public class Boss_controller : MonoBehaviour
         actualDelay  = 0;
 
         anim = GetComponent<Animator>();
+
+        damage = (int)(damage * storage.diffMulti);
     }
 
     private void Update()

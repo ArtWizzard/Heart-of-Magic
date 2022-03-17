@@ -51,4 +51,6 @@ public class DataStorage : ScriptableObject
     public float volume = 0.5f;
     public float effects = 0.5f;
     public float dialogues = 0.5f;
+    public int difficulty = 2;
+    public float diffMulti = 0.5f;
 }

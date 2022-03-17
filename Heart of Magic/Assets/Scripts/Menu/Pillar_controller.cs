@@ -40,10 +40,10 @@ public class Pillar_controller : MonoBehaviour
     [SerializeField] private float earthStep =      3.0f;
     [SerializeField] private float barrierStep =    0.1f;
     [SerializeField] private float beamStep =       10.0f;
-    [SerializeField] private float healthStep =     20.0f;
-    [SerializeField] private float healthRStep =    1f;
+    [SerializeField] private float healthStep =     30.0f;
+    [SerializeField] private float healthRStep =    3f;
     [SerializeField] private float manaStep =       10.0f;
-    [SerializeField] private float manaRStep =      0.5f;
+    [SerializeField] private float manaRStep =      1f;
 
     [Header ("Appearance")]
     [SerializeField] private Sprite def;

@@ -17,10 +17,15 @@ public class MagicBoss_health : MonoBehaviour
     [SerializeField] private GameObject[] loots;
     [SerializeField] private Transform[] positions;
 
+    [Header ("Data storage")]
+    [SerializeField] private DataStorage storage;
+
     public float multiplier;
 
     void Start()
     {
+        MaxHitpoints = (int)(MaxHitpoints * storage.diffMulti);
+
         Hitpoints = MaxHitpoints;
         HealthBar.Sethealth(Hitpoints,MaxHitpoints);
         multiplier = 1;

@@ -21,6 +21,9 @@ public class Enemy_projectile : MonoBehaviour
     private float actualTime;
     private Vector3 direction;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage storage;
+
     private Transform target;
 
     private CircleCollider2D cc;
@@ -33,6 +36,8 @@ public class Enemy_projectile : MonoBehaviour
         anim = GetComponent<Animator>();
         if (target == null)
             target = GameObject.Find("Player").GetComponent<Transform>();
+
+        damage = (int)(damage * storage.diffMulti);
     }
 
     private void Update()

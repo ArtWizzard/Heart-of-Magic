@@ -255,6 +255,7 @@ MonoBehaviour:
   deltaYBeam: 0
   deltaXBeam: 3
   storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+  beamInjury: 10
 --- !u!114 &6304797600368014124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   currentHealth: 100
-  timeToRegen: 5
+  timeToRegen: 3
   iFrameDuration: 0.75
   numberOfFlashes: 3
   dataStorage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}

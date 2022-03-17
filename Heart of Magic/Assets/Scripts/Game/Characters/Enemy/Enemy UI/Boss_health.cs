@@ -22,10 +22,14 @@ public class Boss_health : MonoBehaviour
     [Header ("Loot")]
     [SerializeField] private GameObject[] loots;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage storage;
+
     public float multiplier;
 
     void Start()
     {
+        MaxHitpoints = MaxHitpoints * storage.diffMulti;
         Hitpoints = MaxHitpoints;
         HealthBar.Sethealth(Hitpoints,MaxHitpoints);
         multiplier = 1;

@@ -316,6 +316,7 @@ MonoBehaviour:
   movSpeed: 1
   target: {fileID: 0}
   range: 0
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!50 &6439486943119384370
 Rigidbody2D:
   serializedVersion: 4
@@ -373,6 +374,8 @@ MonoBehaviour:
   yDelta: 0.5
   key: {fileID: 7227820772538516407, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
   rune: {fileID: 8041193737449226625, guid: 14702ab71ca42404c8b605af3f124c37, type: 3}
+  ammount: 1
+  loot: {fileID: 0}
 --- !u!114 &5987269182025156795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +391,11 @@ MonoBehaviour:
   Hitpoints: 0
   MaxHitpoints: 100
   HealthBar: {fileID: 8410840846487109761}
+  startWithDeath: 0
+  objectsToActive: []
+  objectsToDeactive: []
+  instantDrop: 0
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!58 &319710089622381152
 CircleCollider2D:
   m_ObjectHideFlags: 0

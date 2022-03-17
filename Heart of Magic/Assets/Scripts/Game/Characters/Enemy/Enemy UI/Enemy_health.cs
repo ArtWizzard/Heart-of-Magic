@@ -14,10 +14,15 @@ public class Enemy_health : MonoBehaviour
     [SerializeField] private GameObject[] objectsToDeactive;
     [SerializeField] private bool instantDrop = false;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage storage;
+
     //[SerializeField] private string deathAction;
 
     void Start()
     {
+        MaxHitpoints = MaxHitpoints * storage.diffMulti;
+
         Hitpoints = MaxHitpoints;
         HealthBar.Sethealth(Hitpoints,MaxHitpoints);
     }

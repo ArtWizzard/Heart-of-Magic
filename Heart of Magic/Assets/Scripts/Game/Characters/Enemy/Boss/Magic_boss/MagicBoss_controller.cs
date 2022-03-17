@@ -23,6 +23,9 @@ public class MagicBoss_controller : MonoBehaviour
     [SerializeField] private GameObject hittableBody;
     [SerializeField] public int damage;
 
+    [Header ("Data storage")]
+    [SerializeField] private DataStorage storage;
+
     private void Awake()
     {
         //state = MBossState.Spawn;
@@ -30,6 +33,8 @@ public class MagicBoss_controller : MonoBehaviour
 
         free = true;
         actualDelay  = 0;
+
+        damage = (int)(damage * storage.diffMulti);
     }
 
     private void Update()

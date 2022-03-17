@@ -376,6 +376,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 0
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &1834838994872113126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +396,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 7
   backDistance: 5
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!95 &8232518724820849501
 Animator:
   serializedVersion: 3
@@ -868,6 +870,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 1
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &7816561915904142840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,6 +890,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 7
   backDistance: 5
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!95 &7816561915904142841
 Animator:
   serializedVersion: 3
@@ -1053,7 +1057,7 @@ MonoBehaviour:
   ghosts:
   - {fileID: 7816561915904142847}
   - {fileID: 4439131683387543722}
-  SpawnInterval: 5
+  SpawnInterval: 6
   health: {fileID: 7816561915974733066}
   playerInRagne: 0
 --- !u!114 &7816561915974733066
@@ -1075,6 +1079,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 1
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &7816561915974733060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2086,6 +2091,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615746779666024781, guid: 0798191172e48c949974d68b774a542a, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0798191172e48c949974d68b774a542a, type: 3}
 --- !u!1 &8567884795659807554 stripped
@@ -2157,6 +2166,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615746779666024781, guid: 0798191172e48c949974d68b774a542a, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0798191172e48c949974d68b774a542a, type: 3}
 --- !u!1 &8462225280132779402 stripped
@@ -2228,6 +2241,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615746779666024781, guid: 0798191172e48c949974d68b774a542a, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0798191172e48c949974d68b774a542a, type: 3}
 --- !u!1 &8717138947710650555 stripped
@@ -2299,6 +2316,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615746779666024781, guid: 0798191172e48c949974d68b774a542a, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0798191172e48c949974d68b774a542a, type: 3}
 --- !u!1 &4612167242062715934 stripped
@@ -2370,6 +2391,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615746779666024781, guid: 0798191172e48c949974d68b774a542a, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0798191172e48c949974d68b774a542a, type: 3}
 --- !u!1 &3980277568466050647 stripped
@@ -2441,6 +2466,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615746779666024781, guid: 0798191172e48c949974d68b774a542a, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0798191172e48c949974d68b774a542a, type: 3}
 --- !u!1 &2565465945143742556 stripped

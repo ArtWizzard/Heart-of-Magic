@@ -12,6 +12,9 @@ public class SpikyBall : MonoBehaviour
     private float leftEdge;
     private float rightEdge;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage storage;
+
 
     void Awake()
     {
@@ -19,6 +22,8 @@ public class SpikyBall : MonoBehaviour
         rightEdge = transform.position.x + distance;
         if (speed != 0)
             transform.position = transform.position + new Vector3(Random.Range(-distance, distance), 0, 0);
+
+        damage = (int)(damage * storage.diffMulti);
     }
 
     void Update()

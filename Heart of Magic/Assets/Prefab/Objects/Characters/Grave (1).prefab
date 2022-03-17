@@ -197,7 +197,7 @@ MonoBehaviour:
   - {fileID: 4090832389176793650}
   - {fileID: 4090832389453627727}
   - {fileID: 4090832390143264229}
-  SpawnInterval: 3
+  SpawnInterval: 4.5
   health: {fileID: 4090832388606824158}
   playerInRagne: 0
 --- !u!114 &4090832388606824158
@@ -219,6 +219,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 1
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!61 &4090832388606824159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -992,6 +993,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 1
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &4090832389176793648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,10 +1009,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 4090832388584160821}
   health: {fileID: 4090832389176793649}
   damage: 5
-  speed: 2
+  speed: 1.5
   target: {fileID: 0}
   stopDistance: 0
   backDistance: 0
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!95 &4090832389176793652
 Animator:
   serializedVersion: 3
@@ -1557,6 +1560,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 1
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &4090832389453627714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1572,10 +1576,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 4090832388584160821}
   health: {fileID: 4090832389453627715}
   damage: 5
-  speed: 2
+  speed: 1.5
   target: {fileID: 0}
   stopDistance: 0
   backDistance: 0
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!95 &4090832389453627725
 Animator:
   serializedVersion: 3
@@ -2303,6 +2308,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 1
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &4090832390143264152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,10 +2324,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 4090832388584160821}
   health: {fileID: 4090832390143264153}
   damage: 5
-  speed: 2
+  speed: 1.5
   target: {fileID: 0}
   stopDistance: 0
   backDistance: 0
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!95 &4090832390143264155
 Animator:
   serializedVersion: 3

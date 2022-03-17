@@ -325,6 +325,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 0
+  storage: {fileID: 0}
 --- !u!114 &1923357855653439762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +345,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 0
   backDistance: 0
+  storage: {fileID: 0}
 --- !u!95 &1923357855653439763
 Animator:
   serializedVersion: 3
@@ -1062,6 +1064,7 @@ MonoBehaviour:
   hystereze: 0.5
   hittableBody: {fileID: 1923357856872054118}
   damage: 5
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &1923357855914525594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2696,6 +2699,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 0
+  storage: {fileID: 0}
 --- !u!114 &1923357856579445952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2715,6 +2719,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 7
   backDistance: 5
+  storage: {fileID: 0}
 --- !u!95 &1923357856579445953
 Animator:
   serializedVersion: 3
@@ -3092,6 +3097,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 0
+  storage: {fileID: 0}
 --- !u!114 &1923357856781862342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,6 +3117,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 0
   backDistance: 0
+  storage: {fileID: 0}
 --- !u!95 &1923357856781862343
 Animator:
   serializedVersion: 3
@@ -3338,6 +3345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 1923357855914525587}
+  storage: {fileID: 0}
 --- !u!114 &1923357856872054112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3360,6 +3368,7 @@ MonoBehaviour:
   anim: {fileID: 1923357855914525599}
   loots:
   - {fileID: 1923357857270276651}
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
   multiplier: 0
 --- !u!1 &1923357856872766811
 GameObject:
@@ -4103,6 +4112,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 0
+  storage: {fileID: 0}
 --- !u!114 &1923357857246566122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4122,6 +4132,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 0
   backDistance: 0
+  storage: {fileID: 0}
 --- !u!95 &1923357857246566123
 Animator:
   serializedVersion: 3
@@ -4709,6 +4720,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 0
+  storage: {fileID: 0}
 --- !u!114 &1923357857441280384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4728,6 +4740,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 7
   backDistance: 5
+  storage: {fileID: 0}
 --- !u!95 &1923357857441280385
 Animator:
   serializedVersion: 3
@@ -4955,6 +4968,7 @@ MonoBehaviour:
   objectsToActive: []
   objectsToDeactive: []
   instantDrop: 0
+  storage: {fileID: 0}
 --- !u!114 &1923357857482041652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4974,6 +4988,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stopDistance: 0
   backDistance: 0
+  storage: {fileID: 0}
 --- !u!95 &1923357857482041653
 Animator:
   serializedVersion: 3

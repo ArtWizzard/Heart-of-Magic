@@ -912,7 +912,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.92
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -68931,12 +68931,12 @@ PrefabInstance:
       objectReference: {fileID: 1300704832}
     - target: {fileID: 674375773645097302, guid: bd6e543684b6d0a4c915bdbf5e5622e6, type: 3}
       propertyPath: dialogues.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 674375773645097302, guid: bd6e543684b6d0a4c915bdbf5e5622e6, type: 3}
       propertyPath: dialogues.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 6686c8e1937779e4eb8ef20a18196b31, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3671767963925293836, guid: bd6e543684b6d0a4c915bdbf5e5622e6, type: 3}
       propertyPath: dialogue.name
       value: "\u010Carod\u011Bj"
@@ -69455,12 +69455,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 142302034246287536, guid: 4410cb1207efd8b4a843e2f9a70fdc9a, type: 3}
       propertyPath: dialogues.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142302034246287536, guid: 4410cb1207efd8b4a843e2f9a70fdc9a, type: 3}
       propertyPath: dialogues.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 6686c8e1937779e4eb8ef20a18196b31, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1520069568267928390, guid: 4410cb1207efd8b4a843e2f9a70fdc9a, type: 3}
       propertyPath: m_RootOrder
       value: 0

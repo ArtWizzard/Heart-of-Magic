@@ -246,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -748,7 +748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -841,7 +841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -1067,7 +1067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -53959,7 +53959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -54119,7 +54119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -54355,7 +54355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -80440,7 +80440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -80758,7 +80758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -81283,7 +81283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -82919,7 +82919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -83856,7 +83856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090832388606824158, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: MaxHitpoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4090832389176793648, guid: 5e93a143741e4db4fb6efdc2e7d6e0cd, type: 3}
       propertyPath: damage
@@ -84056,7 +84056,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

@@ -28,6 +28,9 @@ public class WoodenBoss_evocate : MonoBehaviour
     [Header ("Body damage")]
     [SerializeField] private int damage;
 
+    [Header ("Data storage")]
+    [SerializeField] private DataStorage storage;
+
     private BoxCollider2D boxCollider;
     private ImpactState state;
 
@@ -39,6 +42,8 @@ public class WoodenBoss_evocate : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         active = false;
         //boxcollider.enabled = false; 
+
+        damage = (int)(damage * storage.diffMulti);
     }
 
      private void OnTriggerEnter2D(Collider2D coll)

@@ -15,6 +15,9 @@ public class Enemy_missile : MonoBehaviour
     private float actualTime;
     private bool flying;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage storage;
+
     private CircleCollider2D cc;
     private Animator anim;
 
@@ -26,6 +29,8 @@ public class Enemy_missile : MonoBehaviour
         flying = true;
         if (target == null)
             target = GameObject.Find("Player").GetComponent<Transform>();
+
+        damage = (int)(damage * storage.diffMulti);
     }
 
     private void Update()

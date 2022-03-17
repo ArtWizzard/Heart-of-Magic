@@ -13,6 +13,9 @@ public class EvilSeed : MonoBehaviour
     private bool near = false;
     public bool range = false;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage storage;
+
     private float x;
     private float y;
     private float z;
@@ -24,6 +27,8 @@ public class EvilSeed : MonoBehaviour
     {
         rB = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        damage = (int)(damage * storage.diffMulti);
 
         x = transform.localScale.x;
         y = transform.localScale.y;

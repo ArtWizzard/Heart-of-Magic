@@ -17,6 +17,9 @@ public class Ghost : MonoBehaviour
     [SerializeField] private float stopDistance;
     [SerializeField] private float backDistance;
 
+    [Header ("Storage")]
+    [SerializeField] private DataStorage storage;
+
     private bool stopLogic;
     private bool backLogic;
     private float xPosS;
@@ -35,6 +38,8 @@ public class Ghost : MonoBehaviour
         if (target == null)
             target = GameObject.Find("Player").GetComponent<Transform>();
         soundDuration = Random.Range(lowDuration, highDuration);
+
+        damage = (int)(damage * storage.diffMulti);
     }
 
     void Update()

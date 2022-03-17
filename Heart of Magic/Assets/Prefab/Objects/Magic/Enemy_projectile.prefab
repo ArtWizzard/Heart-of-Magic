@@ -121,6 +121,7 @@ MonoBehaviour:
   damage: 2
   speed: 3
   lifeTime: 5
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!58 &3693086781608480315
 CircleCollider2D:
   m_ObjectHideFlags: 0

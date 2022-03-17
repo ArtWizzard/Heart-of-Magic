@@ -11,6 +11,13 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Slider sliderEffects;
     [SerializeField] private Slider sliderDialogues;
 
+    [Header ("Check Difficulty")]
+    [SerializeField] private Toggle easy;
+    [SerializeField] private Toggle medium;
+    [SerializeField] private Toggle hard;
+
+    //toggle.isOn
+
     private void Awake()
     {
         if (!storage.started)
@@ -21,6 +28,29 @@ public class MainMenu : MonoBehaviour
         sliderVolume.value = storage.volume;
         sliderEffects.value = storage.effects;
         sliderDialogues.value = storage.dialogues;
+
+        SetToggle(storage.difficulty);
+        
+    }
+
+    private void SetToggle(int _specific)
+    {
+        easy.SetIsOnWithoutNotify(false);
+        medium.SetIsOnWithoutNotify(false);
+        hard.SetIsOnWithoutNotify(false);
+
+        switch(_specific)
+        {
+            case 1:
+                easy.SetIsOnWithoutNotify(true);
+                break;
+            case 2:
+                medium.SetIsOnWithoutNotify(true);
+                break;
+            case 3:
+                hard.SetIsOnWithoutNotify(true);
+                break;
+        }
     }
 
     public void PlayGame()
@@ -54,6 +84,27 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void SetEasy()
+    {
+        storage.difficulty = 1;
+        storage.diffMulti = 0.3f;
+        SetToggle(1);
+    }
+
+    public void SetMedium()
+    {
+        storage.difficulty = 2;
+        storage.diffMulti = 0.5f;
+        SetToggle(2);
+    }
+
+    public void SetHard()
+    {
+        storage.difficulty = 3;
+        storage.diffMulti = 0.8f;
+        SetToggle(3);
+    }
+
     public void RestartGame()
     {
         // inventory
@@ -80,8 +131,8 @@ public class MainMenu : MonoBehaviour
 
         storage.maxHealth = 100;            // strength
         storage.maxMana = 50;
-        storage.healthRegen = 1f;
-        storage.manaRegen = 5;
+        storage.healthRegen = 3f;
+        storage.manaRegen = 11;
 
         // magic damage
         storage.energyBallDamage = 5;       // damage
@@ -98,5 +149,8 @@ public class MainMenu : MonoBehaviour
         storage.earthLevel = 1;
         storage.barrierLevel = 1;
         storage.beamLevel = 1;
+
+        // settings
+        storage.difficulty = 2;
     }
 }
