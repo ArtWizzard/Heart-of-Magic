@@ -73517,14 +73517,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 735006979}
     m_Modifications:
+    - target: {fileID: 1923357855653439762, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 322751141}
+    - target: {fileID: 1923357855653439762, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357855653439773, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357856579445952, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 322751141}
+    - target: {fileID: 1923357856579445952, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     - target: {fileID: 1923357856579445952, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1901345555}
+    - target: {fileID: 1923357856579445955, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357856781862337, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357856781862342, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 322751141}
+    - target: {fileID: 1923357856781862342, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     - target: {fileID: 1923357856872054112, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
       propertyPath: MaxHitpoints
-      value: 7000
+      value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 1923357856872054112, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: objectsToDeactive.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923357856872054112, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: objectsToDeactive.Array.data[1]
+      value: 
+      objectReference: {fileID: 1923357855765004199}
+    - target: {fileID: 1923357856872054112, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: objectsToDeactive.Array.data[2]
+      value: 
+      objectReference: {fileID: 1923357855765004198}
+    - target: {fileID: 1923357856872054114, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     - target: {fileID: 1923357857102318138, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -73573,9 +73625,55 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalBoss_area
       objectReference: {fileID: 0}
+    - target: {fileID: 1923357857246566122, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 322751141}
+    - target: {fileID: 1923357857246566122, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357857246566133, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357857441280384, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 322751141}
+    - target: {fileID: 1923357857441280384, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     - target: {fileID: 1923357857441280384, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1901345555}
+    - target: {fileID: 1923357857441280387, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357857482041652, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 322751141}
+    - target: {fileID: 1923357857482041652, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
+    - target: {fileID: 1923357857482041655, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+      propertyPath: storage
+      value: 
+      objectReference: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+--- !u!1 &1923357855765004198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8894615099431670633, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+  m_PrefabInstance: {fileID: 1923357855765004197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923357855765004199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8894615099868341216, guid: be99b138e36868b49b8aef76cc0f4a17, type: 3}
+  m_PrefabInstance: {fileID: 1923357855765004197}
+  m_PrefabAsset: {fileID: 0}

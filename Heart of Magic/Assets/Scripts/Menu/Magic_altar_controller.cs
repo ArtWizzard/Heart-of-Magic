@@ -5,7 +5,7 @@ using UnityEngine;
 public class Magic_altar_controller : MonoBehaviour
 {
     [Header("Objects")]
-    [SerializeField] private GameObject goddess;
+    [SerializeField] public GameObject goddess;
     [SerializeField] private GameObject[] dialoguesHolder;
     [SerializeField] private DialogueManager DM;
     [SerializeField] private GameObject activation;
@@ -13,7 +13,7 @@ public class Magic_altar_controller : MonoBehaviour
     private int direction;
     private bool once;
 
-    private bool dialogueRuns = false;
+    public bool dialogueRuns = false;
     private int i = 0;
 
     private void Awake()
@@ -61,7 +61,7 @@ public class Magic_altar_controller : MonoBehaviour
     {
         if (collision.tag == "Player" && !goddess.activeInHierarchy && !gameObject.GetComponent<Magic_receiving>().unlocked)
         {
-            Debug.Log(gameObject.GetComponent<Magic_receiving>().unlocked);
+            //Debug.Log(gameObject.GetComponent<Magic_receiving>().unlocked);
             if (collision.transform.position.x < transform.position.x)
                 direction = -1;
             else
@@ -71,6 +71,7 @@ public class Magic_altar_controller : MonoBehaviour
             goddess.GetComponent<Goddess_teleportation>().ShowGoddess(transform, direction);
             dialogueRuns = true;
             once = true;
+            i = 0;
             //SoundManager.PlaySound("tp");
             //Debug.Log(transform);
         }

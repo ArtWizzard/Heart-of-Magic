@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 6355294106492858190}
-  storage: {fileID: 0}
+  storage: {fileID: 11400000, guid: a4674d1363e09704689cf5894181db63, type: 2}
 --- !u!114 &6355294105017583321
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Goddess_controller : MonoBehaviour
 {
     [Header("Objects")]
-    [SerializeField] private GameObject goddess;
+    [SerializeField] public GameObject goddess;
     //[SerializeField] private GameObject[] dialogueHolders;
 
     [Header("Dialogue")]
@@ -15,7 +15,7 @@ public class Goddess_controller : MonoBehaviour
     private int childCount;
     private int direction;
 
-    private bool dialogueRuns = false;
+    public bool dialogueRuns = false;
     private int i = 0;
 
     private void Awake()
@@ -56,6 +56,7 @@ public class Goddess_controller : MonoBehaviour
             else
                 direction = 1;
 
+            i = 0;
             goddess.GetComponent<Goddess_teleportation>().ShowGoddess(transform, direction);
             dialogueRuns = true;
         }

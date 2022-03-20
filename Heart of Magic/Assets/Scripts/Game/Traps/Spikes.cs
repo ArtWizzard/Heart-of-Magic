@@ -8,6 +8,9 @@ public class Spikes : MonoBehaviour
     private int currentLevel;
     private LevelManager LM;
 
+    [Header ("Data storage")]
+    [SerializeField] private DataStorage storage;
+
     private void Awake()
     {
         LM = GameObject.Find("LevelManager").GetComponent<LevelManager>();
@@ -22,7 +25,7 @@ public class Spikes : MonoBehaviour
             //SceneManager.LoadScene("Level_" + currentLevel);
 
             int max = collision.GetComponent<Player_health>().maxHealth;
-            collision.GetComponent<Player_health>().TakeDamage((int)(max / 3));
+            collision.GetComponent<Player_health>().TakeDamage((int)((max / 3) * storage.diffMulti));
         }
     }
 }

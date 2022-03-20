@@ -33,7 +33,27 @@ public class Player_movement : MonoBehaviour
     private void SelfMovement()
     {
         // Pohyb do stran
+        //if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         HorizontalInput = Input.GetAxis("Horizontal");
+        /*
+        if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+            HorizontalInput = 0;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            HorizontalInput = 1;
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            HorizontalInput = -1;
+        }
+        else
+        {
+            HorizontalInput = 0;
+        }*/
+
+
         body.velocity = new Vector2(HorizontalInput * speed, body.velocity.y);
 
         // Otáčení

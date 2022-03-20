@@ -25,10 +25,10 @@ public class DataStorage : ScriptableObject
     public float healthRegen;
     public float manaRegen;
 
-    public int healthCost = 3;  // all 3
-    public int manaCost = 3;
-    public int healthRegenCost = 3;
-    public int regenCost = 3;
+    public int healthCost; // = 3;  // all 3
+    public int manaCost; // = 3;
+    public int healthRegenCost; // = 3;
+    public int regenCost; // = 3;
 
     // magic damage
     public int energyLevel;
@@ -41,16 +41,16 @@ public class DataStorage : ScriptableObject
     public float barrierDuration;
     public int beamDamage; 
 
-    public int energyCost = 1;  // 1, 2, 3, 4
-    public int earthCost = 2;
-    public int barrierCost = 3;
-    public int beamCost = 4;
+    public int energyCost; // = 1;  // 1, 2, 3, 4
+    public int earthCost; // = 2;
+    public int barrierCost; // = 3;
+    public int beamCost; // = 4;
 
     // other
-    public bool started = true;
-    public float volume = 0.5f;
-    public float effects = 0.5f;
-    public float dialogues = 0.5f;
+    public bool started;
+    public float volume; //= 0.5f;
+    public float effects; // = 0.5f;
+    public float dialogues; // = 0.5f;
     public int difficulty = 2;
     public float diffMulti = 0.5f;
 }

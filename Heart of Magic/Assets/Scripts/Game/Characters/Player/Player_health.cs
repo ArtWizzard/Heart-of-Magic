@@ -24,6 +24,8 @@ public class Player_health : MonoBehaviour
     
     [Header("References")]
     public Health_bar health_bar;
+    
+    public bool hittable;
 
     private void Awake()
     {
@@ -35,6 +37,8 @@ public class Player_health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(10, 13, false);
         Physics2D.IgnoreLayerCollision(10, 12, false);
         Physics2D.IgnoreLayerCollision(10, 15, false);
+
+        hittable = true;
     }
 
     private void Update()
@@ -63,20 +67,23 @@ public class Player_health : MonoBehaviour
     }
     public void TakeDamage(int _damage)
     {
-        currentHealth -= _damage;
-        if(currentHealth <= 0)
-            {
-                currentHealth = 0;
-                //dead = true;
-                //Debug.Log("Current health: " + currentHealth.ToString());
-                //FindObjectOfType<LevelManager>().Respawn();
-                FindObjectOfType<GameManager>().EndGame();
-            }
+        if (hittable)
+        {
+            currentHealth -= _damage;
+            if(currentHealth <= 0)
+                {
+                    currentHealth = 0;
+                    //dead = true;
+                    //Debug.Log("Current health: " + currentHealth.ToString());
+                    //FindObjectOfType<LevelManager>().Respawn();
+                    FindObjectOfType<GameManager>().EndGame();
+                }
 
-        StartCoroutine(Invunerability());
-        SoundManager.PlaySound("wizzard_hit");
-        Draw();
-        recoveryTime = 0;
+            StartCoroutine(Invunerability());
+            SoundManager.PlaySound("wizzard_hit");
+            Draw();
+            recoveryTime = 0;
+        }
     }
 
     public void Kill()

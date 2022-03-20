@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     private Scene scene;
     [SerializeField] GameObject canvas;
 
+    [SerializeField] private GameObject pauseCanvas;
+
     private void Awake()
     {
         scene = SceneManager.GetActiveScene();
@@ -18,10 +20,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         canvas.SetActive(true);
+        pauseCanvas.SetActive(false);
     }
     
     public void LoadMenu()
     {
+        pauseCanvas.SetActive(true);
         Time.timeScale = 1f;
         if (GameObject.Find("InventoryManager") != null)
             GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
+        pauseCanvas.SetActive(true);
         Time.timeScale = 1f;
         if (GameObject.Find("InventoryManager") != null)
             GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();
@@ -38,6 +43,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        pauseCanvas.SetActive(true);
         Time.timeScale = 1f;
         if (GameObject.Find("InventoryManager") != null)
             GameObject.Find("InventoryManager").GetComponent<InventoryManager>().Tax();

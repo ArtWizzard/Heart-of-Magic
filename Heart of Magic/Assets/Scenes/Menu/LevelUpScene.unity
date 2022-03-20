@@ -390,7 +390,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.003937006, y: 0.003937006, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -2372,7 +2372,8 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1025162087
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 789555671224335603, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6686b1c1f15ed9a49b24bad5df3cd4ff, type: 3}
 --- !u!1 &1502301245
 GameObject:
@@ -2501,7 +2502,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.003937006, y: 0.003937006, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0

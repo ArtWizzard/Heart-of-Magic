@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class DecisionDialogueManager : MonoBehaviour
 {
-    
     private Queue<string> sentences; 
     
     public Text nameText;
@@ -14,7 +13,10 @@ public class DecisionDialogueManager : MonoBehaviour
     public Animator animator;
 
     public bool isRunning;
-    public bool toClose = false;
+    public bool smthToSay;
+
+    private float letterDrawing = 0.05f;
+    public bool letterProgress = false;
 
     void Start()
     {
@@ -25,64 +27,70 @@ public class DecisionDialogueManager : MonoBehaviour
     {
         
         if(isRunning)
-        {
-            if(Input.GetKeyDown(KeyCode.O))
-            {
-                GameObject.Find("Monk").GetComponent<Monk_lichva_controller>().RekniNapovedu();
-                isRunning = false;
-                toClose = true;
-                //DisplayNextSentence();
-            }
-            else if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Space))
-                EndDialogue();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && toClose)
-        {
-            EndDialogue();
-            toClose = false;
-        }
-            
+            if(Input.GetKeyDown(KeyCode.Space))
+                if (letterProgress)
+                {
+                    letterProgress = false;
+                } else 
+                {
+                    DisplayNextSentence();
+                }
     }
 
-    public void StartDialogue (Dialogue dialogue)  // vykreslení věty
+    public void StartDialogue (Dialogue dialogue)
     {
         isRunning = true;
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name; 
+        //Debug.Log("starting conversation with: " + dialogue.name);
         sentences.Clear();
         
         foreach (string sentence in dialogue.sentences)
         {
+            //Debug.Log(sentence);
             sentences.Enqueue(sentence);
         }
-        DisplayNextSentence(); // vykreslí
+        //Debug.Log("nextSent");
+        DisplayNextSentence();
     }
 
-    public void DisplayNextSentence()   // vykreslí jednu
+    public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
         {
             EndDialogue();
+            smthToSay = false;
             return;
         }
         string sentence = sentences.Dequeue();
+        //dialogueText.text = sentence;     //  whole sentence
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        //Debug.Log(sentence);
     }
 
-    IEnumerator TypeSentence (string sentence)  // vykresluje po písmenkách
+    IEnumerator TypeSentence (string sentence)
     {
+        letterDrawing = 0.05f;
         dialogueText.text = "";
+        letterProgress = true;
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            if (letterProgress == false)
+            {
+                //Debug.Log("print");
+                dialogueText.text = sentence;
+                break;
+            }
+            yield return new WaitForSeconds(letterDrawing);
         }
+        letterProgress = false;
     }
 
-    void EndDialogue()      // skryje dialogue
+    public void EndDialogue()
     {
+        //Debug.Log("End of dialogue");
         animator.SetBool("IsOpen", false);
         isRunning = false;
     }

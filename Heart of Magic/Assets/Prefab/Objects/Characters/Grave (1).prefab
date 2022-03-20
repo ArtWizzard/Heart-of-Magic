@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f10fe585d575154eafb26ae7660e591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   dropRate: 5
   yDelta: 0.5
   key: {fileID: 7227820772538516407, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f10fe585d575154eafb26ae7660e591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   dropRate: 5
   yDelta: 0.5
   key: {fileID: 7227820772538516407, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}
@@ -2360,7 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f10fe585d575154eafb26ae7660e591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   dropRate: 5
   yDelta: 0.5
   key: {fileID: 7227820772538516407, guid: 26d4e57ac4114b341b717b06956f2c60, type: 3}

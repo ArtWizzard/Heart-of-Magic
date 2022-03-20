@@ -49,6 +49,7 @@ public class Barrier : MonoBehaviour
 
     public void SetBarrier()
     {
+        target.GetComponent<Player_health>().hittable = false;
         actualTime = 0;
         gameObject.SetActive(true);
         gameObject.GetComponent<BarrierSound_duration>().StartSound();
@@ -57,6 +58,7 @@ public class Barrier : MonoBehaviour
 
     public void DestroyBarrier()
     {
+        target.GetComponent<Player_health>().hittable = true;
         gameObject.SetActive(false);
     }
 }

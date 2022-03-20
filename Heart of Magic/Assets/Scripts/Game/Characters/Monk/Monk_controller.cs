@@ -13,7 +13,7 @@ public class Monk_controller : MonoBehaviour
     private Transform child;
     private int childCount;
 
-    private bool dialogueRuns = false;
+    public bool dialogueRuns = false;
     private int i;
 
     private void Awake()
@@ -53,6 +53,7 @@ public class Monk_controller : MonoBehaviour
             if (isIn && Input.GetKeyDown(KeyCode.Space))
             {
                 dialogueRuns = true;
+                i = 0;
             }
         }
     }

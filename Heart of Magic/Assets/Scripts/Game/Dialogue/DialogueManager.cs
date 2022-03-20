@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
 
     public bool isRunning;
 
+    private float letterDrawing = 0.05f;
+    private bool letterProgress = false;
+
 
     void Start()
     {
@@ -26,7 +29,14 @@ public class DialogueManager : MonoBehaviour
         
         if(isRunning)
             if(Input.GetKeyDown(KeyCode.Space))
-                DisplayNextSentence();
+                if (letterProgress)
+                {
+                    //letterDrawing = 0f;
+                    letterProgress = false;
+                } else 
+                {
+                    DisplayNextSentence();
+                }
     }
 
     public void StartDialogue (Dialogue dialogue)
@@ -60,15 +70,23 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
+        letterDrawing = 0.05f;
         dialogueText.text = "";
+        letterProgress = true;
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            if (letterProgress == false)
+            {
+                dialogueText.text = sentence;
+                break;
+            }
+            yield return new WaitForSeconds(letterDrawing);
         }
+        letterProgress = false;
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         //Debug.Log("End of dialogue");
         animator.SetBool("IsOpen", false);
